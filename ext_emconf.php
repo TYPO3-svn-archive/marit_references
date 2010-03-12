@@ -14,7 +14,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Marit AG References',
 	'description' => 'An extbase and fluid based extension to show your projects, for wich customers you realised the projects and the technologies you used in your projects. Has a built in project search.
 
-Works with dam to manage files and images and works with tt_address to manage contact persons. Needs jQuery for some coll features but should also work without javascript.',
+Works with dam to manage files and images and works with tt_address to manage contact persons. 
+Needs jQuery for some cool features but should also work without javascript.',
 	'category' => 'plugin',
 	'author' => 'Marit AG Developers,Marco Huber,Markus Kleinhenz,Goran Stefanovic',
 	'author_email' => 'typo3-extension@marit.ag,marco.huber@marit,ag,markus.kleinhenz@marit.ag,goran.stefanovic@marit.ag',
