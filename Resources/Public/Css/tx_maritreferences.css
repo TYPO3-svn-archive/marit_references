@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+#maritReferences ul ul,
+#maritReferences ol ol,
+#maritReferences ul ol,
+#maritReferences ol ul {
+	margin-left: 5px;
+	list-style-position: inside
+}
+#maritReferences ul {
+	list-style-type: disc;
+}
+#maritReferences ol {
+	list-style-type: decimal;
+}
+
+
+.lightboximage_big {
+	display: none;
+}
+
+.sliderWrap {
+	position: relative;
+}
+.sliderText {
+	width: 45px;
+	/*padding-top: 3px;*/
+}
+.sliderTextLeft {
+	text-align: right;
+}
+.sliderTextRight {
+	text-align: left;
+}
+.slider {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 106px;
+}

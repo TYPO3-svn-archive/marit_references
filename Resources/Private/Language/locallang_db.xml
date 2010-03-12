@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'marit_references'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_maritreferences_flexform.view">View</label>
+			<label index="tx_maritreferences_flexform.view.I.0">List views and detail views</label>
+			<label index="tx_maritreferences_flexform.view.I.1">Search boxes</label>
+			
+			<label index="tx_maritreferences_domain_model_industrialsector">Industrial Sector</label>
+			<label index="tx_maritreferences_domain_model_industrialsector.title">Title</label>
+			<label index="tx_maritreferences_domain_model_industrialsector.description">Description</label>
+			
+			<label index="tx_maritreferences_domain_model_customer">Customer</label>
+			<label index="tx_maritreferences_domain_model_customer.title">Title</label>
+			<label index="tx_maritreferences_domain_model_customer.description">Description</label>
+			<label index="tx_maritreferences_domain_model_customer.url">Url</label>
+			<label index="tx_maritreferences_domain_model_customer.size">Customer size</label>
+			<label index="tx_maritreferences_domain_model_customer.images">Images</label>
+			
+			<label index="tx_maritreferences_domain_model_technology">Technology</label>
+			<label index="tx_maritreferences_domain_model_technology.title">Title</label>
+			<label index="tx_maritreferences_domain_model_technology.description">Description</label>
+			<label index="tx_maritreferences_domain_model_technology.images">Images</label>
+			<label index="tx_maritreferences_domain_model_technology.contact_person">Contact person</label>
+			
+			<label index="tx_maritreferences_domain_model_project">Project</label>
+			<label index="tx_maritreferences_domain_model_project.title">Title</label>
+			<label index="tx_maritreferences_domain_model_project.subtitle">Subtitle</label>
+			<label index="tx_maritreferences_domain_model_project.teaser">Teaser</label>
+			<label index="tx_maritreferences_domain_model_project.description">Description</label>
+			<label index="tx_maritreferences_domain_model_project.url">Url</label>
+			<label index="tx_maritreferences_domain_model_project.budget">Budget (€)</label>
+			<label index="tx_maritreferences_domain_model_project.customer_statement">Customer statement</label>
+			<label index="tx_maritreferences_domain_model_project.year">Year</label>
+			<label index="tx_maritreferences_domain_model_project.files">Files</label>
+			<label index="tx_maritreferences_domain_model_project.images">Images</label>
+			<label index="tx_maritreferences_domain_model_project.industrial_sector">Industrial sector</label>
+			<label index="tx_maritreferences_domain_model_project.contact_person">Contact person</label>
+			<label index="tx_maritreferences_domain_model_project.customer_contact_person">Customer contact person</label>
+			<label index="tx_maritreferences_domain_model_project.customer">Customer</label>
+			<label index="tx_maritreferences_domain_model_project.technologies">Technologies</label>
+		</languageKey>
+	</data>
+</T3locallang>

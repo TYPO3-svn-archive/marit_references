@@ -1,0 +1,51 @@
+{namespace helper=Tx_MaritReferences_ViewHelpers}
+<f:layout name="default" />
+
+<f:section name="content">
+	<div class="customershow">
+		<h1><f:link.external uri="{customer.url}" target="_blank">{customer.title}</f:link.external></h1>
+		<p><strong><f:translate key="tx_maritreferences_domain_model_customer.size" />:</strong> {customer.size}</p>
+		<div class="textpic">
+			<div class="customerimages left">
+				<f:for each="{customer.images}" as="image">
+					<helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.customer.show.image.file.maxW}" lightboxMaxWidth="{settings.customer.show.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.customer.show.lightboxImage.file.maxH}" id="customerImage_{image.fileHash}" class="lightboximage" />				
+				</f:for>
+			</div>
+			<f:format.html>{customer.description}</f:format.html>
+			<hr class="clear" />		
+		</div>
+		<div class="twinboxes">
+			<div class="twinbox left">
+				<span class="bubbleheader"></span>
+				<h4><f:translate key="tx_maritreferences_view.projects" /></h4>
+				<span class="bubblefooter"></span>
+				<div class="boximgtext">
+					<ul>
+						<f:for each="{customer.projects}" as="project">
+							<li>
+								<f:link.action controller="Project" action="show" arguments="{project: project}">{project.title}</f:link.action>:
+									<ol>
+										<li><f:translate key="tx_maritreferences_domain_model_project.customer_contact_person" />: <f:link.email email="{project.customerContactPerson.email}"  class="projectcustomercontact"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{project.customerContactPerson.gender}" /> {project.customerContactPerson.firstName} {project.customerContactPerson.lastName}</f:link.email></li>
+										<li><f:translate key="tx_maritreferences_domain_model_project.contact_person" />: <f:link.email email="{project.contactPerson.email}"  class="contactPerson"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{project.contactPerson.gender}" /> {project.contactPerson.firstName} {project.contactPerson.lastName}</f:link.email></li>
+									</ol>
+							</li>
+						</f:for>
+					</ul>
+				</div>
+			</div>
+			<div class="twinbox right">
+				<span class="bubbleheader"></span>
+				<h4><f:translate key="tx_maritreferences_view.technologies" /></h4>
+				<span class="bubblefooter"></span>
+				<div class="boximgtext">
+					<ul>
+						<f:for each="{customer.technologies}" as="technology">		
+							<li><f:link.action controller="Technology" action="show" arguments="{technology: technology}" class="projecttechnology">{technology.title}</f:link.action> (<f:translate key="tx_maritreferences_domain_model_technology.contact_person" /> <f:link.email email="{technology.contactPerson.email}"  class="contactPerson"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{technology.contactPerson.gender}" /> {technology.contactPerson.firstName} {technology.contactPerson.lastName}</f:link.email>)</li>
+						</f:for>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</f:section>

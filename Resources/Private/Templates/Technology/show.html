@@ -1,0 +1,26 @@
+{namespace helper=Tx_MaritReferences_ViewHelpers}
+<f:layout name="default" />
+
+<f:section name="content">
+	<div class="showtechnology">
+		<h1>{technology.title}</h1>
+		<div class="textpic">
+			<div class="technologyimage left">
+				<f:for each="{technology.images}" as="image">
+					<helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.technology.show.image.file.maxW}" lightboxMaxWidth="{settings.technology.show.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.technology.show.lightboxImage.file.maxH}" id="technologyImage_{image.fileHash}" class="lightboximage" />
+				</f:for>
+			</div>
+			<f:format.html>{technology.description}</f:format.html>
+			<div class="clear"></div>		
+		</div>
+		<p><strong><f:translate key="tx_maritreferences_domain_model_technology.contact_person" /></strong>: <f:link.email email="{technology.contactPerson.email}"  class="technologycontact"><f:translate key="{technology.contactPerson.gender}" /> {technology.contactPerson.firstName} {technology.contactPerson.lastName}</f:link.email>
+		<div class="technologyProjects">
+			<p><strong><f:translate key="tx_maritreferences_view.projects" />:</strong></p>
+			<ul>
+				<f:for each="{projects}" as="project">
+					<li><f:link.action controller="Project" action="show" arguments="{project: project}">{project.title}</f:link.action></li>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+</f:section>

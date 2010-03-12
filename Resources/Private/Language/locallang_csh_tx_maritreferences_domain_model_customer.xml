@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Ontext Sensitive Help (CSH) for table tx_maritreferences_domain_model_customer</description>
+        <type>CSH</type>
+        <csh_table>tx_maritreferences_domain_model_customer</csh_table>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+			<label index="title.description">The customer title, name or company name.</label>
+			<label index="description.description">A generall description about the customer.</label>
+			<label index="url.description">A url to the customers website. Must have "http://"!</label>
+			<label index="size.description">How many employees the customer has.</label>
+			<label index="images.description">An image or logo or something like that.</label>
+		</languageKey>
+    </data>
+</T3locallang>

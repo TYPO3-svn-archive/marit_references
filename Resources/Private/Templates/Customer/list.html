@@ -1,0 +1,24 @@
+{namespace helper=Tx_MaritReferences_ViewHelpers}
+<f:layout name="default" />
+
+<f:section name="content">
+	<h1><f:translate key="tx_maritreferences_view_customer.customerlist" /></h1>
+	<hr />
+	<div class="customerlist">
+		<f:for each="{customers}" as="customer">
+			<div class="customer">
+				<h2 class="customername"><f:link.action action="show" arguments="{customer: customer}">{customer.title}</f:link.action></h2>
+				<div class="customerimages left">
+					<f:link.action action="show" arguments="{customer: customer}">
+						<f:for each="{customer.images}" as="image">
+							<helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.customer.list.image.file.maxW}" lightboxMaxWidth="{settings.customer.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.customer.list.lightboxImage.file.maxH}" id="customerImage_{image.fileHash}" class="lightboximage" />
+						</f:for>
+					</f:link.action>
+				</div>
+				<f:format.crop maxCharacters="{settings.customer.list.description.crop}" append="&nbsp;..."><f:format.html>{customer.description}</f:format.html></f:format.crop>
+		    	<p class="customermore"><f:link.action action="show" arguments="{customer: customer}"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+			</div>
+			<hr class="clear" />
+		</f:for>
+	</div>
+</f:section>

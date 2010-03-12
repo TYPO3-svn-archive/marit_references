@@ -1,0 +1,30 @@
+{namespace helper=Tx_MaritReferences_ViewHelpers}
+<f:if condition="{search}">
+	<f:then>
+		<f:if condition="{projectCounter}">
+			<div id="maritReferences">
+		</f:if>
+	</f:then>
+	<f:else>		
+		<div id="maritReferences">
+	</f:else>
+</f:if>
+
+<ul>
+	<li><f:link.action controller="Project"><f:translate key="tx_maritreferences_view.project_list" /></f:link.action></li>
+	<li><f:link.action controller="Customer"><f:translate key="tx_maritreferences_view.customer_list" /></f:link.action></li>
+	<li><f:link.action controller="Technology"><f:translate key="tx_maritreferences_view.technology_list" /></f:link.action></li>
+</ul>
+
+<f:render section="content" />
+
+<f:if condition="{search}">	
+	<f:then>	
+		<f:if condition="{projectCounter}">
+			</div>
+		</f:if>
+	</f:then>
+	<f:else>
+		</div>
+	</f:else>
+</f:if>

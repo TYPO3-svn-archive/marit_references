@@ -1,0 +1,67 @@
+{namespace helper=Tx_MaritReferences_ViewHelpers}
+<f:layout name="default" />
+
+<f:section name="content">
+	<div class="projectshow">
+		<h1>{project.title}</h1>
+		<p><strong><f:format.nl2br>{project.teaser}</f:format.nl2br></strong></p>
+		<div class="textpic">
+			<div class="projectimages left">
+				<f:for each="{project.images}" as="image">
+					 <helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.project.show.image.file.maxW}" lightboxMaxWidth="{settings.project.show.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.show.lightboxImage.file.maxH}" id="projectImage_{image.fileHash}" class="lightboximage" />
+				</f:for>
+			</div>
+			<h2 class="projectsubtitle">{project.subtitle}</h2>
+			<f:format.html>{project.description}</f:format.html>
+			<hr class="clear" />
+		</div>
+		<h3><f:translate key="tx_maritreferences_domain_model_project.customer_statement" /></h3>
+		<f:format.html>{project.customerStatement}</f:format.html>
+		<div class="twinboxes">
+			<div class="twinbox left">
+				<span class="bubbleheader"></span>
+				<h4><f:translate key="tx_maritreferences_view.left_box" /></h4>
+				<span class="bubblefooter"></span>
+				<div class="boximgtext">
+					<ul>
+						<li>
+							<strong><f:translate key="tx_maritreferences_domain_model_project.files" />:</strong>
+							<ol>
+								<f:for each="{project.files}" as="file">
+									<li><a href="{file.filePath}{file.fileName}" title="{file.title} - {file.altText}" class="projectfile">{file.title}</a></li>	
+								</f:for>
+							</ol>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="twinbox right">
+				<span class="bubbleheader"></span>
+				<h4><f:translate key="tx_maritreferences_view.right_box" /></h4>
+				<span class="bubblefooter"></span>
+				<div class="boximgtext">
+					<ul>
+						<li><strong><f:translate key="tx_maritreferences_domain_model_project.url" />:</strong> <f:link.external uri="{project.url}">{project.url}</f:link.external></li>
+						<li><strong><f:translate key="tx_maritreferences_domain_model_project.budget" />:</strong> {project.budget}</li>
+						<li><strong><f:translate key="tx_maritreferences_domain_model_project.year" />:</strong> {project.year}</li>
+						<li>
+							<strong><f:translate key="tx_maritreferences_domain_model_project.technologies" />:</strong>
+							<ol>
+								<f:for each="{project.technologies}" as="technology">
+									<f:if condition="{technology}">
+										<li><f:link.action controller="Technology" action="show" arguments="{technology: technology}" class="projecttechnology">{technology.title}</f:link.action></li>
+									</f:if>
+								</f:for>
+							</ol>	
+						</li>		
+						<li><strong><f:translate key="tx_maritreferences_domain_model_project.customer" />:</strong> <f:link.action controller="Customer" action="show" arguments="{customer: project.customer}" class="projectcustomer">{project.customer.title}</f:link.action></li>
+						<li><strong><f:translate key="tx_maritreferences_domain_model_project.contact_person" />:</strong> <f:link.email email="{project.contactPerson.email}" class="projectcontact"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{project.contactPerson.gender}" />{project.contactPerson.firstName} {project.contactPerson.lastName}</f:link.email></li>
+						<li><strong><f:translate key="tx_maritreferences_domain_model_project.customer_contact_person" />:</strong> <f:link.email email="{project.customerContactPerson.email}"  class="projectcustomercontact"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{project.customerContactPerson.gender}" />{project.customerContactPerson.firstName} {project.customerContactPerson.lastName}</f:link.email></li>
+						<li><strong><f:translate key="tx_maritreferences_domain_model_project.industrial_sector" />:</strong> <span title="{project.industrialSector.description}"  class="projectindustrysector">{project.industrialSector.title}</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>	
+	</div>
+</f:section>

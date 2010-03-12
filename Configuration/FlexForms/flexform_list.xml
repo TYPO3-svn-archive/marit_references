@@ -1,0 +1,33 @@
+<T3DataStructure>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <TCEforms>
+          <sheetTitle>Options</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+          <switchableControllerActions>
+            <TCEforms>
+              <label>LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.view</label>
+              <config>
+                <type>select</type>
+                <size>1</size>
+                <items typ3="array">
+                  <numIndex index="0" type="array">
+                    <numIndex index="0">LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.view.I.0</numIndex>
+                    <numIndex index="1">Project->list;Project->show;Technology->list;Technology->show;Customer->list;Customer->show</numIndex>
+                  </numIndex>                  
+                  <numIndex index="1" type="array">
+                    <numIndex index="0">LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.view.I.1</numIndex>
+                    <numIndex index="1">Project->search</numIndex>
+                  </numIndex>
+                </items>
+              </config>
+            </TCEforms>
+          </switchableControllerActions>
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>

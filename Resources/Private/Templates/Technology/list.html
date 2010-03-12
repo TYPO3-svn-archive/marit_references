@@ -1,0 +1,24 @@
+{namespace helper=Tx_MaritReferences_ViewHelpers}
+<f:layout name="default" />
+
+<f:section name="content">
+	<h1><f:translate key="tx_maritreferences_view_technology.technologylist" /></h1>
+	<hr />
+	<div class="technologylist">
+		<f:for each="{technologies}" as="technology">
+			<div class="technology">
+				<h2 class="technologytitle"><f:link.action action="show" arguments="{technology: technology}">{technology.title}</f:link.action></h2>
+				<div class="technologyimages left">
+					<f:link.action action="show" arguments="{technology: technology}">
+						<f:for each="{technology.images}" as="image">
+							<helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.technology.list.image.file.maxW}" lightboxMaxWidth="{settings.technology.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.technology.list.lightboxImage.file.maxH}" id="technologyImage_{image.fileHash}" class="lightboximage" />
+						</f:for>
+					</f:link.action>
+				</div>
+				<f:format.crop maxCharacters="{settings.technology.list.description.crop}" append="&nbsp;..."><f:format.html>{technology.description}</f:format.html></f:format.crop>
+		    	<p class="technologymore"><f:link.action action="show" arguments="{technology: technology}"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+			</div>
+			<hr class="clear" />
+		</f:for>
+	</div>
+</f:section>

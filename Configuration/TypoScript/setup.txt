@@ -1,0 +1,146 @@
+plugin.tx_maritreferences = USER
+plugin.tx_maritreferences {
+	settings {
+		project {
+      		list {
+        		image.file.maxW = 75
+						lightboxImage.file.maxW = 400
+						lightboxImage.file.maxH = 400		
+						pageBrowser.maxItems = 2		
+						cssFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+						}
+						jsFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+						}
+      		}
+			show {
+				image.file.maxW = 75	
+				lightboxImage.file.maxW = 400
+				lightboxImage.file.maxH = 400		
+						cssFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+						}
+						jsFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+						}
+			}
+			search {
+				yearSliderMin = 1000
+				yearSliderMax = 2100
+				budgetSliderMin = 0
+				budgetSliderMax = 1000000
+						cssFile {
+							3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8rc3.custom.css
+						}
+						jsFile {
+							3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/js/jquery-ui-1.8rc3.custom.min.js
+							4 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery.form.js
+							5 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences_search.js
+						}
+			}
+		}
+		customer {
+      		list {
+        		image.file.maxW = 75
+				lightboxImage.file.maxW = 400
+				lightboxImage.file.maxH = 400		
+						description.crop = 200
+						cssFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+						}
+						jsFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+						}
+      		}
+			show {
+				image.file.maxW = 75		
+				lightboxImage.file.maxW = 400
+				lightboxImage.file.maxH = 400		
+						cssFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+						}
+						jsFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+						}
+			}
+		}
+		technology {
+      		list {
+        		image.file.maxW = 75
+				lightboxImage.file.maxW = 400
+				lightboxImage.file.maxH = 400		
+						description.crop = 200
+						cssFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+						}
+						jsFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+						}
+      		}
+			show {
+				image.file.maxW = 75	
+				lightboxImage.file.maxW = 400
+				lightboxImage.file.maxH = 400			
+						cssFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+						}
+						jsFile {
+							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+						}
+			}
+		}
+	}	
+	
+	view {
+		templateRootPath = EXT:marit_references/Resources/Private/Templates/
+		partialRootPath = EXT:marit_references/Resources/Private/Partials/
+		layoutRootPath = EXT:marit_references/Resources/Private/Layouts/
+	}
+	
+  	persistence {
+		storagePid = 12
+		classes {
+			Tx_MaritReferences_Domain_Model_ContactPerson {
+				mapping {
+					tableName = tt_address
+				}
+			}
+			Tx_MaritReferences_Domain_Model_DAM {
+				mapping {
+					tableName = tx_dam
+				}
+			}
+		}
+	}
+	
+	_CSS_DEFAULT_STYLE (
+	}
+}
+
+maritReferences = PAGE
+maritReferences {
+	typeNum = 1267717411
+	config {
+		disableAllHeaderCode = 1
+		admPanel = 0
+	}
+	10 = USER
+	10 {
+		userFunc = tx_extbase_dispatcher->dispatch
+		pluginName = Pi1
+		extensionName = MaritReferences
+		controller = Project
+		switchableControllerActions {
+			1 {
+				controller = Project
+				actions = list
+			}	
+		}
+		action = list
+		settings =< plugin.tx_maritreferences.settings
+		persistence =< plugin.tx_maritreferences.persistence
+		view =< plugin.tx_maritreferences.view
+	}
+}
