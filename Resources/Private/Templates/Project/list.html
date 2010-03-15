@@ -4,39 +4,37 @@
 <f:section name="content">
 	<h1><f:translate key="tx_maritreferences_view.project_list" /></h1>
 	<hr />
-	<div id="projectListWrap">	
-		<div class="projectlist">
-			<f:for each="{projects}" as="project">
-				<div class="project">
-					<h2 class="projecttitle"><f:link.action action="show" arguments="{project: project}">{project.title}</f:link.action></h2>
-					<div class="projectimages left"> 
-						<f:link.action action="show" arguments="{project: project}">
-							<f:for each="{project.images}" as="image">
-								<helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.project.list.image.file.maxW}" lightboxMaxWidth="{settings.project.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.list.lightboxImage.file.maxH}" id="projectImage_{image.fileHash}" class="lightboximage" />
-							</f:for>
-						</f:link.action>
-					</div>
-					<p class="projectteaser"><f:format.nl2br>{project.teaser}</f:format.nl2br></p>
-			   		<p class="projectmore"><f:link.action action="show" arguments="{project: project}"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+	<div class="projectlist">
+		<f:for each="{projects}" as="project">
+			<div class="project">
+				<h2 class="projecttitle"><f:link.action action="show" arguments="{project: project}">{project.title}</f:link.action></h2>
+				<div class="projectimages left"> 
+					<f:link.action action="show" arguments="{project: project}">
+						<f:for each="{project.images}" as="image">
+							<helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.project.list.image.file.maxW}" lightboxMaxWidth="{settings.project.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.list.lightboxImage.file.maxH}" id="projectImage_{image.fileHash}" class="lightboximage" />
+						</f:for>
+					</f:link.action>
 				</div>
-				<hr class="clear" />
-			</f:for>
-		</div>
-		<f:if condition="{settings.project.list.pageBrowser}">
-			<f:if condition="{projectCounter} > {settings.project.list.pageBrowser.maxItems}">
-				<div id="referencesPageBrowser">
-					<helper:pageBrowser 
-						totalCountOfItems="{projectCounter}" 
-						maxItemsToDisplay="{settings.project.list.pageBrowser.maxItems}" 
-						previousLabel="<f:translate key='tx_maritreferences_view.pageBrowser.previous' />" 
-						pageLabel="<f:translate key='tx_maritreferences_view.pageBrowser.page' />" 
-						outOfLabel="<f:translate key='tx_maritreferences_view.pageBrowser.outOf' />"
-						nextLabel="<f:translate key='tx_maritreferences_view.pageBrowser.next' />" 
-						template="<span class=\"pageBrowserPrevious\">%1$s</span> <span class=\"pageBrowserPage\">%2$s %3$s %4$s %5$s</span> <span class=\"pageBrowserNext\">%6$s</span>"
-						onclick="doAjaxPageBrowser($(this)); return false;"               
-					/>
-				</div>
-			</f:if>
-		</f:if>
+				<p class="projectteaser"><f:format.nl2br>{project.teaser}</f:format.nl2br></p>
+		   		<p class="projectmore"><f:link.action action="show" arguments="{project: project}"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+			</div>
+			<hr class="clear" />
+		</f:for>
 	</div>
+	<f:if condition="{settings.project.list.pageBrowser}">
+		<f:if condition="{projectCounter} > {settings.project.list.pageBrowser.maxItems}">
+			<div id="referencesPageBrowser">
+				<helper:pageBrowser 
+					totalCountOfItems="{projectCounter}" 
+					maxItemsToDisplay="{settings.project.list.pageBrowser.maxItems}" 
+					previousLabel="<f:translate key='tx_maritreferences_view.pageBrowser.previous' />" 
+					pageLabel="<f:translate key='tx_maritreferences_view.pageBrowser.page' />" 
+					outOfLabel="<f:translate key='tx_maritreferences_view.pageBrowser.outOf' />"
+					nextLabel="<f:translate key='tx_maritreferences_view.pageBrowser.next' />" 
+					template="<span class=\"pageBrowserPrevious\">%1$s</span> <span class=\"pageBrowserPage\">%2$s %3$s %4$s %5$s</span> <span class=\"pageBrowserNext\">%6$s</span>"
+					onclick="doAjaxPageBrowser($(this)); return false;"               
+				/>
+			</div>
+		</f:if>
+	</f:if>
 </f:section>

@@ -11,7 +11,7 @@ function moveTooltip(slider, sliderId, ui){
 				);	
 				
 				if(ui!=0) {
-					$('#sliderValueMin'+slider).text(ui.values[0]);		
+					$('#sliderValueMin'+slider).val(ui.values[0]);		
 					$('#sliderValueMax'+slider).text(ui.values[1]);
 				}
 }
@@ -88,25 +88,6 @@ function initSearchSubmit(){
 	
 	var pageType = $( '<input type="hidden" name="type" value="1267717411" />' ) ;
 	$('#searchProject').append(pageType);
-	
-	flobuSearchBox = new flower_bubble ({
-		base_obj: $('#searchProject'),
-		block_mode: 'base_obj',
-		base_dir: 'typo3conf/ext/marit_references/Resources/Public/Javascript',
-		background: { css: 'white', opacity: 0.78 },
-		bubble: { image: 'bubble.png', width: 130, height: 98 },
-		flower: { image: 'flower.gif', width: 32, height: 32 }
-	});
-	
-	flobuReferenceList = new flower_bubble ({
-		base_obj: $('#maritReferences'),
-		block_mode: 'base_obj',
-		base_dir: 'typo3conf/ext/marit_references/Resources/Public/Javascript',
-		background: { css: 'white', opacity: 0.78 },
-		bubble: { image: 'bubble.png', width: 130, height: 98 },
-		flower: { image: 'flower.gif', width: 32, height: 32 }
-	});
-
 
 
 	var options = { 
@@ -114,16 +95,12 @@ function initSearchSubmit(){
       type: 'POST',
       beforeSubmit:  function(formData, jqForm, options){
     		//alert('About to submit: \n\n' + $.param(formData));     
-				flobuSearchBox.enable();
 				flobuReferenceList.enable();
-    		//$('#maritReferences').fadeOut('fast');
 			},
       success: function(responseText, statusText, xhr, $form){
-      	$('#maritReferences #projectListWrap').replaceWith($(responseText).find('#projectListWrap'));
-		    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText);		      
-				flobuSearchBox.disable();  
-				flobuReferenceList.disable();
-    		//$('#maritReferences').fadeIn('fast');
+      	$('#maritReferences').replaceWith(responseText);
+		    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText);		
+				flobuReferenceList.disable(); 
 			},
   };
   
@@ -134,9 +111,6 @@ function initSearchSubmit(){
   });
 }
 
-
-var flobuSearchBox;
-var flobuReferenceList;
 
 $(document).ready(function(){
 	initSlider();
