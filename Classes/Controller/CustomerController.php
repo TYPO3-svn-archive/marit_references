@@ -59,19 +59,27 @@ class Tx_MaritReferences_Controller_CustomerController extends Tx_MaritReference
 	/**
 	 * list action
 	 *
+	 * @param  integer $currentPage The current page
 	 * @return string The rendered list action
 	 */
-	public function listAction() {
+	public function listAction($currentPage = 0) {
 		$this->initCSS($this->settings['customer']['list']['cssFile']);
 		$this->initJS($this->settings['customer']['list']['jsFile']);
 		
 		$this->view->assign('settings', $this->settings);
-		$customers = $this->customerRepository->findAll();
+		
+		
+		if($this->settings['customer']['list']['pageBrowser']){
+			$customers = $this->customerRepository->findLimited($this->settings['customer']['list']['pageBrowser']['maxItems'], ($currentPage*$this->settings['customer']['list']['pageBrowser']['maxItems']));
+			$this->view->assign('customerCounter', $this->customerRepository->countItems());
+		} else {
+			$customers = $this->customerRepository->findAll();
+		}
 		foreach($customers as $key => $customer){			
 			$customers[$key]->projects = $this->projectRepository->findByCustomer($customer);						
 			$customers[$key]->technologies = $this->getTechnologies($customer->projects);
 		}
-
+		
 		$this->view->assign('customers', $customers);
 	}
 	

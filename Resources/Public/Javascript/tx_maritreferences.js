@@ -21,6 +21,7 @@ function doAjaxPageBrowser(element){
 		success: function(responseText, statusText, xhr) {     
 			$('#maritReferences').replaceWith(responseText);
 			flobuReferenceList.disable();
+			initImageLightboxes();
 		}
   });
 

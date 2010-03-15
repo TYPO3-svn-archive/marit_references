@@ -58,14 +58,20 @@ class Tx_MaritReferences_Controller_TechnologyController extends Tx_MaritReferen
 	/**
 	 * list action
 	 *
+	 * @param  integer $currentPage The current page
 	 * @return string The rendered list action
 	 */
-	public function listAction() {
+	public function listAction($currentPage = 0) {
 		$this->initCSS($this->settings['technology']['list']['cssFile']);
 		$this->initJS($this->settings['technology']['list']['jsFile']);
 		
 		$this->view->assign('settings', $this->settings);
-      	$this->view->assign('technologies', $this->technologyRepository->findAll());
+    if($this->settings['technology']['list']['pageBrowser']){
+			$this->view->assign('technologies', $this->technologyRepository->findLimited($this->settings['technology']['list']['pageBrowser']['maxItems'], ($currentPage*$this->settings['technology']['list']['pageBrowser']['maxItems'])));
+			$this->view->assign('technologyCounter', $this->technologyRepository->countItems());
+		} else {
+			$this->view->assign('technologies', $this->technologyRepository->findAll());
+		}
 	}
 	
 	/**

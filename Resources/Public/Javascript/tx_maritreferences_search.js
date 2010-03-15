@@ -101,6 +101,7 @@ function initSearchSubmit(){
       	$('#maritReferences').replaceWith(responseText);
 		    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText);		
 				flobuReferenceList.disable(); 
+				initImageLightboxes();
 			},
   };
   

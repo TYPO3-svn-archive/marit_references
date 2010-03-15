@@ -2,7 +2,7 @@
 <f:layout name="default" />
 
 <f:section name="content">
-	<h1><f:translate key="tx_maritreferences_view_customer.customerlist" /></h1>
+	<h1><f:translate key="tx_maritreferences_view.customer_list" /></h1>
 	<hr />
 	<div class="customerlist">
 		<f:for each="{customers}" as="customer">
@@ -21,4 +21,20 @@
 			<hr class="clear" />
 		</f:for>
 	</div>
+	<f:if condition="{settings.customer.list.pageBrowser}">
+		<f:if condition="{customerCounter} > {settings.customer.list.pageBrowser.maxItems}">
+			<div id="referencesPageBrowser">
+				<helper:pageBrowser 
+					totalCountOfItems="{customerCounter}" 
+					maxItemsToDisplay="{settings.customer.list.pageBrowser.maxItems}" 
+					previousLabel="<f:translate key='tx_maritreferences_view.pageBrowser.previous' />" 
+					pageLabel="<f:translate key='tx_maritreferences_view.pageBrowser.page' />" 
+					outOfLabel="<f:translate key='tx_maritreferences_view.pageBrowser.outOf' />"
+					nextLabel="<f:translate key='tx_maritreferences_view.pageBrowser.next' />" 
+					template="<span class=\"pageBrowserPrevious\">%1$s</span> <span class=\"pageBrowserPage\">%2$s %3$s %4$s %5$s</span> <span class=\"pageBrowserNext\">%6$s</span>"
+					onclick="doAjaxPageBrowser($(this)); return false;"               
+				/>
+			</div>
+		</f:if>
+	</f:if>
 </f:section>
