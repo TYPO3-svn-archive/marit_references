@@ -97,21 +97,33 @@ function initSearchSubmit(){
 		bubble: { image: 'bubble.png', width: 130, height: 98 },
 		flower: { image: 'flower.gif', width: 32, height: 32 }
 	});
+	
+	flobuReferenceList = new flower_bubble ({
+		base_obj: $('#maritReferences'),
+		block_mode: 'base_obj',
+		base_dir: 'typo3conf/ext/marit_references/Resources/Public/Javascript',
+		background: { css: 'white', opacity: 0.78 },
+		bubble: { image: 'bubble.png', width: 130, height: 98 },
+		flower: { image: 'flower.gif', width: 32, height: 32 }
+	});
 
 
 
 	var options = { 
-      target: $('#maritReferences'),
+      //target: $('#maritReferences'),
       type: 'POST',
       beforeSubmit:  function(formData, jqForm, options){
     		//alert('About to submit: \n\n' + $.param(formData));     
 				flobuSearchBox.enable();
-    		$('#maritReferences').fadeOut('fast');
+				flobuReferenceList.enable();
+    		//$('#maritReferences').fadeOut('fast');
 			},
       success: function(responseText, statusText, xhr, $form){
+      	$('#maritReferences #projectListWrap').replaceWith($(responseText).find('#projectListWrap'));
 		    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText);		      
-				flobuSearchBox.disable();
-    		$('#maritReferences').fadeIn('fast');
+				flobuSearchBox.disable();  
+				flobuReferenceList.disable();
+    		//$('#maritReferences').fadeIn('fast');
 			},
   };
   
@@ -124,6 +136,7 @@ function initSearchSubmit(){
 
 
 var flobuSearchBox;
+var flobuReferenceList;
 
 $(document).ready(function(){
 	initSlider();
