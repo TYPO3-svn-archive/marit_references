@@ -54,6 +54,7 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 	 * @return void
 	 */
 	public function initializeAction() {
+		parent::initializeAction();
 		$this->projectRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_ProjectRepository');
 		$this->industrialSectorRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_IndustrialSectorRepository');
 		$this->technologyRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_TechnologyRepository');
@@ -69,7 +70,7 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 	public function listAction(array $search = NULL, $currentPage = 0) {	
 		$this->initCSS($this->settings['project']['list']['cssFile']);
 		$this->initJS($this->settings['project']['list']['jsFile']);
-		
+		t3lib_div::debug($this->settings);
 		$this->view->assign('settings', $this->settings);
 		//t3lib_div::debug($this->technologyRepository->findByUid(4));
 		//t3lib_div::debug($this->projectRepository->findByTechnologies(4)); // should find project ratiopharm

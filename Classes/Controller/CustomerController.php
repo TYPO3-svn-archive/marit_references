@@ -51,6 +51,7 @@ class Tx_MaritReferences_Controller_CustomerController extends Tx_MaritReference
 	 * @return void
 	 */
 	public function initializeAction() {
+		parent::initializeAction();
 		$this->customerRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_CustomerRepository');
 		$this->projectRepository = t3lib_div::makeInstance('TX_MaritReferences_Domain_Repository_ProjectRepository');
 	}

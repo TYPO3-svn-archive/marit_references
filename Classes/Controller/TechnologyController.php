@@ -51,6 +51,7 @@ class Tx_MaritReferences_Controller_TechnologyController extends Tx_MaritReferen
      * @return void
      */
     public function initializeAction() {
+				parent::initializeAction();
         $this->technologyRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_TechnologyRepository');
         $this->projectRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_ProjectRepository');
     }	

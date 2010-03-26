@@ -38,6 +38,22 @@
 
 class Tx_MaritReferences_Controller_BaseController extends Tx_Extbase_MVC_Controller_ActionController {
 
+	/**
+	 * @return void
+	 */
+	public function initializeAction() {
+		foreach($this->settings as $key => $value) {
+			if($key != 'flexform' && $this->settings['flexform'][$key]){
+				var_dump($key, $value);
+				foreach($value as $tsKey => $tsValue){
+					if($this->settings['flexform'][$tsKey]){
+					}
+				}			
+			}		
+		}
+		//var_dump($this->settings);
+	}
+
   /**
 	 * add css-files to header
 	 * 

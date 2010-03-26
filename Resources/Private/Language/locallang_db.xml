@@ -6,8 +6,43 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
+			<label index="tx_maritreferences_flexform.sheet1">General</label>
+			<label index="tx_maritreferences_flexform.projectOptions">Project Options</label>
+			<label index="tx_maritreferences_flexform.projectOptions.listOptions">#####################Project List#####################</label>
+			<label index="tx_maritreferences_flexform.projectOptions.listOptions.imgWidth">List image max Widht</label>
+			<label index="tx_maritreferences_flexform.projectOptions.listOptions.lightboxImgWidth">Lightbox image max Widht</label>
+			<label index="tx_maritreferences_flexform.projectOptions.listOptions.lightboxImgHeight">Lightbox image max Height</label>
+			<label index="tx_maritreferences_flexform.projectOptions.listOptions.maxItems">Max items in list</label>
+			<label index="tx_maritreferences_flexform.projectOptions.showOptions">#####################Project Show Detail#####################</label>
+			<label index="tx_maritreferences_flexform.projectOptions.showOptions.imgWidth">List image max Widht</label>
+			<label index="tx_maritreferences_flexform.projectOptions.showOptions.lightboxImgWidth">Lightbox image max Widht</label>
+			<label index="tx_maritreferences_flexform.projectOptions.showOptions.lightboxImgHeight">Lightbox image max Height</label>
+			<label index="tx_maritreferences_flexform.projectOptions.searchOptions">#####################Project Search#####################</label>
+			<label index="tx_maritreferences_flexform.customerOptions">Customer Options</label>
+			<label index="tx_maritreferences_flexform.customerOptions.listOptions">#####################Customer List#####################</label>
+			<label index="tx_maritreferences_flexform.customerOptions.listOptions.imgWidth">List image max Widht</label>
+			<label index="tx_maritreferences_flexform.customerOptions.listOptions.lightboxImgWidth">Lightbox image max Widht</label>
+			<label index="tx_maritreferences_flexform.customerOptions.listOptions.lightboxImgHeight">Lightbox image max Height</label>
+			<label index="tx_maritreferences_flexform.customerOptions.listOptions.maxItems">Max items in list</label>
+			<label index="tx_maritreferences_flexform.customerOptions.listOptions.cropDescription">Crop Description after X chars</label>
+			<label index="tx_maritreferences_flexform.customerOptions.showOptions">#####################Customer Show Detail#####################</label>
+			<label index="tx_maritreferences_flexform.customerOptions.showOptions.imgWidth">List image max Widht</label>
+			<label index="tx_maritreferences_flexform.customerOptions.showOptions.lightboxImgWidth">Lightbox image max Widht</label>
+			<label index="tx_maritreferences_flexform.customerOptions.showOptions.lightboxImgHeight">Lightbox image max Height</label>
+			<label index="tx_maritreferences_flexform.technologyOptions">Technology Options</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.listOptions">#####################Technology List#####################</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.listOptions.imgWidth">List image max Widht</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.listOptions.lightboxImgWidth">Lightbox image max Widht</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.listOptions.lightboxImgHeight">Lightbox image max Height</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.listOptions.maxItems">Max items in list</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.listOptions.cropDescription">Crop Description after X chars</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.showOptions">#####################Technology Show Detail#####################</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.showOptions.imgWidth">List image max Widht</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.showOptions.lightboxImgWidth">Lightbox image max Widht</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.showOptions.lightboxImgHeight">Lightbox image max Height</label>
 			<label index="tx_maritreferences_flexform.view">View</label>
 			<label index="tx_maritreferences_flexform.view.I.0">List views and detail views</label>
+			<label index="tx_maritreferences_flexform.view.I.1">Search boxes</label>
 			<label index="tx_maritreferences_flexform.view.I.1">Search boxes</label>
 			
 			<label index="tx_maritreferences_domain_model_industrialsector">Industrial Sector</label>
