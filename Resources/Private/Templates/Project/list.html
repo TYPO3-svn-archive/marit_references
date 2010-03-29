@@ -2,20 +2,24 @@
 <f:layout name="default" />
 
 <f:section name="content">	
-	<div class="projectlist">
+	<div class="projectList">
 		<f:for each="{projects}" as="project">
 			<f:cycle values="{0: 'col1', 1: 'col2'}" as="cols">
-				<div class="project {cols}">
-					<h2 class="projecttitle"><f:link.action action="show" arguments="{project: project}">{project.title}</f:link.action></h2>
-					<div class="projectimages left"> 
-					<f:debug>{project.list_image}</f:debug>
-						<f:link.action action="show" arguments="{project: project}">
-							<helper:mouseoverLightboxImage src="{project.listImage.filePath}{project.listImage.fileName}" alt="{project.listImage.title} - {project.listImage.altText}" title="{project.listImage.title}" maxWidth="{settings.project.list.image.file.maxW}" lightboxMaxWidth="{settings.project.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.list.lightboxImage.file.maxH}" id="projectImage_{project.listImage.fileHash}" class="lightboximage" />
-						</f:link.action>
+				<div class="project left {cols}">
+					<div class="projectListImage"> 
+						<f:if condition="{project.listImage}">
+							<f:link.action action="show" arguments="{project: project}">
+								<helper:mouseoverLightboxImage src="{project.listImage.filePath}{project.listImage.fileName}" alt="{project.listImage.title} - {project.listImage.altText}" title="{project.listImage.title}" maxWidth="{settings.project.list.image.file.maxW}" maxHeight="{settings.project.list.image.file.maxH}" lightboxMaxWidth="{settings.project.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.list.lightboxImage.file.maxH}" id="projectImage_{project.listImage.fileHash}" class="lightboximage" />
+							</f:link.action>
+						</f:if>
 					</div>
-					<p class="projectteaser"><f:format.nl2br>{project.teaser}</f:format.nl2br></p>
-			   		<p class="projectmore"><f:link.action action="show" arguments="{project: project}"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+					<h2 class="projectTitle"><f:link.action action="show" arguments="{project: project}">{project.title}</f:link.action></h2>
+					<p class="projectTeaser">
+						<f:format.nl2br>{project.teaser}</f:format.nl2br>
+			   	</p>
+			   	<p class="projectMore right"><f:link.action action="show" arguments="{project: project}" class="morelink"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
 				</div>
+				<hr class="clear {cols}" />
 			</f:cycle>
 		</f:for>
 	</div>
@@ -29,8 +33,7 @@
 					previousLabel="<f:translate key='tx_maritreferences_view.pageBrowser.previous' />"
 					nextLabel="<f:translate key='tx_maritreferences_view.pageBrowser.next' />" 
 					template="<f:translate key='tx_maritreferences_view.pageBrowser.page' /> %1$s <f:translate key='tx_maritreferences_view.pageBrowser.outOf' /> %2$s<br class='clear' />%3$s %4$s %5$s"
-					onclick="doAjaxPageBrowser($(this)); return false;"
-					               
+					onclick="doAjaxPageBrowser($(this)); return false;"					               
 				/>
 			</div>
 		</f:if>

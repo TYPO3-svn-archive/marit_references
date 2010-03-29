@@ -201,6 +201,7 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 				'maxitems' => 1,
 				'allowed' => 'tx_dam',
 				'foreign_table' => 'tx_dam',
+				'foreign_table_where' => 'tx_dam.pid = 9',
 		        'wizards' => array(
 		            'suggest' => array(
 		                'type' => 'suggest',

@@ -1,15 +1,25 @@
 function initImageLightboxes(){
-	$('.lightboximage').hover(function(event){
+	/*$('.lightboximage').hover(function(event){
 			if(!$('#'+event.currentTarget.id+"_big").is(':visible')){
 				var offsetTarget = $(this).offset();
 				$('#'+event.currentTarget.id+"_big").css('display', 'block');
 				$('#'+event.currentTarget.id+"_big").css('position', 'absolute');
 				$('#'+event.currentTarget.id+"_big").css('top', (offsetTarget.top-25)+'px');
-				$('#'+event.currentTarget.id+"_big").css('left', (offsetTarget.left-50)+'px');		
+				$('#'+event.currentTarget.id+"_big").css('left', (offsetTarget.left+18)+'px');		
 			}
 		}, function(event){
-			$('#'+event.currentTarget.id+"_big").css('display', 'none');
-		});
+				$('#'+event.currentTarget.id+"_big").css('display', 'none');
+		});*/
+	$('.lightboximage').tooltip({ 
+	    delay: 500, 
+	    showURL: false, 
+	    fade: 250,
+    	top: -15, 
+    	left: 15,
+	    bodyHandler: function() { 
+	        return $("<img/>").attr("src", $('#'+this.id+"_big").attr('src')); 
+	    } 
+	});
 }
 
 function doAjaxPageBrowser(element){

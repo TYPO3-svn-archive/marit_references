@@ -28,12 +28,12 @@
 	text-decoration: none;
 	display: block;
 }
-#maritReferences ul#referencesMenu li span.bubbleheader {
+#maritReferences ul#referencesMenu li span.bubbleHeader {
 	background: transparent url(../CssImages/bubble_grey.png) no-repeat scroll 0 0;
 	display: block;
 	height: 2px;
 }
-#maritReferences ul#referencesMenu li span.bubblefooter {
+#maritReferences ul#referencesMenu li span.bubbleFooter {
 	background: transparent url(../CssImages/bubble_grey.png) no-repeat scroll 0 -2px;
 	display: block;
 	height: 10px;
@@ -43,23 +43,67 @@
 	background-color:#99CE08;
 	color: #FFFFFF;
 }
-#maritReferences ul#referencesMenu li#activeReferencesMenu span.bubbleheader,
-#maritReferences ul#referencesMenu li:hover span.bubbleheader {
+#maritReferences ul#referencesMenu li#activeReferencesMenu span.bubbleHeader,
+#maritReferences ul#referencesMenu li:hover span.bubbleHeader {
 	background: transparent url(../CssImages/bubble_green.png) no-repeat scroll 0 0;
 	display: block;
 	height: 2px;
 }
-#maritReferences ul#referencesMenu li#activeReferencesMenu span.bubblefooter,
-#maritReferences ul#referencesMenu li:hover span.bubblefooter {
+#maritReferences ul#referencesMenu li#activeReferencesMenu span.bubbleFooter,
+#maritReferences ul#referencesMenu li:hover span.bubbleFooter {
 	background: transparent url(../CssImages/bubble_green.png) no-repeat scroll 0 -2px;
 	display: block;
 	height: 10px;
+}
+
+#maritReferences .projectList .project {
+	width: 206px;
+	margin-top: 10px;
+}
+#maritReferences .projectList .project:hover {
+	background-color: #F1F1F1;
+}
+#maritReferences .projectList .project.col1 {
+	margin-left: 5px;
+	margin-right: 10px;
+}
+#maritReferences .projectList hr.col1 {
+	display: none;
+}
+#maritReferences .projectList .project.col2 {
+	margin-left: 10px;
+	margin-right: 5px;
+}
+#maritReferences .projectList .project .projectListImage {
+	border: 1px solid #B4B5B6;
+	width: 194px;
+	height: 194px;
+	padding: 6px;
+	text-align: center;
+}
+#maritReferences .projectList .project .projectTitle,
+#maritReferences .projectList .project .projectTitle a {
+	color: #64A519;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+#maritReferences .projectList .project .projectTitle {
+	margin-top: 5px;
+	padding-left: 7px;
+	height: 25px;
+}
+#maritReferences .projectList .project .projectTeaser {
+	padding-left: 7px;
 }
 
 #maritReferences .lightboximage_big {
 	display: none;
 }
 
+#maritReferences #referencesPageBrowser {
+	text-align: center;
+}
 #maritReferences #referencesPageBrowser a,
 #maritReferences #referencesPageBrowser span.dots {
 	display: inline-block;
@@ -102,3 +146,12 @@
 	margin-right: 10px;
 	width: 106px;
 }
+
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	border: 1px solid #111;
+	background-color: #eee;
+	padding: 5px;
+}
+#tooltip h3, #tooltip div { margin: 0; }
