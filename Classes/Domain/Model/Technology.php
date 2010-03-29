@@ -56,6 +56,12 @@ class Tx_MaritReferences_Domain_Model_Technology extends Tx_Extbase_DomainObject
 	protected $images;
 	
 	/**
+	 * listImage
+	 * @var Tx_MaritReferences_Domain_Model_DAM
+	 */
+	protected $listImage;
+	
+	/**
 	 * contactPerson
 	 * @var Tx_MaritReferences_Domain_Model_ContactPerson
 	 */
@@ -125,6 +131,25 @@ class Tx_MaritReferences_Domain_Model_Technology extends Tx_Extbase_DomainObject
 	 */
 	public function getImages() {
 		return $this->images;
+	}
+	
+	/**
+	 * Setter for the listImage
+	 *
+	 * @param Tx_MaritReferences_Domain_Model_DAM $listImage listImage
+	 * @return void
+	 */
+	public function setListImage(Tx_MaritReferences_Domain_Model_DAM $listImage) {
+		$this->listImage = $listImage;
+	}
+
+	/**
+	 * Getter for the listImage
+	 *
+	 * @return Tx_MaritReferences_Domain_Model_DAM listImage
+	 */
+	public function getListImage() {
+		return $this->listImage;
 	}
 	
 	/**

@@ -39,6 +39,7 @@ CREATE TABLE tx_maritreferences_domain_model_customer (
 	url varchar(255) DEFAULT '' NOT NULL,
 	size varchar(255) DEFAULT '' NOT NULL,
 	images int(11) unsigned DEFAULT '0' NOT NULL,
+	list_image int(11) unsigned DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -71,6 +72,7 @@ CREATE TABLE tx_maritreferences_domain_model_technology (
 	title varchar(255) DEFAULT '' NOT NULL,
 	description text,
 	images int(11) unsigned DEFAULT '0' NOT NULL,
+	list_image int(11) unsigned DEFAULT '0' NOT NULL,
 	contact_person int(11) unsigned DEFAULT '0'
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,

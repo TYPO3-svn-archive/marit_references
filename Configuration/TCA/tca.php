@@ -201,7 +201,6 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 				'maxitems' => 1,
 				'allowed' => 'tx_dam',
 				'foreign_table' => 'tx_dam',
-				'foreign_table_where' => 'tx_dam.pid = 9',
 		        'wizards' => array(
 		            'suggest' => array(
 		                'type' => 'suggest',
@@ -325,10 +324,10 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 $TCA['tx_maritreferences_domain_model_technology'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_technology']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,description,images,contact_person'
+		'showRecordFieldList' => 'title,description,images,list_image,contact_person'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,images,contact_person')
+		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,images,list_image,contact_person')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -425,6 +424,28 @@ $TCA['tx_maritreferences_domain_model_technology'] = array(
 				'MM' => 'tx_maritreferences_technology_images_dam_mm'
 			)
 		),
+		'list_image' => array(
+			'exclude' => 0,
+			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.list_image',
+			'config'  => array(
+				'type' => 'group',
+        		'internal_type' => 'db',
+				'size' => 1,
+				'minitems' => 1,
+				'maxitems' => 1,
+				'allowed' => 'tx_dam',
+				'foreign_table' => 'tx_dam',
+		        'wizards' => array(
+		            'suggest' => array(
+		                'type' => 'suggest',
+		                'tx_dam' => array(
+		                    'maxItemsInResultList' => 5,
+		                    'searchWholePhrase' => 1
+		                ),
+		            ),
+		        ),
+			)
+		),
 		'contact_person' => array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.contact_person',
@@ -453,10 +474,10 @@ $TCA['tx_maritreferences_domain_model_technology'] = array(
 $TCA['tx_maritreferences_domain_model_customer'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_customer']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,description,url,size,images'
+		'showRecordFieldList' => 'title,description,url,size,images,list_image'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,size,images')
+		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,size,images,list_image')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -569,6 +590,28 @@ $TCA['tx_maritreferences_domain_model_customer'] = array(
 				'allowed' => 'tx_dam',
 				'foreign_table' => 'tx_dam',
 				'MM' => 'tx_maritreferences_customer_images_dam_mm'
+			)
+		),
+		'list_image' => array(
+			'exclude' => 0,
+			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.list_image',
+			'config'  => array(
+				'type' => 'group',
+        		'internal_type' => 'db',
+				'size' => 1,
+				'minitems' => 1,
+				'maxitems' => 1,
+				'allowed' => 'tx_dam',
+				'foreign_table' => 'tx_dam',
+		        'wizards' => array(
+		            'suggest' => array(
+		                'type' => 'suggest',
+		                'tx_dam' => array(
+		                    'maxItemsInResultList' => 5,
+		                    'searchWholePhrase' => 1
+		                ),
+		            ),
+		        ),
 			)
 		),
 	),

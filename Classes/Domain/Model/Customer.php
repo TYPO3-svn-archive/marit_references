@@ -67,6 +67,12 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	 */
 	protected $images;
 	
+	/**
+	 * listImage
+	 * @var Tx_MaritReferences_Domain_Model_DAM
+	 */
+	protected $listImage;
+	
 
 	/**
 	 * Constructor. Initializes all Tx_Extbase_Persistence_ObjectStorage instances.
@@ -169,6 +175,25 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	 */
 	public function getImages() {
 		return $this->images;
+	}
+	
+	/**
+	 * Setter for the listImage
+	 *
+	 * @param Tx_MaritReferences_Domain_Model_DAM $listImage listImage
+	 * @return void
+	 */
+	public function setListImage(Tx_MaritReferences_Domain_Model_DAM $listImage) {
+		$this->listImage = $listImage;
+	}
+
+	/**
+	 * Getter for the listImage
+	 *
+	 * @return Tx_MaritReferences_Domain_Model_DAM listImage
+	 */
+	public function getListImage() {
+		return $this->listImage;
 	}
 	
 }

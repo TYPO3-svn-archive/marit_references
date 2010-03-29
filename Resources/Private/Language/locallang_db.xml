@@ -55,11 +55,13 @@
 			<label index="tx_maritreferences_domain_model_customer.url">Url</label>
 			<label index="tx_maritreferences_domain_model_customer.size">Customer size</label>
 			<label index="tx_maritreferences_domain_model_customer.images">Images</label>
+			<label index="tx_maritreferences_domain_model_customer.list_image">List image</label>
 			
 			<label index="tx_maritreferences_domain_model_technology">Technology</label>
 			<label index="tx_maritreferences_domain_model_technology.title">Title</label>
 			<label index="tx_maritreferences_domain_model_technology.description">Description</label>
 			<label index="tx_maritreferences_domain_model_technology.images">Images</label>
+			<label index="tx_maritreferences_domain_model_technology.list_image">List image</label>
 			<label index="tx_maritreferences_domain_model_technology.contact_person">Contact person</label>
 			
 			<label index="tx_maritreferences_domain_model_project">Project</label>

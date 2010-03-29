@@ -10,6 +10,7 @@
 			<label index="title.description">The title for the technology.</label>
 			<label index="description.description">The description for the technology.</label>
 			<label index="images.description">Some images about the technology.</label>
+			<label index="list_image.description">One image for the technology list.</label>
 			<label index="contact_person.description">A person in your company.</label>
 		</languageKey>
     </data>

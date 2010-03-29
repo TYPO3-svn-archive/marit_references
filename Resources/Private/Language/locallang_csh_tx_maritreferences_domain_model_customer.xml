@@ -12,6 +12,7 @@
 			<label index="url.description">A url to the customers website. Must have "http://"!</label>
 			<label index="size.description">How many employees the customer has.</label>
 			<label index="images.description">An image or logo or something like that.</label>
+			<label index="list_image.description">One image or logo or something like that for the list view.</label>
 		</languageKey>
     </data>
 </T3locallang>

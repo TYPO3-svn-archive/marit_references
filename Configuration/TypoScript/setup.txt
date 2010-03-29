@@ -25,6 +25,7 @@ plugin.tx_maritreferences {
 					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
@@ -46,16 +47,18 @@ plugin.tx_maritreferences {
 		}
 		customer {
 			list {
-				image.file.maxW = 75
+				image.file.maxW = 155
+				image.file.maxH = 155
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
 				description.crop = 200
-				pageBrowser.maxItems = 4		
+				pageBrowser.maxItems = 3		
 				pageBrowser.range = 1		
 				cssFile {
 					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
@@ -67,22 +70,25 @@ plugin.tx_maritreferences {
 					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 		}
 		technology {
 			list {
-				image.file.maxW = 75
+				image.file.maxW = 155
+				image.file.maxH = 155
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
 				description.crop = 200
-				pageBrowser.maxItems = 1		
+				pageBrowser.maxItems = 4		
 				pageBrowser.range = 1		
 				cssFile {
 					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
@@ -94,6 +100,7 @@ plugin.tx_maritreferences {
 					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}

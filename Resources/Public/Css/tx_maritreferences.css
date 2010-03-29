@@ -97,6 +97,55 @@
 	padding-left: 7px;
 }
 
+#maritReferences .customerList .customer {
+	margin-top: 10px;
+	border-bottom: 1px solid #E5E5E5;
+}
+#maritReferences .customerList .customer .customerListText {
+	margin-left: 170px;
+}
+#maritReferences .customerList .customer .customerListText .customerName,
+#maritReferences .customerList .customer .customerListText .customerName a {
+	color: #64A519;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#maritReferences .technologyList .technology {
+	margin-top: 10px;
+	border-bottom: 1px solid #E5E5E5;
+}
+#maritReferences .technologyList .technology .technologyListText {
+	margin-left: 170px;
+}
+#maritReferences .technologyList .technology .technologyListText .technologyName,
+#maritReferences .technologyList .technology .technologyListText .technologyName a {
+	color: #64A519;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+#maritReferencesSearch .sliderWrap {
+	position: relative;
+}
+#maritReferencesSearch .sliderText {
+	width: 45px;
+	/*padding-top: 3px;*/
+}
+#maritReferencesSearch .sliderTextLeft {
+	text-align: right;
+}
+#maritReferencesSearch .sliderTextRight {
+	text-align: left;
+}
+#maritReferencesSearch .slider {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 106px;
+}
+
 #maritReferences .lightboximage_big {
 	display: none;
 }
@@ -124,27 +173,6 @@
 #maritReferences #referencesPageBrowser span.dots {
 	color: #AAAAAA;
 	background: transparent;
-}
-
-
-
-#maritReferencesSearch .sliderWrap {
-	position: relative;
-}
-#maritReferencesSearch .sliderText {
-	width: 45px;
-	/*padding-top: 3px;*/
-}
-#maritReferencesSearch .sliderTextLeft {
-	text-align: right;
-}
-#maritReferencesSearch .sliderTextRight {
-	text-align: left;
-}
-#maritReferencesSearch .slider {
-	margin-left: 10px;
-	margin-right: 10px;
-	width: 106px;
 }
 
 #tooltip {

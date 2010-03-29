@@ -2,32 +2,33 @@
 <f:layout name="default" />
 
 <f:section name="content">
-	<h1><f:translate key="tx_maritreferences_view.technology_list" /></h1>
-	<hr />
-	<div class="technologylist">
+	<div class="technologyList">
 		<f:for each="{technologies}" as="technology">
 			<div class="technology">
-				<h2 class="technologytitle"><f:link.action action="show" arguments="{technology: technology}">{technology.title}</f:link.action></h2>
-				<div class="technologyimages left">
-					<f:link.action action="show" arguments="{technology: technology}">
-						<f:for each="{technology.images}" as="image">
-							<helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.technology.list.image.file.maxW}" lightboxMaxWidth="{settings.technology.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.technology.list.lightboxImage.file.maxH}" id="technologyImage_{image.fileHash}" class="lightboximage" />
-						</f:for>
-					</f:link.action>
+				<div class="technologyListImage left">
+					<f:if condition="{technology.listImage}">
+							<f:link.action action="show" arguments="{technology: technology}">
+								<helper:mouseoverLightboxImage src="{technology.listImage.filePath}{technology.listImage.fileName}" alt="{technology.listImage.title} - {technology.listImage.altText}" title="{technology.listImage.title}" maxWidth="{settings.technology.list.image.file.maxW}" maxHeight="{settings.technology.list.image.file.maxH}" lightboxMaxWidth="{settings.technology.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.technology.list.lightboxImage.file.maxH}" id="technologyImage_{technology.listImage.fileHash}" class="lightboximage" />
+							</f:link.action>
+						</f:if>
 				</div>
-				<f:format.crop maxCharacters="{settings.technology.list.description.crop}" append="&nbsp;..."><f:format.html>{technology.description}</f:format.html></f:format.crop>
-		    	<p class="technologymore"><f:link.action action="show" arguments="{technology: technology}"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+				<div class="technologyListText">
+					<h2 class="technologyName"><f:link.action action="show" arguments="{technology: technology}">{technology.title}</f:link.action></h2>
+					<f:format.crop maxCharacters="{settings.technology.list.description.crop}" append="&nbsp;..."><f:format.html>{technology.description}</f:format.html></f:format.crop>
+				  <p class="right"><f:link.action action="show" arguments="{technology: technology}" class="morelink"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+					<hr class="clear" />
+				</div>
 			</div>
 			<hr class="clear" />
 		</f:for>
 	</div>
-	<f:if condition="{settings.techology.list.pageBrowser}">
-		<f:if condition="{techologyCounter} > {settings.techology.list.pageBrowser.maxItems}">
+	<f:if condition="{settings.technology.list.pageBrowser}">
+		<f:if condition="{technologyCounter} > {settings.technology.list.pageBrowser.maxItems}">
 			<div id="referencesPageBrowser">
 				<helper:pageBrowser 
-					totalCountOfItems="{techologyCounter}" 
-					maxItemsToDisplay="{settings.techology.list.pageBrowser.maxItems}" 
-					range="{settings.techology.list.pageBrowser.range}"
+					totalCountOfItems="{technologyCounter}" 
+					maxItemsToDisplay="{settings.technology.list.pageBrowser.maxItems}" 
+					range="{settings.technology.list.pageBrowser.range}"
 					previousLabel="<f:translate key='tx_maritreferences_view.pageBrowser.previous' />"
 					nextLabel="<f:translate key='tx_maritreferences_view.pageBrowser.next' />" 
 					template="<f:translate key='tx_maritreferences_view.pageBrowser.page' /> %1$s <f:translate key='tx_maritreferences_view.pageBrowser.outOf' /> %2$s<br class='clear' />%3$s %4$s %5$s"
