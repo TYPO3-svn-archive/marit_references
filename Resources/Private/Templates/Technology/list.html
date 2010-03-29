@@ -6,11 +6,11 @@
 		<f:for each="{technologies}" as="technology">
 			<div class="technology">
 				<div class="technologyListImage left">
-					<f:if condition="{technology.listImage}">
-							<f:link.action action="show" arguments="{technology: technology}">
-								<helper:mouseoverLightboxImage src="{technology.listImage.filePath}{technology.listImage.fileName}" alt="{technology.listImage.title} - {technology.listImage.altText}" title="{technology.listImage.title}" maxWidth="{settings.technology.list.image.file.maxW}" maxHeight="{settings.technology.list.image.file.maxH}" lightboxMaxWidth="{settings.technology.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.technology.list.lightboxImage.file.maxH}" id="technologyImage_{technology.listImage.fileHash}" class="lightboximage" />
-							</f:link.action>
-						</f:if>
+					<f:for each="{technology.listImage}" as="listImage">
+						<f:link.action action="show" arguments="{technology: technology}">
+							<helper:mouseoverLightboxImage src="{listImage.filePath}{listImage.fileName}" alt="{listImage.title} - {listImage.altText}" title="{listImage.title}" maxWidth="{settings.technology.list.image.file.maxW}" maxHeight="{settings.technology.list.image.file.maxH}" lightboxMaxWidth="{settings.technology.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.technology.list.lightboxImage.file.maxH}" id="technologyImage_{listImage.fileHash}" class="lightboximage" />
+						</f:link.action>
+					</f:for>
 				</div>
 				<div class="technologyListText">
 					<h2 class="technologyName"><f:link.action action="show" arguments="{technology: technology}">{technology.title}</f:link.action></h2>

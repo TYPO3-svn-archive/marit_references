@@ -6,11 +6,11 @@
 		<f:for each="{customers}" as="customer">
 			<div class="customer">
 				<div class="customerListImage left">
-					<f:if condition="{customer.listImage}">
-							<f:link.action action="show" arguments="{customer: customer}">
-								<helper:mouseoverLightboxImage src="{customer.listImage.filePath}{customer.listImage.fileName}" alt="{customer.listImage.title} - {customer.listImage.altText}" title="{customer.listImage.title}" maxWidth="{settings.customer.list.image.file.maxW}" maxHeight="{settings.customer.list.image.file.maxH}" lightboxMaxWidth="{settings.customer.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.customer.list.lightboxImage.file.maxH}" id="customerImage_{customer.listImage.fileHash}" class="lightboximage" />
-							</f:link.action>
-						</f:if>
+					<f:for each="{customer.listImage}" as="listImage">
+						<f:link.action action="show" arguments="{customer: customer}">
+							<helper:mouseoverLightboxImage src="{listImage.filePath}{listImage.fileName}" alt="{listImage.title} - {listImage.altText}" title="{listImage.title}" maxWidth="{settings.customer.list.image.file.maxW}" maxHeight="{settings.customer.list.image.file.maxH}" lightboxMaxWidth="{settings.customer.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.customer.list.lightboxImage.file.maxH}" id="customerImage_{listImage.fileHash}" class="lightboximage" />
+						</f:link.action>
+					</f:for>
 				</div>
 				<div class="customerListText">
 					<h2 class="customerName"><f:link.action action="show" arguments="{customer: customer}">{customer.title}</f:link.action></h2>

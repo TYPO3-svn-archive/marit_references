@@ -57,7 +57,7 @@ class Tx_MaritReferences_Domain_Model_Technology extends Tx_Extbase_DomainObject
 	
 	/**
 	 * listImage
-	 * @var Tx_MaritReferences_Domain_Model_DAM
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
 	 */
 	protected $listImage;
 	
@@ -136,17 +136,17 @@ class Tx_MaritReferences_Domain_Model_Technology extends Tx_Extbase_DomainObject
 	/**
 	 * Setter for the listImage
 	 *
-	 * @param Tx_MaritReferences_Domain_Model_DAM $listImage listImage
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $listImage listImage
 	 * @return void
 	 */
-	public function setListImage(Tx_MaritReferences_Domain_Model_DAM $listImage) {
+	public function setListImage(Tx_Extbase_Persistence_ObjectStorage $listImage) {
 		$this->listImage = $listImage;
 	}
 
 	/**
 	 * Getter for the listImage
 	 *
-	 * @return Tx_MaritReferences_Domain_Model_DAM listImage
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> listImage
 	 */
 	public function getListImage() {
 		return $this->listImage;

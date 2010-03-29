@@ -7,11 +7,11 @@
 			<f:cycle values="{0: 'col1', 1: 'col2'}" as="cols">
 				<div class="project left {cols}">
 					<div class="projectListImage"> 
-						<f:if condition="{project.listImage}">
+						<f:for each="{project.listImage}" as="listImage">
 							<f:link.action action="show" arguments="{project: project}">
-								<helper:mouseoverLightboxImage src="{project.listImage.filePath}{project.listImage.fileName}" alt="{project.listImage.title} - {project.listImage.altText}" title="{project.listImage.title}" maxWidth="{settings.project.list.image.file.maxW}" maxHeight="{settings.project.list.image.file.maxH}" lightboxMaxWidth="{settings.project.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.list.lightboxImage.file.maxH}" id="projectImage_{project.listImage.fileHash}" class="lightboximage" />
+								<helper:mouseoverLightboxImage src="{listImage.filePath}{listImage.fileName}" alt="{listImage.title} - {listImage.altText}" title="{listImage.title}" maxWidth="{settings.project.list.image.file.maxW}" maxHeight="{settings.project.list.image.file.maxH}" lightboxMaxWidth="{settings.project.list.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.list.lightboxImage.file.maxH}" id="projectImage_{listImage.fileHash}" class="lightboximage" />
 							</f:link.action>
-						</f:if>
+						</f:for>
 					</div>
 					<h2 class="projectTitle"><f:link.action action="show" arguments="{project: project}">{project.title}</f:link.action></h2>
 					<p class="projectTeaser">
