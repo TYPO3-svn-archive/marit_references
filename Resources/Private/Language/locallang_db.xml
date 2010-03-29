@@ -73,6 +73,7 @@
 			<label index="tx_maritreferences_domain_model_project.year">Year</label>
 			<label index="tx_maritreferences_domain_model_project.files">Files</label>
 			<label index="tx_maritreferences_domain_model_project.images">Images</label>
+			<label index="tx_maritreferences_domain_model_project.list_image">List image</label>
 			<label index="tx_maritreferences_domain_model_project.industrial_sector">Industrial sector</label>
 			<label index="tx_maritreferences_domain_model_project.contact_person">Contact person</label>
 			<label index="tx_maritreferences_domain_model_project.customer_contact_person">Customer contact person</label>

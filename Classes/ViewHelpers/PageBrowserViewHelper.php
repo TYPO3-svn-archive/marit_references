@@ -57,16 +57,15 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 	 *
 	 * @param  int The total item count for calculating the page count
 	 * @param  int The maximum amount of items to show per page
+	 * @param  int The number of pages to show left an right frim the current page
 	 * @param  string The label for the "previous" link, taken from locallang
-	 * @param  string The text in front of the current page count ("Page 3" [see next param])
-	 * @param  string The text between the current page and the total page count ("3 out of 6")
 	 * @param  string The label for the "next" link, taken from locallang
 	 * @param  string a "template" filled with sprintf
 	 * @param  string onclick
 	 * @return string the rendered string
 	 * @author Marco Huberg <marco.huber@marit.ag>
 	 */
-	public function render($totalCountOfItems=NULL,$maxItemsToDisplay=5, $previousLabel='previous', $pageLabel='Page', $outOfLabel='out of', $nextLabel='next', $template='%1$s %2$s %3$s %4$s %5$s %6$s', $onclick='') {
+	public function render($totalCountOfItems=NULL, $maxItemsToDisplay=5, $range=2, $previousLabel='previous', $nextLabel='next', $template='page %1$s out of %2$s<br />%3$s %4$s %5$s', $onclick='') {
 		$pagesTotal = ceil($totalCountOfItems/$maxItemsToDisplay);
 		if($this->controllerContext->getRequest()->hasArgument('currentPage')) {
 			$currentPage = $this->controllerContext->getRequest()->getArgument('currentPage');
@@ -76,14 +75,41 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 		if(($currentPage+1) == $pagesTotal) {
 			$next = '';
 		} else {
-			$next = $this->getLink(($currentPage+1), $nextLabel, $onclick);
+			$next = $this->getLink(($currentPage+1), $nextLabel, $onclick, 'next');
 		}
 		if($currentPage == 0) {
 			$previous = '';
 		} else {
-			$previous = $this->getLink(($currentPage-1), $previousLabel, $onclick);
+			$previous = $this->getLink(($currentPage-1), $previousLabel, $onclick, 'previous');
 		}
-		$content = sprintf($template, $previous, $pageLabel, ($currentPage+1), $outOfLabel, $pagesTotal, $next);
+		for($i=0; $i<$range; $i++){
+			if(($currentPage-$i-1)>=0){
+				$leftPages[] = $this->getLink(($currentPage-$i-1), ($currentPage-$i), $onclick);
+			}
+			if(($currentPage+$i+1)<$pagesTotal) {
+				$rightPages[] = $this->getLink(($currentPage+$i+1), ($currentPage+$i+2), $onclick);
+			}
+			if($i==($range-1)){
+				if(($currentPage-$i-1)>=1) {
+					if(($currentPage-$i-1)>=2){
+						$leftPages[] = $this->getLink(0, 1, $onclick).'<span class="dots">...</span>';
+					} else {
+						$leftPages[] = $this->getLink(0, 1, $onclick);
+					}
+				}
+				if(($currentPage+$i+1)<($pagesTotal-1)) {
+					if(($currentPage+$i+1)<($pagesTotal-2)){
+						$rightPages[] = '<span class="dots">...</span>'.$this->getLink(($pagesTotal-1), $pagesTotal, $onclick);
+					} else {
+						$rightPages[] = $this->getLink(($pagesTotal-1), $pagesTotal, $onclick);
+					}
+				}
+			}
+		}
+		$leftPages = array_reverse($leftPages);
+		$actPage = $this->getLink($currentPage, ($currentPage+1), $onclick, 'activePage');
+		
+		$content = sprintf($template, ($currentPage+1), $pagesTotal, $previous, implode($leftPages).$actPage.implode($rightPages), $next);
 		return $content;
 	}
 	
@@ -96,7 +122,7 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 	 * @return string returns an a-tag with a link to the same page and an additional parameter for the pagebrowser
 	 * @author Marco Huberg <marco.huber@marit.ag>
 	 */
-	private function getLink($page,$linktext='', $onclick='') {
+	private function getLink($page, $linktext='', $onclick='', $class='') {
 		$uriBuilder = $this->controllerContext->getUriBuilder();
 		$arguments = $this->controllerContext->getRequest()->getArguments();
 		$arguments['currentPage'] = $page;
@@ -105,8 +131,15 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 			->uriFor('list', $arguments);		
 
 		$this->tag->addAttribute('href', $uri);
-		if($onclick){
+		if($onclick!=''){
 			$this->tag->addAttribute('onclick', $onclick);
+		} else {
+			$this->tag->removeAttribute('onclick');
+		}
+		if($class!=''){
+			$this->tag->addAttribute('class', $class);
+		} else {
+			$this->tag->removeAttribute('class');
 		}
 		$this->tag->setContent($linktext);
 

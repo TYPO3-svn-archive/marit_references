@@ -2,95 +2,98 @@ plugin.tx_maritreferences = USER
 plugin.tx_maritreferences {
 	settings {
 		project {
-      list {
-        		image.file.maxW = 75
-						lightboxImage.file.maxW = 400
-						lightboxImage.file.maxH = 400		
-						pageBrowser.maxItems = 2		
-						cssFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
-						}
-						jsFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
-						}
-      		}
+			list {
+				image.file.maxW = 75
+				lightboxImage.file.maxW = 400
+				lightboxImage.file.maxH = 400		
+				pageBrowser.maxItems = 4		
+				pageBrowser.range = 1		
+				cssFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+				}
+				jsFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+				}
+			}
 			show {
 				image.file.maxW = 75	
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
-						cssFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
-						}
-						jsFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
-						}
+				cssFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+				}
+				jsFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+				}
 			}
 			search {
 				yearSliderMin = 1000
 				yearSliderMax = 2100
 				budgetSliderMin = 0
 				budgetSliderMax = 1000000
-						cssFile {
-							3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8rc3.custom.css
-						}
-						jsFile {
-							3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/js/jquery-ui-1.8rc3.custom.min.js
-							4 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery.form.js
-							5 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
-							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences_search.js
-						}
+				cssFile {
+					3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8rc3.custom.css
+				}
+				jsFile {
+					3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/js/jquery-ui-1.8rc3.custom.min.js
+					4 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery.form.js
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences_search.js
+				}
 			}
 		}
 		customer {
-      		list {
-        		image.file.maxW = 75
+			list {
+				image.file.maxW = 75
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
-						description.crop = 200
-						pageBrowser.maxItems = 5		
-						cssFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
-						}
-						jsFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
-						}
-      		}
+				description.crop = 200
+				pageBrowser.maxItems = 1		
+				pageBrowser.range = 1		
+				cssFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+				}
+				jsFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+				}
+			}
 			show {
 				image.file.maxW = 75		
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
-						cssFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
-						}
-						jsFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
-						}
+				cssFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+				}
+				jsFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+				}
 			}
 		}
 		technology {
-      		list {
-        		image.file.maxW = 75
+			list {
+				image.file.maxW = 75
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
-						description.crop = 200
-						pageBrowser.maxItems = 2		
-						cssFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
-						}
-						jsFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
-						}
-      		}
+				description.crop = 200
+				pageBrowser.maxItems = 1		
+				pageBrowser.range = 1		
+				cssFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+				}
+				jsFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+				}
+			}
 			show {
 				image.file.maxW = 75	
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400			
-						cssFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
-						}
-						jsFile {
-							10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
-						}
+				cssFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+				}
+				jsFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+				}
 			}
 		}
 	}	
@@ -101,7 +104,7 @@ plugin.tx_maritreferences {
 		layoutRootPath = EXT:marit_references/Resources/Private/Layouts/
 	}
 	
-  	persistence {
+	persistence {
 		storagePid = 12
 		classes {
 			Tx_MaritReferences_Domain_Model_ContactPerson {
@@ -116,7 +119,7 @@ plugin.tx_maritreferences {
 			}
 		}
 	}
-	
+		
 	_CSS_DEFAULT_STYLE {
 	}
 }

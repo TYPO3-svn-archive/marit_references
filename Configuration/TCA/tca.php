@@ -7,10 +7,10 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $TCA['tx_maritreferences_domain_model_project'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_project']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,subtitle,teaser,description,url,budget,customer_statement,year,files,images,industrial_sector,contact_person,customer_contact_person,customer,technologies'
+		'showRecordFieldList' => 'title,subtitle,teaser,description,url,budget,customer_statement,year,files,images,list_image,industrial_sector,contact_person,customer_contact_person,customer,technologies'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,budget,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,industrial_sector,contact_person,customer_contact_person,customer,technologies')
+		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,budget,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,list_image,industrial_sector,contact_person,customer_contact_person,customer,technologies')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -188,6 +188,28 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 				'allowed' => 'tx_dam',
 				'foreign_table' => 'tx_dam',
 				'MM' => 'tx_maritreferences_project_images_dam_mm'
+			)
+		),
+		'list_image' => array(
+			'exclude' => 0,
+			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.list_image',
+			'config'  => array(
+				'type' => 'group',
+        		'internal_type' => 'db',
+				'size' => 1,
+				'minitems' => 1,
+				'maxitems' => 1,
+				'allowed' => 'tx_dam',
+				'foreign_table' => 'tx_dam',
+		        'wizards' => array(
+		            'suggest' => array(
+		                'type' => 'suggest',
+		                'tx_dam' => array(
+		                    'maxItemsInResultList' => 5,
+		                    'searchWholePhrase' => 1
+		                ),
+		            ),
+		        ),
 			)
 		),
 		'industrial_sector' => array(

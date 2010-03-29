@@ -1,32 +1,32 @@
 <?php
 
 /***************************************************************
-*  Copyright notice
-*
-*  (c) 2010 Marit AG <typo3-extension@marit.ag>
-*  			Marco Huber <marco.huber@marit.ag>, Marit AG
-*  			Markus Kleinhenz <markus.kleinhenz@marit.ag>, Marit AG
-*  			Goran Stefanovic <goran.stefanovic@marit.ag>, Marit AG
-*  			
-*  			
-*  All rights reserved
-*
-*  This script is part of the TYPO3 project. The TYPO3 project is
-*  free software; you can redistribute it and/or modify
-*  it under the terms of the GNU General Public License as published by
-*  the Free Software Foundation; either version 2 of the License, or
-*  (at your option) any later version.
-*
-*  The GNU General Public License can be found at
-*  http://www.gnu.org/copyleft/gpl.html.
-*
-*  This script is distributed in the hope that it will be useful,
-*  but WITHOUT ANY WARRANTY; without even the implied warranty of
-*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-*  GNU General Public License for more details.
-*
-*  This copyright notice MUST APPEAR in all copies of the script!
-***************************************************************/
+ *  Copyright notice
+ *
+ *  (c) 2010 Marit AG <typo3-extension@marit.ag>
+ *  			Marco Huber <marco.huber@marit.ag>, Marit AG
+ *  			Markus Kleinhenz <markus.kleinhenz@marit.ag>, Marit AG
+ *  			Goran Stefanovic <goran.stefanovic@marit.ag>, Marit AG
+ *
+ *
+ *  All rights reserved
+ *
+ *  This script is part of the TYPO3 project. The TYPO3 project is
+ *  free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  The GNU General Public License can be found at
+ *  http://www.gnu.org/copyleft/gpl.html.
+ *
+ *  This script is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  This copyright notice MUST APPEAR in all copies of the script!
+ ***************************************************************/
 
 /**
  * Controller for varius objects
@@ -42,24 +42,14 @@ class Tx_MaritReferences_Controller_BaseController extends Tx_Extbase_MVC_Contro
 	 * @return void
 	 */
 	public function initializeAction() {
-		foreach($this->settings as $key => $value) {
-			if($key != 'flexform' && $this->settings['flexform'][$key]){
-				var_dump($key, $value);
-				foreach($value as $tsKey => $tsValue){
-					if($this->settings['flexform'][$tsKey]){
-					}
-				}			
-			}		
-		}
-		//var_dump($this->settings);
 	}
 
-  /**
+	/**
 	 * add css-files to header
-	 * 
-	 * @array $files array with pathes to css-files, typically from typoscript	 
+	 *
+	 * @array $files array with pathes to css-files, typically from typoscript
 	 * @return void
-	 *  
+	 *
 	 */
 	public function initCSS($files) {
 		foreach($files as $cssFile) {
@@ -67,12 +57,12 @@ class Tx_MaritReferences_Controller_BaseController extends Tx_Extbase_MVC_Contro
 		}
 	}
 
-  /**
+	/**
 	 * add js-files to header
-	 * 
-	 * @array $files array with pathes to js-files, typically from typoscript	 
+	 *
+	 * @array $files array with pathes to js-files, typically from typoscript
 	 * @return void
-	 *  
+	 *
 	 */
 	public function initJS($files) {
 		foreach($files as $jsFile) {

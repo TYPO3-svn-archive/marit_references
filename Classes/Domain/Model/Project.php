@@ -98,6 +98,12 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	protected $images;
 	
 	/**
+	 * listImage
+	 * @var Tx_MaritReferences_Domain_Model_DAM
+	 */
+	protected $listImage;
+	
+	/**
 	 * industrialSector
 	 * @var Tx_MaritReferences_Domain_Model_IndustrialSector
 	 */
@@ -324,6 +330,25 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	 */
 	public function getImages() {
 		return $this->images;
+	}
+	
+	/**
+	 * Setter for the listImage
+	 *
+	 * @param Tx_MaritReferences_Domain_Model_DAM $listImage listImage
+	 * @return void
+	 */
+	public function setListImage(Tx_MaritReferences_Domain_Model_DAM $listImage) {
+		$this->listImage = $listImage;
+	}
+
+	/**
+	 * Getter for the listImage
+	 *
+	 * @return Tx_MaritReferences_Domain_Model_DAM listImage
+	 */
+	public function getListImage() {
+		return $this->listImage;
 	}
 	
 	/**

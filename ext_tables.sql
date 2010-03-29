@@ -111,6 +111,7 @@ CREATE TABLE tx_maritreferences_domain_model_project (
 	year int(4) DEFAULT 1000 NOT NULL,
 	files int(11) unsigned DEFAULT '0' NOT NULL,
 	images int(11) unsigned DEFAULT '0' NOT NULL,
+	list_image int(11) unsigned DEFAULT '0' NOT NULL,
 	industrial_sector int(11) unsigned DEFAULT '0',
 	contact_person int(11) unsigned DEFAULT '0',
 	customer_contact_person int(11) unsigned DEFAULT '0',

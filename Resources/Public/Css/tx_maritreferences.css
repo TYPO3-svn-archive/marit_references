@@ -13,26 +13,91 @@
 #maritReferences ol {
 	list-style-type: decimal;
 }
+#maritReferences ul#referencesMenu {
+	list-style-type: none;
+}
+#maritReferences ul#referencesMenu li {
+	float: left;
+	margin-right: 2px;
+	width: 145px;
+}
+#maritReferences ul#referencesMenu li a {
+	background-color:#ECECEC;
+	color: #555555;
+	padding: 1px 6px 3px;
+	text-decoration: none;
+	display: block;
+}
+#maritReferences ul#referencesMenu li span.bubbleheader {
+	background: transparent url(../CssImages/bubble_grey.png) no-repeat scroll 0 0;
+	display: block;
+	height: 2px;
+}
+#maritReferences ul#referencesMenu li span.bubblefooter {
+	background: transparent url(../CssImages/bubble_grey.png) no-repeat scroll 0 -2px;
+	display: block;
+	height: 10px;
+}
+#maritReferences ul#referencesMenu li#activeReferencesMenu a,
+#maritReferences ul#referencesMenu li:hover a {
+	background-color:#99CE08;
+	color: #FFFFFF;
+}
+#maritReferences ul#referencesMenu li#activeReferencesMenu span.bubbleheader,
+#maritReferences ul#referencesMenu li:hover span.bubbleheader {
+	background: transparent url(../CssImages/bubble_green.png) no-repeat scroll 0 0;
+	display: block;
+	height: 2px;
+}
+#maritReferences ul#referencesMenu li#activeReferencesMenu span.bubblefooter,
+#maritReferences ul#referencesMenu li:hover span.bubblefooter {
+	background: transparent url(../CssImages/bubble_green.png) no-repeat scroll 0 -2px;
+	display: block;
+	height: 10px;
+}
 
-
-.lightboximage_big {
+#maritReferences .lightboximage_big {
 	display: none;
 }
 
-.sliderWrap {
+#maritReferences #referencesPageBrowser a,
+#maritReferences #referencesPageBrowser span.dots {
+	display: inline-block;
+	margin-right: 5px;
+	width: 16px;
+	padding: 4px 0;
+	margin-top: 7px;
+	text-decoration: none;
+	font-weight: normal;
+	font-size: 10px;
+	text-align: center;
+	color: #FFFFFF;
+	background: #AAAAAA;
+}
+#maritReferences #referencesPageBrowser a.activePage {
+	background: #99CE08;
+}
+#maritReferences #referencesPageBrowser span.dots {
+	color: #AAAAAA;
+	background: transparent;
+}
+
+
+
+#maritReferencesSearch .sliderWrap {
 	position: relative;
 }
-.sliderText {
+#maritReferencesSearch .sliderText {
 	width: 45px;
 	/*padding-top: 3px;*/
 }
-.sliderTextLeft {
+#maritReferencesSearch .sliderTextLeft {
 	text-align: right;
 }
-.sliderTextRight {
+#maritReferencesSearch .sliderTextRight {
 	text-align: left;
 }
-.slider {
+#maritReferencesSearch .slider {
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 106px;

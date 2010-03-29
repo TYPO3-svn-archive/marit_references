@@ -67,10 +67,10 @@
 			<label index="tx_maritreferences_view.read_more">Read more!</label>
 			<label index="tx_maritreferences_view.left_box">Left Box</label>
 			<label index="tx_maritreferences_view.right_box">Right box</label>
-			<label index="tx_maritreferences_view.pageBrowser.previous">previous</label>
+			<label index="tx_maritreferences_view.pageBrowser.previous">&lt;</label>
 			<label index="tx_maritreferences_view.pageBrowser.page">page</label>
 			<label index="tx_maritreferences_view.pageBrowser.outOf">out of</label>
-			<label index="tx_maritreferences_view.pageBrowser.next">next</label>			
+			<label index="tx_maritreferences_view.pageBrowser.next">&gt;</label>			
 			<label index="tx_maritreferences_view.project_list">Project list</label>			
 			<label index="tx_maritreferences_view.customer_list">Customer list</label>
 			<label index="tx_maritreferences_view.technology_list">Technology list</label>
