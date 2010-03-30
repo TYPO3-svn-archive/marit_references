@@ -87,7 +87,8 @@ class Tx_MaritReferences_Controller_TechnologyController extends Tx_MaritReferen
 
 		$this->view->assign('settings', $this->settings);
 		$this->view->assign('technology', $technology);
-		$this->view->assign('projects', $this->projectRepository->findByMmTechnologies(array($technology->getUid()), 'Tx_MaritReferences_Domain_Model_Project'));
+		$this->view->assign('projects', $this->projectRepository->findByTechnologies($technology));
+		//$this->view->assign('projects', $this->projectRepository->findByMmTechnologies($technology->getUid()));
 	}
 
 }

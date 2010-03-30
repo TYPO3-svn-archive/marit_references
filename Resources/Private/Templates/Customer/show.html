@@ -21,7 +21,7 @@
 				<span class="bubblefooter"></span>
 				<div class="boximgtext">
 					<ul>
-						<f:for each="{customer.projects}" as="project">
+						<f:for each="{projects}" as="project">
 							<li>
 								<f:link.action controller="Project" action="show" arguments="{project: project}">{project.title}</f:link.action>:
 									<ol>
@@ -39,7 +39,7 @@
 				<span class="bubblefooter"></span>
 				<div class="boximgtext">
 					<ul>
-						<f:for each="{customer.technologies}" as="technology">		
+						<f:for each="{technologies}" as="technology">		
 							<li><f:link.action controller="Technology" action="show" arguments="{technology: technology}" class="projecttechnology">{technology.title}</f:link.action> (<f:translate key="tx_maritreferences_domain_model_technology.contact_person" /> <f:link.email email="{technology.contactPerson.email}"  class="contactPerson"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{technology.contactPerson.gender}" /> {technology.contactPerson.firstName} {technology.contactPerson.lastName}</f:link.email>)</li>
 						</f:for>
 					</ul>

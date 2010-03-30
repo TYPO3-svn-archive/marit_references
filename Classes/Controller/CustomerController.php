@@ -98,8 +98,10 @@ class Tx_MaritReferences_Controller_CustomerController extends Tx_MaritReference
 
 		$customer->projects = $this->projectRepository->findByCustomer($customer);
 		$customer->technologies = $this->getTechnologies($customer->projects);
-
+		
 		$this->view->assign('customer', $customer);
+		$this->view->assign('projects', $customer->projects);
+		$this->view->assign('technologies', $customer->technologies);
 
 	}
 

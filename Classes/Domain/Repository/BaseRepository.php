@@ -92,28 +92,21 @@ class Tx_MaritReferences_Domain_Repository_BaseRepository extends Tx_Extbase_Per
 		} elseif (substr($methodName, 0, 8) === 'findByMm' && strlen($methodName) > 9) {
 		
 			$propertyName = strtolower(substr(substr($methodName, 8), 0, 1) ) . substr(substr($methodName, 8), 1);
-			$dataMapper = t3lib_div::makeInstance('Tx_Extbase_Persistence_Mapper_DataMapper');
-			$dataMap = $dataMapper->getDataMap($arguments[1]);
-
-			$dataMapperColumns = $dataMap->getColumnMaps(); 
-			
-			$relationTableName = $dataMapperColumns[$propertyName]->getRelationTableName();
-			$childTableName = $dataMapperColumns[$propertyName]->getChildTableName();
-			$childKeyFieldName = $dataMapperColumns[$propertyName]->getChildKeyFieldName();
-			$parentKeyFieldName = $dataMapperColumns[$propertyName]->getParentKeyFieldName();
-			$tableName = $dataMap->getTableName();
-			
 			$query = $this->createQuery();
-			$statement = '
-					SELECT '.$tableName.'.* 
-					FROM '.$tableName.' 
-							LEFT JOIN '.$relationTableName.' ON '.$relationTableName.'.'.$parentKeyFieldName.' = '.$tableName.'.uid 
-							LEFT JOIN '.$childTableName.' ON '.$relationTableName.'.'.$childKeyFieldName.' = '.$childTableName.'.uid 
-					WHERE '.$relationTableName.'.'.$childKeyFieldName.' IN ('.implode(',', $arguments[0]).')';
+			return $query->matching($query->equals($propertyName.'.uid', $arguments[0]))
+										//->setOrderings(array('date' => Tx_Extbase_Persistence_QueryInterface::ORDER_DESCENDING))
+										->execute();
 
-			$query = $query->statement($statement);
-			$result = $query->execute();
-			return $result;
+			
+		} elseif (substr($methodName, 0, 8) === 'findOneByMm' && strlen($methodName) > 9) {
+		
+			$propertyName = strtolower(substr(substr($methodName, 8), 0, 1) ) . substr(substr($methodName, 8), 1);
+			$query = $this->createQuery();
+			return $query->matching($query->equals($propertyName.'.uid', $arguments[0]))
+										//->setOrderings(array('date' => Tx_Extbase_Persistence_QueryInterface::ORDER_DESCENDING))
+										->setLimit(1)
+										->execute();
+
 			
 		} else {
 			return parent::__call($methodName, $arguments);

@@ -64,7 +64,7 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 				} else {
 					if($field == 'technologies'){
 						$field = 'uid';
-						$projects = $this->findByMmTechnologies($searchValue, 'Tx_MaritReferences_Domain_Model_Project');
+						$projects = $this->findByMmTechnologies($searchValue);
 						unset($searchValue);
 						foreach($projects as $project){
 							$searchValue[] = $project->getUid();
@@ -116,7 +116,7 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 				} else {
 					if($field == 'technologies'){
 						$field = 'uid';
-						$projects = $this->findByMmTechnologies($searchValue, 'Tx_MaritReferences_Domain_Model_Project');
+						$projects = $this->findByMmTechnologies($searchValue);
 						unset($searchValue);
 						foreach($projects as $project){
 							$searchValue[] = $project->getUid();
@@ -168,7 +168,7 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 				} else {
 					if($field == 'technologies'){
 						$field = 'uid';
-						$projects = $this->findByMmTechnologies($searchValue, 'Tx_MaritReferences_Domain_Model_Project');
+						$projects = $this->findByMmTechnologies($searchValue);
 						unset($searchValue);
 						foreach($projects as $project){
 							$searchValue[] = $project->getUid();
