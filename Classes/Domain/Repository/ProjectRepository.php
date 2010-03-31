@@ -43,43 +43,8 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 	 */	
 	public function findBySearchValues($search){
 		$query = $this->createQuery();
-		foreach($search as $field => $searchValue){
-			//var_dump($field);
-			//var_dump($searchValue);	
-			if($searchValue!=''){
-				if($field == 'maxBudget' || $field == 'maxYear'){			
-					$field = strtolower(ltrim($field, 'max'));		
-					if($queries){
-						$queries = $query->logicalAnd($queries, $query->lessThanOrEqual($field, $searchValue));
-					} else {
-						$queries = $query->lessThanOrEqual($field, $searchValue);
-					} 
-				} elseif($field == 'minBudget' || $field == 'minYear'){			
-					$field = strtolower(ltrim($field, 'min'));	
-					if($queries){
-						$queries = $query->logicalAnd($queries, $query->greaterThanOrEqual($field, $searchValue));
-					} else {
-						$queries = $query->greaterThanOrEqual($field, $searchValue);
-					} 
-				} else {
-					if($field == 'technologies'){
-						$field = 'uid';
-						$projects = $this->findByMmTechnologies($searchValue);
-						unset($searchValue);
-						foreach($projects as $project){
-							$searchValue[] = $project->getUid();
-						}
-					}
-					if($queries){
-						$queries = $query->logicalAnd($queries, $query->equals($field, $searchValue));
-					} else {
-						$queries = $query->equals($field, $searchValue);
-					} 
-				}
-			}
-		}
-		$query->matching($queries);
-		
+		$queries = $this->createSearchQuery($query, $search);
+		$query->matching($queries);		
 		$searchResults = $query->execute();
 		return $searchResults;
 	}
@@ -95,41 +60,7 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 	 */	
 	public function findBySearchValuesLimited($search, $limit, $offset = 0){
 		$query = $this->createQuery();
-		foreach($search as $field => $searchValue){
-			//var_dump($field);
-			//var_dump($searchValue);	
-			if($searchValue!=''){
-				if($field == 'maxBudget' || $field == 'maxYear'){			
-					$field = strtolower(ltrim($field, 'max'));		
-					if($queries){
-						$queries = $query->logicalAnd($queries, $query->lessThanOrEqual($field, $searchValue));
-					} else {
-						$queries = $query->lessThanOrEqual($field, $searchValue);
-					} 
-				} elseif($field == 'minBudget' || $field == 'minYear'){			
-					$field = strtolower(ltrim($field, 'min'));	
-					if($queries){
-						$queries = $query->logicalAnd($queries, $query->greaterThanOrEqual($field, $searchValue));
-					} else {
-						$queries = $query->greaterThanOrEqual($field, $searchValue);
-					} 
-				} else {
-					if($field == 'technologies'){
-						$field = 'uid';
-						$projects = $this->findByMmTechnologies($searchValue);
-						unset($searchValue);
-						foreach($projects as $project){
-							$searchValue[] = $project->getUid();
-						}
-					}
-					if($queries){
-						$queries = $query->logicalAnd($queries, $query->equals($field, $searchValue));
-					} else {
-						$queries = $query->equals($field, $searchValue);
-					} 
-				}
-			}
-		}
+		$queries = $this->createSearchQuery($query, $search);
 		$query = $query->setOffset((int) $offset);
 		$query = $query->setLimit((int) $limit);
 		$query->matching($queries);		
@@ -147,6 +78,22 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 	 */	
 	public function countItemsBySearchValues($search){
 		$query = $this->createQuery();
+		$queries = $this->createSearchQuery($query, $search);
+		$query->matching($queries);		
+		
+		$result = $query->count();
+		return $result;
+	}
+	
+	/**
+	 * loop through the searchparams and build a query
+	 * 
+	 * @param Tx_Extbase_Persistence_QueryInterface $query
+	 * @param array $search the search parameters
+	 * @return object $queries
+	 *
+	 */
+	public function createSearchQuery(Tx_Extbase_Persistence_QueryInterface $query, $search) {		
 		foreach($search as $field => $searchValue){
 			//var_dump($field);
 			//var_dump($searchValue);	
@@ -182,10 +129,7 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 				}
 			}
 		}
-		$query->matching($queries);		
-		
-		$result = $query->count();
-		return $result;
+		return $queries;			
 	}
 
 }

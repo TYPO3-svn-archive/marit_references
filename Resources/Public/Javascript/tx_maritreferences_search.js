@@ -1,17 +1,14 @@
 function moveTooltip(slider, sliderId, ui){
+				//alert($("#"+sliderId+" a.ui-slider-handle:first").position().left);
 				$('#sliderValueMin'+slider).css('left', 
-							$("#"+sliderId+" a.ui-slider-handle:first").position().left
-							+$("#"+sliderId+" a.ui-slider-handle:first").width()
-							+$(".sliderTextLeft:first").width()
-							-$('#sliderValueMin'+slider).width()
+							$("#"+sliderId+" a.ui-slider-handle:first").position().left + 10 - $('#sliderValueMin'+slider).width()
 				);	
 				$('#sliderValueMax'+slider).css('left', 
-							$("#"+sliderId+" a.ui-slider-handle:last").position().left
-							+$(".sliderTextRight:first").width()
+							$("#"+sliderId+" a.ui-slider-handle:last").position().left + 10
 				);	
 				
 				if(ui!=0) {
-					$('#sliderValueMin'+slider).val(ui.values[0]);		
+					$('#sliderValueMin'+slider).text(ui.values[0]);		
 					$('#sliderValueMax'+slider).text(ui.values[1]);
 				}
 }
@@ -24,6 +21,7 @@ function initSlider(){
 			min: $('#yearSliderMin').val()*1,
 			max: $('#yearSliderMax').val()*1,
 			values: [$('#minYear').val()*1, $('#maxYear').val()*1],
+			step: 1,
 			slide: function(event, ui){
 				moveTooltip('Year', 'yearSlider', ui);
 			},
@@ -35,15 +33,9 @@ function initSlider(){
 			}
 		});		
 		$('.sliderValue').css('position', 'absolute');
-		$('#sliderValueMinYear').css(
-					'top', 
-					$("#yearSlider a.ui-slider-handle:first").position().top
-		);	
-		$('#sliderValueMaxYear').css(
-				'top', 
-				$("#yearSlider a.ui-slider-handle:last").height()
-				+$('#sliderValueMaxYear').height()
-		);
+		$('.sliderValue').css('top', $("#yearSlider a.ui-slider-handle:first").position().top-12);	
+
+		$("#yearSlider a.ui-slider-handle:last").css('background', 'url("typo3conf/ext/marit_references/Resources/Public/CssImages/slider-right.png") repeat-x scroll 50% 50% #99CE08');
 		moveTooltip('Year', 'yearSlider', 0);
 	}
 	
@@ -54,7 +46,7 @@ function initSlider(){
 			min: $('#budgetSliderMin').val()*1,
 			max: $('#budgetSliderMax').val()*1,
 			values: [$('#minBudget').val()*1, $('#maxBudget').val()*1],
-			step: 5000,
+			step: 1,
 			slide: function(event, ui){
 				moveTooltip('Budget', 'budgetSlider', ui);
 			},
@@ -66,21 +58,28 @@ function initSlider(){
 			}
 		});		
 		$('.sliderValue').css('position', 'absolute');
-		$('#sliderValueMinBudget').css(
-					'top', 
-					$("#budgetSlider a.ui-slider-handle:first").position().top
-		);
-		$('#sliderValueMaxBudget').css(
-				'top', 
-				$("#budgetSlider a.ui-slider-handle:last").height()
-				+$('#sliderValueMaxBudget').height()
-		);
+		$('.sliderValue').css('top', $("#budgetSlider a.ui-slider-handle:first").position().top-12);	
+
+		$("#budgetSlider a.ui-slider-handle:last").css('background', 'url("typo3conf/ext/marit_references/Resources/Public/CssImages/slider-right.png") repeat-x scroll 50% 50% #99CE08');
 		moveTooltip('Budget', 'budgetSlider', 0);	
 	}
 }
 
 function initSearchSubmit(){
 	$('#searchProject .search').change(function(){
+		$('#searchProject').submit();
+	});
+	$('#searchProject .searchAll').change(function(objEvent){
+		if(this.checked){
+			checked = true;
+		} else {
+			checked = false;
+		}
+		$('input[name*='+$(this).attr('id').replace(/All$/g, "")+']').each(function(index, domEle){
+			if($(domEle).attr('id').search(/All$/g, "") == -1){
+				domEle.checked = checked;
+			}
+		});
 		$('#searchProject').submit();
 	});
 	

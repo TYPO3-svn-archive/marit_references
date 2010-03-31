@@ -71,14 +71,16 @@
 			<label index="tx_maritreferences_view.pageBrowser.page">page</label>
 			<label index="tx_maritreferences_view.pageBrowser.outOf">out of</label>
 			<label index="tx_maritreferences_view.pageBrowser.next">&gt;</label>			
-			<label index="tx_maritreferences_view.project_list">Project list</label>			
-			<label index="tx_maritreferences_view.customer_list">Customer list</label>
-			<label index="tx_maritreferences_view.technology_list">Technology list</label>
+			<label index="tx_maritreferences_view.project_list">PROJECTS</label>			
+			<label index="tx_maritreferences_view.customer_list">CUSTOMERS</label>
+			<label index="tx_maritreferences_view.technology_list">TECHNOLOGIES</label>
 			<label index="tx_maritreferences_view.projects">Projects</label>
 			<label index="tx_maritreferences_view.technologies">Technologies</label>
 			
 			<label index="tx_maritreferences_view_search">Searchfilters</label>
 			<label index="tx_maritreferences_view_search.search">Submit search!</label>
+			<label index="tx_maritreferences_view_search.all_industriall_sectors">All industrial setors</label>
+			<label index="tx_maritreferences_view_search.all_technologies">All technologies</label>
 			<!-- END: Labels for views -->
 			
 		</languageKey>

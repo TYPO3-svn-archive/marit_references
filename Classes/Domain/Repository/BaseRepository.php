@@ -98,16 +98,6 @@ class Tx_MaritReferences_Domain_Repository_BaseRepository extends Tx_Extbase_Per
 										->execute();
 
 			
-		} elseif (substr($methodName, 0, 8) === 'findOneByMm' && strlen($methodName) > 9) {
-		
-			$propertyName = strtolower(substr(substr($methodName, 8), 0, 1) ) . substr(substr($methodName, 8), 1);
-			$query = $this->createQuery();
-			return $query->matching($query->equals($propertyName.'.uid', $arguments[0]))
-										//->setOrderings(array('date' => Tx_Extbase_Persistence_QueryInterface::ORDER_DESCENDING))
-										->setLimit(1)
-										->execute();
-
-			
 		} else {
 			return parent::__call($methodName, $arguments);
 		}

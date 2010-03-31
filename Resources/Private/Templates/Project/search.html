@@ -3,53 +3,88 @@
 	<h1><f:translate key="search" /></h1>
 	
 	<f:form action="list" controller="Project" name="searchProject" id="searchProject">
-		
-		<div class="searchbox">
-			<h2><f:translate key="tx_maritreferences_domain_model_project.industrial_sector" /></h2>
-			<f:for each="{industrialSectors}" as="industrialSector">
-				<helper:searchForm.checkbox name="search[industrialSector][]" value="{industrialSector.uid}" searched="{search.industrialSector}" id="industrialSector{industrialSector.uid}" class="search" /><label for="industrialSector{industrialSector.uid}">{industrialSector.title}</label><br />
-			</f:for>	
-		</div>
-		
-		<div class="searchbox">
-			<h2><f:translate key="tx_maritreferences_domain_model_project.technologies" /></h2>
-			<f:for each="{technologies}" as="technology">
-				<helper:searchForm.checkbox name="search[technologies][]" value="{technology.uid}" searched="{search.technologies}" id="technologies{technology.uid}" class="search" /><label for="technologies{technology.uid}">{technology.title}</label><br />
-			</f:for>	
-		</div>
-		
-		<div class="searchbox">
-			<h2><f:translate key="tx_maritreferences_domain_model_project.year" /></h2>
-			<div class="sliderWrap">
-				&nbsp;<span class="sliderValue sliderValueLeft left" id="sliderValueMinYear">{minYear}</span>
-				<div class="clear"></div>
-				<span class="sliderText sliderTextLeft left">{yearSliderMin}</span>
-				<div id="yearSlider" class="slider left"></div>
-				<span class="sliderText sliderTextRight left">{yearSliderMax}</span>
-				<div class="clear"></div>
-				&nbsp;<span class="sliderValue sliderValueRight left" id="sliderValueMaxYear">{maxYear}</span>
+		<div class="block">
+    	<div class="block-inner blue">
+				<div class="searchbox">
+					<div class="block-inner-header">
+						<h4><f:translate key="tx_maritreferences_domain_model_project.industrial_sector" /></h4>
+  			  </div>
+					<div class="block-inner-content">
+						<helper:searchForm.checkbox name="search[industrialSector][]" value="all" searched="{search.industrialSector}" id="industrialSectorAll" class="searchAll" /><label for="industrialSectorAll"><f:translate key="tx_maritreferences_view_search.all_industriall_sectors" /></label><br /><br />
+						<f:for each="{industrialSectors}" as="industrialSector">
+							<helper:searchForm.checkbox name="search[industrialSector][]" value="{industrialSector.uid}" searched="{search.industrialSector}" id="industrialSector{industrialSector.uid}" class="search" /><label for="industrialSector{industrialSector.uid}">{industrialSector.title}</label><br />
+						</f:for>	
+					</div>
+				</div>
 			</div>
-			<f:form.hidden name="yearSliderMin" value="{yearSliderMin}" id="yearSliderMin" />
-			<f:form.hidden name="yearSliderMax" value="{yearSliderMax}" id="yearSliderMax" />
-			<f:form.hidden name="search[minYear]" value="{minYear}" id="minYear" class="search" />
-			<f:form.hidden name="search[maxYear]" value="{maxYear}" id="maxYear" class="search" />
 		</div>
 		
-		<div class="searchbox">
-			<h2><f:translate key="tx_maritreferences_domain_model_project.budget" /></h2>
-			<div class="sliderWrap">
-				&nbsp;<span class="sliderValue sliderValueLeft left" id="sliderValueMinBudget">{minBudget}</span>
-				<div class="clear"></div>
-				<span class="sliderText sliderTextLeft left">{budgetSliderMin}</span>
-				<div id="budgetSlider" class="slider left"></div>
-				<span class="sliderText sliderTextRight left">{budgetSliderMax}</span>
-				<div class="clear"></div>
-				&nbsp;<span class="sliderValue sliderValueRight left" id="sliderValueMaxBudget">{maxBudget}</span>
+		<div class="block">
+    	<div class="block-inner blue">
+				<div class="searchbox">
+					<div class="block-inner-header">
+						<h4><f:translate key="tx_maritreferences_domain_model_project.technologies" /></h4>
+  			  </div>
+					<div class="block-inner-content">
+						<helper:searchForm.checkbox name="search[technologies][]" value="all" searched="{search.technologies}" id="technologiesAll" class="searchAll" /><label for="technologiesAll"><f:translate key="tx_maritreferences_view_search.all_technologies" /></label><br /><br />
+						<f:for each="{technologies}" as="technology">
+							<f:cycle values="{0: 'col1', 1: 'col2'}" as="cols">
+								<span class="{cols} left"><helper:searchForm.checkbox name="search[technologies][]" value="{technology.uid}" searched="{search.technologies}" id="technologies{technology.uid}" class="search" /><label for="technologies{technology.uid}">{technology.title}</label></span>
+								<div class="clear {cols}"></div>
+							</f:cycle>
+						</f:for>	
+						<div class="clear {cols}"></div>
+					</div>
+				</div>
 			</div>
-			<f:form.hidden name="budgetSliderMin" value="{budgetSliderMin}" id="budgetSliderMin" />
-			<f:form.hidden name="budgetSliderMax" value="{budgetSliderMax}" id="budgetSliderMax" />
-			<f:form.hidden name="search[minBudget]" value="{minBudget}" id="minBudget" class="search" />
-			<f:form.hidden name="search[maxBudget]" value="{maxBudget}" id="maxBudget" class="search" />
+		</div>
+		
+		<div class="block">
+    	<div class="block-inner green">
+				<div class="searchbox">
+					<div class="block-inner-header">
+						<h4><f:translate key="tx_maritreferences_domain_model_project.year" /></h4>
+  			  </div>
+					<div class="block-inner-content">
+						<div class="sliderWrap">
+							<span class="sliderValue sliderValueLeft left" id="sliderValueMinYear">{minYear}</span>
+							<span class="sliderValue sliderValueRight right" id="sliderValueMaxYear">{maxYear}</span>
+							<div id="yearSlider" class="slider"></div>
+							<span class="sliderText sliderTextLeft left">{yearSliderMin}</span>
+							<span class="sliderText sliderTextRight right">{yearSliderMax}</span>
+							<div class="clear"></div>
+						</div>
+						<f:form.hidden name="yearSliderMin" value="{yearSliderMin}" id="yearSliderMin" />
+						<f:form.hidden name="yearSliderMax" value="{yearSliderMax}" id="yearSliderMax" />
+						<f:form.hidden name="search[minYear]" value="{minYear}" id="minYear" class="search" />
+						<f:form.hidden name="search[maxYear]" value="{maxYear}" id="maxYear" class="search" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="block">
+    	<div class="block-inner green">
+				<div class="searchbox">
+					<div class="block-inner-header green">
+						<h4><f:translate key="tx_maritreferences_domain_model_project.budget" /></h4>
+  			  </div>
+					<div class="block-inner-content green">
+						<div class="sliderWrap">
+							<span class="sliderValue sliderValueLeft left" id="sliderValueMinBudget">{minBudget}</span>
+							<span class="sliderValue sliderValueRight right" id="sliderValueMaxBudget">{maxBudget}</span>
+							<div id="budgetSlider" class="slider"></div>
+							<span class="sliderText sliderTextLeft left">{budgetSliderMin}</span>
+							<span class="sliderText sliderTextRight right">{budgetSliderMax}</span>
+							<div class="clear"></div>
+						</div>
+						<f:form.hidden name="budgetSliderMin" value="{budgetSliderMin}" id="budgetSliderMin" />
+						<f:form.hidden name="budgetSliderMax" value="{budgetSliderMax}" id="budgetSliderMax" />
+						<f:form.hidden name="search[minBudget]" value="{minBudget}" id="minBudget" class="search" />
+						<f:form.hidden name="search[maxBudget]" value="{maxBudget}" id="maxBudget" class="search" />
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<f:form.hidden name="controller" value="Project" />

@@ -14,12 +14,14 @@
 				</div>
 				<div class="customerListText">
 					<h2 class="customerName"><f:link.action action="show" arguments="{customer: customer}">{customer.title}</f:link.action></h2>
-					<f:format.crop maxCharacters="{settings.customer.list.description.crop}" append="&nbsp;..."><f:format.html>{customer.description}</f:format.html></f:format.crop>
+					<div class="customerTeaser">
+						<f:format.crop maxCharacters="{settings.customer.list.description.crop}" append="&nbsp;..."><f:format.html>{customer.description}</f:format.html></f:format.crop>
+					</div>
 				  <p class="right"><f:link.action action="show" arguments="{customer: customer}" class="morelink"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
-					<hr class="clear" />
+					<div class="clear"></div>
 				</div>
 			</div>
-			<hr class="clear" />
+			<div class="clear"></div>
 		</f:for>
 	</div>
 	<f:if condition="{settings.customer.list.pageBrowser}">
