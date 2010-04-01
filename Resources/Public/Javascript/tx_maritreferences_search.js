@@ -28,8 +28,10 @@ function initSlider(){
 			stop: function(event, ui) {
 				moveTooltip('Year', 'yearSlider', ui);
 				
-				$("#minYear").val(ui.values[0]).change();
-				$("#maxYear").val(ui.values[1]).change();				
+				if($("#minYear").val()!=ui.values[0] || $("#maxYear").val()!=ui.values[1]){
+					$("#minYear").val(ui.values[0]).change();
+					$("#maxYear").val(ui.values[1]).change();
+				}				
 			}
 		});		
 		$('.sliderValue').css('position', 'absolute');
@@ -53,8 +55,10 @@ function initSlider(){
 			stop: function(event, ui) {
 				moveTooltip('Budget', 'budgetSlider', ui);
 				
-				$("#minBudget").val(ui.values[0]).change();
-				$("#maxBudget").val(ui.values[1]).change();
+				if($("#minBudget").val()!=ui.values[0] || $("#maxBudget").val()!=ui.values[1]){
+					$("#minBudget").val(ui.values[0]).change();
+					$("#maxBudget").val(ui.values[1]).change();
+				}
 			}
 		});		
 		$('.sliderValue').css('position', 'absolute');

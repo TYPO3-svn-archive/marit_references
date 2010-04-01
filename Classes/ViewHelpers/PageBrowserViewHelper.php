@@ -58,6 +58,7 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 	 * @param  int The total item count for calculating the page count
 	 * @param  int The maximum amount of items to show per page
 	 * @param  int The number of pages to show left an right frim the current page
+	 * @param  string if $mode=='items' show the number of displayed items, else show the pages
 	 * @param  string The label for the "previous" link, taken from locallang
 	 * @param  string The label for the "next" link, taken from locallang
 	 * @param  string a "template" filled with sprintf
@@ -65,7 +66,7 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 	 * @return string the rendered string
 	 * @author Marco Huberg <marco.huber@marit.ag>
 	 */
-	public function render($totalCountOfItems=NULL, $maxItemsToDisplay=5, $range=2, $previousLabel='previous', $nextLabel='next', $template='page %1$s out of %2$s<br />%3$s %4$s %5$s', $onclick='') {
+	public function render($totalCountOfItems=NULL, $maxItemsToDisplay=5, $range=2, $mode='pages', $previousLabel='previous', $nextLabel='next', $template='page %1$s out of %2$s<br />%3$s %4$s %5$s', $onclick='') {
 		$pagesTotal = ceil($totalCountOfItems/$maxItemsToDisplay);
 		if($this->controllerContext->getRequest()->hasArgument('currentPage')) {
 			$currentPage = $this->controllerContext->getRequest()->getArgument('currentPage');
@@ -84,10 +85,20 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 		}
 		for($i=0; $i<$range; $i++){
 			if(($currentPage-$i-1)>=0){
-				$leftPages[] = $this->getLink(($currentPage-$i-1), ($currentPage-$i), $onclick);
+				if($mode == 'items'){
+					$label = (($maxItemsToDisplay*($currentPage-$i-1))+1).'-'.($maxItemsToDisplay*($currentPage-$i));
+				} else {
+					$label = ($currentPage+1);
+				}
+				$leftPages[] = $this->getLink(($currentPage-$i-1), $label, $onclick);
 			}
 			if(($currentPage+$i+1)<$pagesTotal) {
-				$rightPages[] = $this->getLink(($currentPage+$i+1), ($currentPage+$i+2), $onclick);
+				if($mode == 'items'){
+					$label = (($maxItemsToDisplay*($currentPage+$i+1))+1).'-'.(($maxItemsToDisplay*($currentPage+$i+2))<$totalCountOfItems?($maxItemsToDisplay*($currentPage+$i+2)):$totalCountOfItems);
+				} else {
+					$label = ($currentPage+$i+2);
+				}
+				$rightPages[] = $this->getLink(($currentPage+$i+1), $label, $onclick);
 			}
 			if($i==($range-1)){
 				if(($currentPage-$i-1)>=1) {
@@ -107,7 +118,12 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 			}
 		}
 		$leftPages = array_reverse($leftPages);
-		$actPage = $this->getLink($currentPage, ($currentPage+1), $onclick, 'activePage');
+		if($mode == 'items'){
+			$label = (($maxItemsToDisplay*$currentPage)+1).'-'.(($maxItemsToDisplay*($currentPage+1))<$totalCountOfItems?($maxItemsToDisplay*($currentPage+1)):$totalCountOfItems);
+		} else {
+			$label = ($currentPage+1);
+		}
+		$actPage = $this->getLink($currentPage, $label, $onclick, 'activePage');
 		
 		$content = sprintf($template, ($currentPage+1), $pagesTotal, $previous, implode($leftPages).$actPage.implode($rightPages), $next);
 		return $content;
