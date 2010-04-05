@@ -141,5 +141,21 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 		$maxBudget = $search['maxBudget'] ? $search['maxBudget'] : $budgetSliderMax;
 		$this->view->assign('maxBudget', $maxBudget);
 	}
+
+	/**
+	 * doublebox action render a random project and a random technology
+	 *
+	 * @return string The rendered single view
+	 */
+	public function doubleboxAction() {
+		$this->initCSS($this->settings['project']['show']['cssFile']);
+		$this->initJS($this->settings['project']['show']['jsFile']);
+
+		$this->view->assign('settings', $this->settings);
+		//$this->view->assign('project', $this->projectRepository->findRandom());
+		//$this->view->assign('technology', $this->technologyRepository->findRandom());
+		$this->view->assign('project', $this->projectRepository->findByUid(7));
+		$this->view->assign('technology', $this->technologyRepository->findByUid(1));
+	}
 }
 ?>

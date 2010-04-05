@@ -245,3 +245,75 @@ div.clear.col1 {
 	background: url('../CssImages/slider-left.png') repeat-x scroll 50% 50% #99CE08;
 	border: none;
 }
+
+/**
+  * Referenzboxen (doublebox)
+  */
+#maritReferencesDoublebox {
+	margin-top: 37px;
+}
+#maritReferencesDoublebox .leftReferencebox {
+	height: 196px;
+	position: absolute;
+}
+#maritReferencesDoublebox .rightReferencebox {
+	margin-right: 14px;
+	height: 196px;
+	position: relative;
+	right: 0;
+}
+#maritReferencesDoublebox .refbox-pic {
+	background: transparent url(../CssImages/homebox_bg.png) repeat scroll 0 0;
+	border: 0 none;
+	padding-left: 2px;
+	padding-right: 2px;
+	width: 340px;
+}
+#maritReferencesDoublebox .referencebox {
+	background: transparent url(../CssImages/referencebox-bottom.png) no-repeat scroll 0 100%;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	min-height: 49px;
+	padding: 0 1px 30px;
+	position: absolute;
+	width: 343px;
+}
+#maritReferencesDoublebox .referencebox .referencebox-inner {
+	bottom: 22px;
+	position: absolute;
+}
+#maritReferencesDoublebox .referencebox .referencebox-inner p {
+	font-size: 11px;
+	margin: 0;
+	padding: 0 0 5px 10px;
+	height: auto;
+}
+#maritReferencesDoublebox .referencebox .referencebox-inner p.heading {
+	font-weight: bold;
+	padding-left: 10px;
+	padding-top: 7px;
+	text-transform: uppercase;
+}
+#maritReferencesDoublebox .referencebox .referencebox-inner p.heading a,
+#maritReferencesDoublebox .referencebox .referencebox-inner p.heading a:hover {
+	text-decoration: none;
+}
+#maritReferencesDoublebox .referencebox .referencebox-inner div.hover{
+	display: none;
+	width: 342px;
+}
+#maritReferencesDoublebox .leftReferencebox:hover .referencebox .referencebox-inner, 
+#maritReferencesDoublebox .rightReferencebox:hover .referencebox .referencebox-inner {
+	background: #ffffff;
+}
+#maritReferencesDoublebox .leftReferencebox:hover .referencebox .referencebox-inner div.hover, 
+#maritReferencesDoublebox .rightReferencebox:hover .referencebox .referencebox-inner div.hover {
+	display: block;
+}
+#maritReferencesDoublebox .leftReferencebox:hover .referencebox .referencebox-inner p.heading, 
+#maritReferencesDoublebox .rightReferencebox:hover .referencebox .referencebox-inner p.heading,
+#maritReferencesDoublebox .leftReferencebox:hover .referencebox .referencebox-inner p.heading a, 
+#maritReferencesDoublebox .rightReferencebox:hover .referencebox .referencebox-inner p.heading a {
+	color: #64a519;
+}

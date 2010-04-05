@@ -18,6 +18,7 @@
 			<label index="files.description">Some files for the project.</label>
 			<label index="images.description">Some images or screenshots from the project.</label>
 			<label index="list_image.description">One Image for the project list view.</label>
+			<label index="doublebox_image.description">One Image for the project and technology doublebox view.</label>
 			<label index="industrial_sector.description">The industral sector for the project.</label>
 			<label index="contact_person.description">A person in your company.</label>
 			<label index="customer_contact_person.description">A person in the customers company.</label>

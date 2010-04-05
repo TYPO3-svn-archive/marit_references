@@ -21,6 +21,10 @@
                   <numIndex index="1" type="array">
                     <numIndex index="0">LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.view.I.1</numIndex>
                     <numIndex index="1">Project->search</numIndex>
+                  </numIndex>              
+                  <numIndex index="2" type="array">
+                    <numIndex index="0">LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.view.I.2</numIndex>
+                    <numIndex index="1">Project->doublebox</numIndex>
                   </numIndex>
                 </items>
               </config>

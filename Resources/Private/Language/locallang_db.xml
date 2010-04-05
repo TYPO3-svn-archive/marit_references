@@ -43,7 +43,7 @@
 			<label index="tx_maritreferences_flexform.view">View</label>
 			<label index="tx_maritreferences_flexform.view.I.0">List views and detail views</label>
 			<label index="tx_maritreferences_flexform.view.I.1">Search boxes</label>
-			<label index="tx_maritreferences_flexform.view.I.1">Search boxes</label>
+			<label index="tx_maritreferences_flexform.view.I.2">Doublebox (Random project and technology)</label>
 			
 			<label index="tx_maritreferences_domain_model_industrialsector">Industrial Sector</label>
 			<label index="tx_maritreferences_domain_model_industrialsector.title">Title</label>
@@ -62,6 +62,7 @@
 			<label index="tx_maritreferences_domain_model_technology.description">Description</label>
 			<label index="tx_maritreferences_domain_model_technology.images">Images</label>
 			<label index="tx_maritreferences_domain_model_technology.list_image">List image</label>
+			<label index="tx_maritreferences_domain_model_technology.doublebox_image">Doublebox image</label>
 			<label index="tx_maritreferences_domain_model_technology.contact_person">Contact person</label>
 			
 			<label index="tx_maritreferences_domain_model_project">Project</label>
@@ -76,6 +77,7 @@
 			<label index="tx_maritreferences_domain_model_project.files">Files</label>
 			<label index="tx_maritreferences_domain_model_project.images">Images</label>
 			<label index="tx_maritreferences_domain_model_project.list_image">List image</label>
+			<label index="tx_maritreferences_domain_model_project.doublebox_image">Doublebox image</label>
 			<label index="tx_maritreferences_domain_model_project.industrial_sector">Industrial sector</label>
 			<label index="tx_maritreferences_domain_model_project.contact_person">Contact person</label>
 			<label index="tx_maritreferences_domain_model_project.customer_contact_person">Customer contact person</label>

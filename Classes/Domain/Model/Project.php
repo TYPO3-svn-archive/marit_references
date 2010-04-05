@@ -104,6 +104,12 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	protected $listImage;
 	
 	/**
+	 * doubleboxImage
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 */
+	protected $doubleboxImage;
+	
+	/**
 	 * industrialSector
 	 * @var Tx_MaritReferences_Domain_Model_IndustrialSector
 	 */
@@ -349,6 +355,25 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	 */
 	public function getListImage() {
 		return $this->listImage;
+	}
+	
+	/**
+	 * Setter for the doubleboxImage
+	 *
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $doubleboxImage doubleboxImage
+	 * @return void
+	 */
+	public function setDoubleboxImage(Tx_Extbase_Persistence_ObjectStorage $doubleboxImage) {
+		$this->doubleboxImage = $doubleboxImage;
+	}
+
+	/**
+	 * Getter for the doubleboxImage
+	 *
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> doubleboxImage
+	 */
+	public function getDoubleboxImage() {
+		return $this->doubleboxImage;
 	}
 	
 	/**

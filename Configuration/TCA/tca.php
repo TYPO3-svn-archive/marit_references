@@ -15,6 +15,12 @@ $projectListImage['config']['foreign_table'] = 'tx_dam';
 $projectListImage['config']['maxitems'] = 1;
 $projectListImage['config']['size'] = 1;
 
+$projectDoubleboxImage = txdam_getMediaTCA('image_field', 'project_doublebox_image');
+$projectDoubleboxImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.doublebox_image';
+$projectDoubleboxImage['config']['foreign_table'] = 'tx_dam';
+$projectDoubleboxImage['config']['maxitems'] = 1;
+$projectDoubleboxImage['config']['size'] = 1;
+
 $technologyImages = txdam_getMediaTCA('image_field', 'technology_images');
 $technologyImages['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.images';
 $technologyImages['config']['foreign_table'] = 'tx_dam';
@@ -24,6 +30,12 @@ $technologyListImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Lang
 $technologyListImage['config']['foreign_table'] = 'tx_dam';
 $technologyListImage['config']['maxitems'] = 1;
 $technologyListImage['config']['size'] = 1;
+
+$technologyDoubleboxImage = txdam_getMediaTCA('image_field', 'technology_doublebox_image');
+$technologyDoubleboxImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.doublebox_image';
+$technologyDoubleboxImage['config']['foreign_table'] = 'tx_dam';
+$technologyDoubleboxImage['config']['maxitems'] = 1;
+$technologyDoubleboxImage['config']['size'] = 1;
 
 $customerImages = txdam_getMediaTCA('image_field', 'customer_images');
 $customerImages['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.images';
@@ -39,10 +51,10 @@ $customerListImage['config']['size'] = 1;
 $TCA['tx_maritreferences_domain_model_project'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_project']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,subtitle,teaser,description,url,budget,customer_statement,year,files,images,list_image,industrial_sector,contact_person,customer_contact_person,customer,technologies'
+		'showRecordFieldList' => 'title,subtitle,teaser,description,url,budget,customer_statement,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,budget,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,list_image,industrial_sector,contact_person,customer_contact_person,customer,technologies')
+		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,budget,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -190,65 +202,10 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 		 		'range' => array('lower' => 1000,'upper' => 9999),
 			)
 		),
-		/*
-		'files' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.files',
-			'config'  => array(
-				'type' => 'group',
-        'internal_type' => 'db',
-				'size' => 10,
-				'minitems' => 0,
-				'maxitems' => 9999,
-				'autoSizeMax' => 30,
-				'multiple' => 1,
-				'allowed' => 'tx_dam',
-				'foreign_table' => 'tx_dam',
-				'MM' => 'tx_maritreferences_project_files_dam_mm'
-			)
-		),
-		*/
 		'files' => $projectFiles,
-		/*'images' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.images',
-			'config'  => array(
-				'type' => 'group',
-        		'internal_type' => 'db',
-				'size' => 10,
-				'minitems' => 0,
-				'maxitems' => 9999,
-				'autoSizeMax' => 30,
-				'multiple' => 1,
-				'allowed' => 'tx_dam',
-				'foreign_table' => 'tx_dam',
-				'MM' => 'tx_maritreferences_project_images_dam_mm'
-			)
-		),*/
 		'images' => $projectImages,
-		/*'list_image' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.list_image',
-			'config'  => array(
-				'type' => 'group',
-        		'internal_type' => 'db',
-				'size' => 1,
-				'minitems' => 1,
-				'maxitems' => 1,
-				'allowed' => 'tx_dam',
-				'foreign_table' => 'tx_dam',
-		        'wizards' => array(
-		            'suggest' => array(
-		                'type' => 'suggest',
-		                'tx_dam' => array(
-		                    'maxItemsInResultList' => 5,
-		                    'searchWholePhrase' => 1
-		                ),
-		            ),
-		        ),
-			)
-		),*/
 		'list_image' => $projectListImage,
+		'doublebox_image' => $projectDoubleboxImage,
 		'industrial_sector' => array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.industrial_sector',
@@ -361,10 +318,10 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 $TCA['tx_maritreferences_domain_model_technology'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_technology']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,description,images,list_image,contact_person'
+		'showRecordFieldList' => 'title,description,images,list_image,doublebox_image,contact_person'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,images,list_image,contact_person')
+		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,images,list_image,doublebox_image,contact_person')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -445,48 +402,9 @@ $TCA['tx_maritreferences_domain_model_technology'] = array(
             	)
 			)
 		),
-		/*'images' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.images',
-			'config'  => array(
-				'type' => 'group',
-        		'internal_type' => 'db',
-				'size' => 10,
-				'minitems' => 0,
-				'maxitems' => 9999,
-				'autoSizeMax' => 30,
-				'multiple' => 1,
-				'allowed' => 'tx_dam',
-				'foreign_table' => 'tx_dam',
-				'MM' => 'tx_maritreferences_technology_images_dam_mm'
-			)
-		),*/
 		'images' => $technologyImages,
-		/*
-		'list_image' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.list_image',
-			'config'  => array(
-				'type' => 'group',
-        		'internal_type' => 'db',
-				'size' => 1,
-				'minitems' => 1,
-				'maxitems' => 1,
-				'allowed' => 'tx_dam',
-				'foreign_table' => 'tx_dam',
-		        'wizards' => array(
-		            'suggest' => array(
-		                'type' => 'suggest',
-		                'tx_dam' => array(
-		                    'maxItemsInResultList' => 5,
-		                    'searchWholePhrase' => 1
-		                ),
-		            ),
-		        ),
-			)
-		),
-		*/
 		'list_image' => $technologyListImage,
+		'doublebox_image' => $technologyDoubleboxImage,
 		'contact_person' => array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.contact_person',
@@ -617,49 +535,7 @@ $TCA['tx_maritreferences_domain_model_customer'] = array(
 				'eval' => 'trim'
 			)
 		),
-		/*
-		'images' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.images',
-			'config'  => array(
-				'type' => 'group',
-        		'internal_type' => 'db',
-				'size' => 10,
-				'minitems' => 0,
-				'maxitems' => 9999,
-				'autoSizeMax' => 30,
-				'multiple' => 1,
-				'allowed' => 'tx_dam',
-				'foreign_table' => 'tx_dam',
-				'MM' => 'tx_maritreferences_customer_images_dam_mm'
-			)
-		),
-		*/
 		'images' => $customerImages,
-		/*
-		'list_image' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.list_image',
-			'config'  => array(
-				'type' => 'group',
-        		'internal_type' => 'db',
-				'size' => 1,
-				'minitems' => 1,
-				'maxitems' => 1,
-				'allowed' => 'tx_dam',
-				'foreign_table' => 'tx_dam',
-		        'wizards' => array(
-		            'suggest' => array(
-		                'type' => 'suggest',
-		                'tx_dam' => array(
-		                    'maxItemsInResultList' => 5,
-		                    'searchWholePhrase' => 1
-		                ),
-		            ),
-		        ),
-			)
-		),
-		*/
 		'list_image' => $customerListImage,
 	),
 );

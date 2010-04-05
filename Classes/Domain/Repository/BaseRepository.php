@@ -61,6 +61,20 @@ class Tx_MaritReferences_Domain_Repository_BaseRepository extends Tx_Extbase_Per
 		return $result;
 	}
 	
+/**
+	 * build the query to find a random entry
+	 * 
+	 * @return array $result
+	 *
+	 */	
+	public function findRandom() {
+		$query = $this->createQuery();
+		$query = $query->setLimit(1);
+		$query = $query->setOrderings(array('deleted' => 'ASC, RAND()'));
+		$result = $query->execute();
+		return $result;
+	}
+	
 	/**
 	 * Dispatches magic methods
 	 *

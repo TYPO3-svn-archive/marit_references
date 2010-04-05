@@ -11,6 +11,7 @@
 			<label index="description.description">The description for the technology.</label>
 			<label index="images.description">Some images about the technology.</label>
 			<label index="list_image.description">One image for the technology list.</label>
+			<label index="doublebox_image.description">One Image for the project and technology doublebox view.</label>
 			<label index="contact_person.description">A person in your company.</label>
 		</languageKey>
     </data>
