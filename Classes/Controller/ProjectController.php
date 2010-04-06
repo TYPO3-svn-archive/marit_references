@@ -148,14 +148,33 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 	 * @return string The rendered single view
 	 */
 	public function doubleboxAction() {
-		$this->initCSS($this->settings['project']['show']['cssFile']);
-		$this->initJS($this->settings['project']['show']['jsFile']);
+		$this->initCSS($this->settings['project']['doublebox']['cssFile']);
+		$this->initJS($this->settings['project']['doublebox']['jsFile']);
 
 		$this->view->assign('settings', $this->settings);
-		//$this->view->assign('project', $this->projectRepository->findRandom());
-		//$this->view->assign('technology', $this->technologyRepository->findRandom());
-		$this->view->assign('project', $this->projectRepository->findByUid(7));
-		$this->view->assign('technology', $this->technologyRepository->findByUid(1));
+		$this->view->assign('project', $this->projectRepository->findRandom());
+		$this->view->assign('technology', $this->technologyRepository->findRandom());
+		//$this->view->assign('project', $this->projectRepository->findByUid(7));
+		//$this->view->assign('technology', $this->technologyRepository->findByUid(1));
+	}
+
+	/**
+	 * contextbox action render a random project from a list of projects configured in flexform. if no projects are selected in backend, then a random project from all projects is chosen
+	 *
+	 * @return string The rendered single view
+	 */
+	public function contextboxAction() {
+		$this->initCSS($this->settings['project']['contextbox']['cssFile']);
+		$this->initJS($this->settings['project']['contextbox']['jsFile']);
+
+		$this->view->assign('settings', $this->settings);
+		if(strlen(trim($this->settings['project']['contextbox']['projects']))>0) {
+			$selectedProjects = explode(',', $this->settings['project']['contextbox']['projects']);
+			$this->view->assign('project', $this->projectRepository->findRandom($selectedProjects));
+		} else {
+			$this->view->assign('project', $this->projectRepository->findRandom());
+		}
+		
 	}
 }
 ?>

@@ -24,6 +24,7 @@
 	</div>
 	<f:if condition="{settings.technology.list.pageBrowser}">
 		<f:if condition="{technologyCounter} > {settings.technology.list.pageBrowser.maxItems}">
+			<div class="clear"></div>
 			<div id="referencesPageBrowser">
 				<helper:pageBrowser 
 					totalCountOfItems="{technologyCounter}" 
@@ -32,9 +33,8 @@
 					mode="items"
 					previousLabel="<f:translate key='tx_maritreferences_view.pageBrowser.previous' />"
 					nextLabel="<f:translate key='tx_maritreferences_view.pageBrowser.next' />" 
-					template="<f:translate key='tx_maritreferences_view.pageBrowser.page' /> %1$s <f:translate key='tx_maritreferences_view.pageBrowser.outOf' /> %2$s<br class='clear' />%3$s %4$s %5$s"
-					onclick="doAjaxPageBrowser($(this)); return false;"
-					               
+					template="<f:translate key='tx_maritreferences_view.pageBrowser.technologies' /> %1$s <f:translate key='tx_maritreferences_view.pageBrowser.outOf' /> %2$s<br class='clear' />%3$s %4$s %5$s"
+					onclick="doAjaxPageBrowser($(this)); return false;"					               
 				/>
 			</div>
 		</f:if>

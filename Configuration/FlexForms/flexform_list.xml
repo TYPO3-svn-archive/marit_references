@@ -25,6 +25,10 @@
                   <numIndex index="2" type="array">
                     <numIndex index="0">LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.view.I.2</numIndex>
                     <numIndex index="1">Project->doublebox</numIndex>
+                  </numIndex>           
+                  <numIndex index="3" type="array">
+                    <numIndex index="0">LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.view.I.3</numIndex>
+                    <numIndex index="1">Project->contextbox</numIndex>
                   </numIndex>
                 </items>
               </config>
@@ -33,6 +37,31 @@
         </el>
       </ROOT>
     </sDEF>
+    <contextboxOptions>
+    	<ROOT>
+        <TCEforms>
+          <sheetTitle>LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.contextboxOptions</sheetTitle>
+        </TCEforms>
+        <type>array</type>
+        <el>
+        	<settings.project.contextbox.projects>
+        		<TCEforms>
+        			<label>LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_flexform.contextboxOptions.projects</label>
+        			<config>
+        				<type>select</type>
+        				<size>10</size>
+								<minitems>0</minitems>
+								<maxitems>9999</maxitems>
+								<autoSizeMax>0</autoSizeMax>
+								<multiple>1</multiple>
+								<allowed>tx_maritreferences_domain_model_project</allowed>
+								<foreign_table>tx_maritreferences_domain_model_project</foreign_table>
+        			</config>
+        		</TCEforms>
+        	</settings.project.contextbox.projects>
+        </el>
+      </ROOT>
+    </contextboxOptions>
     <!--
     <projectOptions>
     	<ROOT>

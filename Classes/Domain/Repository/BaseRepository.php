@@ -64,15 +64,18 @@ class Tx_MaritReferences_Domain_Repository_BaseRepository extends Tx_Extbase_Per
 /**
 	 * build the query to find a random entry
 	 * 
+	 * @param array $uid Array with uids
 	 * @return array $result
 	 *
 	 */	
-	public function findRandom() {
+	public function findRandom($uid = array()) {
 		$query = $this->createQuery();
-		$query = $query->setLimit(1);
-		$query = $query->setOrderings(array('deleted' => 'ASC, RAND()'));
+		if(count($uid)>0){
+			$query = $query->matching($query->equals('uid', $uid));
+		}
 		$result = $query->execute();
-		return $result;
+		shuffle($result);
+		return $result[0];
 	}
 	
 	/**

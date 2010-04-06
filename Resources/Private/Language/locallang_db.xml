@@ -7,7 +7,15 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="tx_maritreferences_flexform.sheet1">General</label>
-			<label index="tx_maritreferences_flexform.projectOptions">Project Options</label>
+			<label index="tx_maritreferences_flexform.view">View</label>
+			<label index="tx_maritreferences_flexform.view.I.0">List views and detail views</label>
+			<label index="tx_maritreferences_flexform.view.I.1">Search boxes</label>
+			<label index="tx_maritreferences_flexform.view.I.2">Doublebox (Random project and technology)</label>
+			<label index="tx_maritreferences_flexform.view.I.3">Contextbox (see Tab "Contextbox")</label>
+			<label index="tx_maritreferences_flexform.contextboxOptions">Contextbox Options</label>
+			<label index="tx_maritreferences_flexform.contextboxOptions.boxTitle">BoxTitle</label>
+			<label index="tx_maritreferences_flexform.contextboxOptions.projects">Projects (one of this projects is shown in the box)</label>
+			<!--<label index="tx_maritreferences_flexform.projectOptions">Project Options</label>
 			<label index="tx_maritreferences_flexform.projectOptions.listOptions">#####################Project List#####################</label>
 			<label index="tx_maritreferences_flexform.projectOptions.listOptions.imgWidth">List image max Widht</label>
 			<label index="tx_maritreferences_flexform.projectOptions.listOptions.lightboxImgWidth">Lightbox image max Widht</label>
@@ -39,11 +47,7 @@
 			<label index="tx_maritreferences_flexform.technologyOptions.showOptions">#####################Technology Show Detail#####################</label>
 			<label index="tx_maritreferences_flexform.technologyOptions.showOptions.imgWidth">List image max Widht</label>
 			<label index="tx_maritreferences_flexform.technologyOptions.showOptions.lightboxImgWidth">Lightbox image max Widht</label>
-			<label index="tx_maritreferences_flexform.technologyOptions.showOptions.lightboxImgHeight">Lightbox image max Height</label>
-			<label index="tx_maritreferences_flexform.view">View</label>
-			<label index="tx_maritreferences_flexform.view.I.0">List views and detail views</label>
-			<label index="tx_maritreferences_flexform.view.I.1">Search boxes</label>
-			<label index="tx_maritreferences_flexform.view.I.2">Doublebox (Random project and technology)</label>
+			<label index="tx_maritreferences_flexform.technologyOptions.showOptions.lightboxImgHeight">Lightbox image max Height</label>-->
 			
 			<label index="tx_maritreferences_domain_model_industrialsector">Industrial Sector</label>
 			<label index="tx_maritreferences_domain_model_industrialsector.title">Title</label>

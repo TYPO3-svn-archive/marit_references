@@ -55,6 +55,16 @@ plugin.tx_maritreferences {
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
+			contextbox {
+				image.file.maxW = 200
+				image.file.maxH = 120		
+				cssFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+				}
+				jsFile {
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+				}
+			}
 		}
 		customer {
 			list {
@@ -161,7 +171,7 @@ maritReferences {
 		switchableControllerActions {
 			1 {
 				controller = Project
-				actions = list,show,search,doublebox
+				actions = list,show,search,doublebox,contextbox
 			}	
 			2 {
 				controller = Customer

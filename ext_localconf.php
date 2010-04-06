@@ -5,14 +5,14 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Pi1',
 	array(
-		'Project' => 'list, show, search, doublebox',
+		'Project' => 'list, show, search, doublebox, contextbox',
 		'Customer' => 'list, show',
-		'Technology' => 'list, show, doublebox',
+		'Technology' => 'list, show',
 	),
 	array(
-		'Project' => 'list, show, search, doublebox',
+		'Project' => 'list, show, search, doublebox, contextbox',
 		'Customer' => 'list, show',
-		'Technology' => 'list, show, doublebox',
+		'Technology' => 'list, show',
 	)
 );
 

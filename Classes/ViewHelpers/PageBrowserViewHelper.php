@@ -85,19 +85,19 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 		}
 		for($i=0; $i<$range; $i++){
 			if(($currentPage-$i-1)>=0){
-				if($mode == 'items'){
+				/*if($mode == 'items'){
 					$label = (($maxItemsToDisplay*($currentPage-$i-1))+1).'-'.($maxItemsToDisplay*($currentPage-$i));
-				} else {
-					$label = ($currentPage+1);
-				}
+				} else {*/
+					$label = ($currentPage-$i);
+				//}
 				$leftPages[] = $this->getLink(($currentPage-$i-1), $label, $onclick);
 			}
 			if(($currentPage+$i+1)<$pagesTotal) {
-				if($mode == 'items'){
+				/*if($mode == 'items'){
 					$label = (($maxItemsToDisplay*($currentPage+$i+1))+1).'-'.(($maxItemsToDisplay*($currentPage+$i+2))<$totalCountOfItems?($maxItemsToDisplay*($currentPage+$i+2)):$totalCountOfItems);
-				} else {
+				} else {*/
 					$label = ($currentPage+$i+2);
-				}
+				//}
 				$rightPages[] = $this->getLink(($currentPage+$i+1), $label, $onclick);
 			}
 			if($i==($range-1)){
@@ -118,14 +118,22 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 			}
 		}
 		$leftPages = array_reverse($leftPages);
-		if($mode == 'items'){
+		/*if($mode == 'items'){
 			$label = (($maxItemsToDisplay*$currentPage)+1).'-'.(($maxItemsToDisplay*($currentPage+1))<$totalCountOfItems?($maxItemsToDisplay*($currentPage+1)):$totalCountOfItems);
-		} else {
+		} else {*/
 			$label = ($currentPage+1);
-		}
+		//}
 		$actPage = $this->getLink($currentPage, $label, $onclick, 'activePage');
 		
-		$content = sprintf($template, ($currentPage+1), $pagesTotal, $previous, implode($leftPages).$actPage.implode($rightPages), $next);
+		if($mode == 'items'){			
+			$currentString = (($maxItemsToDisplay*$currentPage)+1).'-'.(($maxItemsToDisplay*($currentPage+1))<$totalCountOfItems?($maxItemsToDisplay*($currentPage+1)):$totalCountOfItems);
+			$totalString = $totalCountOfItems;
+		} else {
+			$currentString = ($currentPage+1);
+			$totalString = $pagesTotal;
+		}
+		
+		$content = sprintf($template, $currentString, $totalString, $previous, implode($leftPages).$actPage.implode($rightPages), $next);
 		return $content;
 	}
 	
