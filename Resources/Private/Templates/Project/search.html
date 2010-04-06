@@ -87,6 +87,30 @@
 			</div>
 		</div>
 		
+		<div class="block">
+    	<div class="block-inner green">
+				<div class="searchbox">
+					<div class="block-inner-header green">
+						<h4><f:translate key="tx_maritreferences_domain_model_customer.size" /></h4>
+  			  </div>
+					<div class="block-inner-content green">
+						<div class="sliderWrap">
+							<span class="sliderValue sliderValueLeft left" id="sliderValueMinCustomerSize">{minCustomerSize}</span>
+							<span class="sliderValue sliderValueRight right" id="sliderValueMaxCustomerSize">{maxCustomerSize}</span>
+							<div id="customerSizeSlider" class="slider"></div>
+							<span class="sliderText sliderTextLeft left">{customerSizeSliderMin}</span>
+							<span class="sliderText sliderTextRight right">{customerSizeSliderMax}</span>
+							<div class="clear"></div>
+						</div>
+						<f:form.hidden name="customerSizeSliderMin" value="{customerSizeSliderMin}" id="customerSizeSliderMin" />
+						<f:form.hidden name="customerSizeSliderMax" value="{customerSizeSliderMax}" id="customerSizeSliderMax" />
+						<f:form.hidden name="search[minCustomerSize]" value="{minCustomerSize}" id="minCustomerSize" class="search" />
+						<f:form.hidden name="search[maxCustomerSize]" value="{maxCustomerSize}" id="maxCustomerSize" class="search" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<f:form.hidden name="controller" value="Project" />
 		<input type="submit" value="<f:translate key="tx_maritreferences_view_search.search" />" id="projectSearchSubmit" />
 	</f:form>

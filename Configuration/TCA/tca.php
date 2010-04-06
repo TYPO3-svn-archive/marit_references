@@ -531,8 +531,8 @@ $TCA['tx_maritreferences_domain_model_customer'] = array(
 			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.size',
 			'config'  => array(
 				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim'
+				'size' => 15,
+				'eval' => 'trim,int'
 			)
 		),
 		'images' => $customerImages,

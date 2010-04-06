@@ -37,7 +37,7 @@ CREATE TABLE tx_maritreferences_domain_model_customer (
 	title tinytext,
 	description text,
 	url varchar(255) DEFAULT '' NOT NULL,
-	size varchar(255) DEFAULT '' NOT NULL,
+	size int(11) DEFAULT 0 NOT NULL,
 	images int(11) unsigned DEFAULT 0 NOT NULL,
 	list_image int(11) unsigned DEFAULT 0 NOT NULL,
 

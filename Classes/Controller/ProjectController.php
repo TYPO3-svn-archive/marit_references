@@ -49,6 +49,10 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 	 * @var Tx_MaritReferences_Domain_Repository_TechnologyRepository
 	 */
 	protected $technologyRepository;
+	/**
+	 * @var Tx_MaritReferences_Domain_Repository_TechnologyRepository
+	 */
+	protected $customerRepository;
 
 	/**
 	 * @return void
@@ -58,6 +62,7 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 		$this->projectRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_ProjectRepository');
 		$this->industrialSectorRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_IndustrialSectorRepository');
 		$this->technologyRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_TechnologyRepository');
+		$this->customerRepository = t3lib_div::makeInstance('Tx_MaritReferences_Domain_Repository_CustomerRepository');
 	}
 
 	/**
@@ -140,6 +145,15 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 		$this->view->assign('minBudget', $minBudget);
 		$maxBudget = $search['maxBudget'] ? $search['maxBudget'] : $budgetSliderMax;
 		$this->view->assign('maxBudget', $maxBudget);
+
+		$customerSizeSliderMin = $this->customerRepository->findMinSize()->getSize() > 0 ? $this->customerRepository->findMinSize()->getSize() : $this->settings['project']['search']['customerSizeSliderMin'];
+		$this->view->assign('customerSizeSliderMin', $customerSizeSliderMin);
+		$customerSizeSliderMax = $this->customerRepository->findMaxSize()->getSize() > 0 ? $this->customerRepository->findMaxSize()->getSize() : $this->settings['project']['search']['customerSizeSliderMax'];
+		$this->view->assign('customerSizeSliderMax', $customerSizeSliderMax);
+		$minCustomerSize = $search['minCustomerSize'] ?  $search['minCustomerSize'] : $customerSizeSliderMin;
+		$this->view->assign('minCustomerSize', $minCustomerSize);
+		$maxCustomerSize = $search['maxCustomerSize'] ? $search['maxCustomerSize'] : $customerSizeSliderMax;
+		$this->view->assign('maxCustomerSize', $maxCustomerSize);
 	}
 
 	/**
