@@ -53,7 +53,7 @@ class Tx_MaritReferences_Controller_BaseController extends Tx_Extbase_MVC_Contro
 	 */
 	public function initCSS($files) {
 		foreach($files as $cssFile) {
-			$GLOBALS['TSFE']->additionalHeaderData['tx_maritreferences'] .= '<link rel="stylesheet" type="text/css" href="'.$cssFile.'" media="screen, projection" />'."\n";
+			$GLOBALS['TSFE']->additionalHeaderData['tx_maritreferences_'.str_replace(array('/', '.'), '_', $cssFile)] = '<link rel="stylesheet" type="text/css" href="'.$cssFile.'" media="screen, projection" />'."\n";
 		}
 	}
 
@@ -66,7 +66,7 @@ class Tx_MaritReferences_Controller_BaseController extends Tx_Extbase_MVC_Contro
 	 */
 	public function initJS($files) {
 		foreach($files as $jsFile) {
-			$GLOBALS['TSFE']->additionalHeaderData['tx_maritreferences'] .= '<script type="text/javascript" src="'.$jsFile.'"></script>'."\n";
+			$GLOBALS['TSFE']->additionalHeaderData['tx_maritreferences_'.str_replace(array('/', '.'), '_', $jsFile)] = '<script type="text/javascript" src="'.$jsFile.'"></script>'."\n";
 		}
 	}
 }

@@ -10,11 +10,12 @@ plugin.tx_maritreferences {
 				pageBrowser.maxItems = 4		
 				pageBrowser.range = 1		
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
-					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+					15 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 			show {
@@ -22,7 +23,7 @@ plugin.tx_maritreferences {
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
@@ -37,13 +38,15 @@ plugin.tx_maritreferences {
 				customerSizeSliderMin = 0
 				customerSizeSliderMax = 1000000
 				cssFile {
-					3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8rc3.custom.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8rc3.custom.css
 				}
 				jsFile {
-					3 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/js/jquery-ui-1.8rc3.custom.min.js
-					4 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery.form.js
-					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
-					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences_search.js
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/js/jquery-ui-1.8rc3.custom.min.js
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery.form.js
+					15 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+					20 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					25 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences_search.js
 				}
 			}
 			doublebox {
@@ -51,20 +54,20 @@ plugin.tx_maritreferences {
 				image.file.maxH = 150		
 				technology.description.crop = 200
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					#10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 			contextbox {
 				image.file.maxW = 200
 				image.file.maxH = 120		
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					#10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 		}
@@ -78,11 +81,12 @@ plugin.tx_maritreferences {
 				pageBrowser.maxItems = 3		
 				pageBrowser.range = 1		
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
-					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+					15 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 			show {
@@ -90,7 +94,7 @@ plugin.tx_maritreferences {
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
@@ -108,11 +112,12 @@ plugin.tx_maritreferences {
 				pageBrowser.maxItems = 4		
 				pageBrowser.range = 1		
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
-					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+					15 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 			show {
@@ -120,7 +125,7 @@ plugin.tx_maritreferences {
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400			
 				cssFile {
-					10 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
+					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-tooltip/jquery.tooltip.js
