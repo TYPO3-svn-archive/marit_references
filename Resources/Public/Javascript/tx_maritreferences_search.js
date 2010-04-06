@@ -115,8 +115,18 @@ function initSearchSubmit(){
   });
 }
 
+var flobuReferenceList;
 
 $(document).ready(function(){
 	initSlider();
 	initSearchSubmit();
+	
+	flobuReferenceList = new flower_bubble ({
+		base_obj: $('.wrapper'),
+		block_mode: 'base_obj',
+		base_dir: 'typo3conf/ext/marit_references/Resources/Public/Javascript',
+		background: { css: 'white', opacity: 0.78 },
+		bubble: { image: 'bubble.png', width: 130, height: 98 },
+		flower: { image: 'flower.gif', width: 32, height: 32 }
+	});
 });
