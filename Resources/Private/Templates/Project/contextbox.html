@@ -8,11 +8,12 @@
 				<f:for each="{project.listImage}" as="listImage">
 					<f:image src="{listImage.filePath}{listImage.fileName}" alt="{listImage.title} - {listImage.altText}" title="{listImage.title}" maxWidth="{settings.project.contextbox.image.file.maxW}" maxHeight="{settings.project.conntextbox.image.file.maxH}" class="contextbox-pic" />
 				</f:for>
-				<p class="dev_emph"><f:link.action action="show" arguments="{project: project}">{project.subtitle}</f:link.action></p>
+				<p class="subtitle"><f:link.action action="show" arguments="{project: project}">{project.subtitle}</f:link.action></p>
 				<p>
 					<f:format.nl2br>{project.teaser}</f:format.nl2br>
 				</p>
 				<p class="right"><f:link.action action="show" arguments="{project: project}" class="morelink"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+				<br class="clear" />
 			</div>
 		</div>
 	</div>

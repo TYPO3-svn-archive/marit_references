@@ -27,7 +27,7 @@
 	<f:if condition="{settings.customer.list.pageBrowser}">
 		<f:if condition="{customerCounter} > {settings.customer.list.pageBrowser.maxItems}">
 			<div class="clear"></div>
-			<div id="referencesPageBrowser">
+			<div class="pageBrowser">
 				<helper:pageBrowser 
 					totalCountOfItems="{customerCounter}" 
 					maxItemsToDisplay="{settings.customer.list.pageBrowser.maxItems}" 

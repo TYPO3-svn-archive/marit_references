@@ -5,7 +5,7 @@ div.clear.col1 {
 
 /**
  * Menu with the three item Projects, Customers and Technologies
- */ 
+ */
 #maritReferences ul#referencesMenu {
 	list-style-type: none;
 }
@@ -50,23 +50,33 @@ div.clear.col1 {
 	height: 10px;
 }
 
+#maritReferences .projectimages {
+	margin: 0px 10px 10px 0;
+}
 /**
  * Project list
  */ 
 #maritReferences .projectList .project {
 	width: 206px;
-	margin-top: 10px;
+	margin-top: 5px;
+	padding-top: 5px;
+	padding-left: 5px; /* jke */
+	padding-right: 5px; /* jke */
+}
+#maritReferences .projectList a {
+	font-size: 11px;
+	line-height: 12px;
 }
 #maritReferences .projectList .project:hover {
 	background-color: #F1F1F1;
 }
 #maritReferences .projectList .project.col1 {
-	margin-left: 5px;
+	/* margin-left: 5px; /* jke */
 	margin-right: 10px;
 }
 #maritReferences .projectList .project.col2 {
-	margin-left: 10px;
-	margin-right: 5px;
+	/* margin-left: 10px; */
+	/* margin-right: 5px; */
 }
 #maritReferences .projectList .project .projectListImage {
 	border: 1px solid #B4B5B6;
@@ -79,16 +89,17 @@ div.clear.col1 {
 #maritReferences .projectList .project .projectTitle a {
 	color: #64A519;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 11px;
 	text-decoration: none;
 }
 #maritReferences .projectList .project .projectTitle {
 	margin-top: 5px;
+	margin-bottom: 0px;
 	padding-left: 7px;
-	height: 25px;
 }
 #maritReferences .projectList .project .projectTeaser {
 	padding-left: 7px;
+	font-size: 11px;
 }
 
 /**
@@ -108,6 +119,9 @@ div.clear.col1 {
 	font-size: 12px;
 	text-decoration: none;
 }
+#maritReferences .customerList .customer .customerListText h2 {
+	margin-bottom: 10px;
+}
 
 /**
  * Technology list
@@ -126,33 +140,6 @@ div.clear.col1 {
 	font-size: 12px;
 	text-decoration: none;
 }
-
-/**
- * Listviews pagebrowser
- */ 
-#maritReferences #referencesPageBrowser a,
-#maritReferences #referencesPageBrowser span.dots {
-	display: inline-block;
-	margin-right: 5px;
-	width: 16px;
-	padding: 4px 0;
-	margin-top: 7px;
-	text-decoration: none;
-	font-weight: normal;
-	font-size: 10px;
-	text-align: center;
-	color: #FFFFFF;
-	background: #AAAAAA;
-}
-#maritReferences #referencesPageBrowser a.activePage,
-#maritReferences #referencesPageBrowser a:hover {
-	background: #99CE08;
-}
-#maritReferences #referencesPageBrowser span.dots {
-	color: #AAAAAA;
-	background: transparent;
-}
-
 
 /**
  * Moueseover lightbox/tooltip
@@ -217,9 +204,10 @@ div.clear.col1 {
 #maritReferencesSearch .sliderWrap .sliderText {
 	color: #64A519;
 	font-weight: bold;
+	font-size: 10px;
 }
 #maritReferencesSearch .sliderWrap .sliderValue {
-	font-size: 9px;
+	font-size: 10px;
 }
 #maritReferencesSearch .sliderWrap .slider {
 	margin: 20px 10px 5px 10px;	
@@ -251,6 +239,9 @@ div.clear.col1 {
   */
 #maritReferencesDoublebox {
 	margin-top: 37px;
+}
+#maritReferencesDoublebox a.morelink {
+	line-height: 12px;
 }
 #maritReferencesDoublebox .leftReferencebox {
 	height: 196px;
