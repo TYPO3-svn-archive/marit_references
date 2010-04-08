@@ -163,6 +163,7 @@ div.clear.col1 {
 /**
  * Searchboxes
  */ 
+ /*
 #maritReferencesSearch .block-inner-header, 
 #maritReferencesSearch .block-inner-content {  
 	padding: 7px 10px;
@@ -193,7 +194,7 @@ div.clear.col1 {
 #maritReferencesSearch .blue .block-inner-content {
 	background-position: -684px 0;
 }
-
+*/
 #maritReferencesSearch .col1,
 #maritReferencesSearch .col2 {
 	width: 50%;

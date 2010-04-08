@@ -4,14 +4,14 @@
 <f:section name="content">
 	<div class="projectshow">
 		<h1>{project.title}</h1>
-		<p><strong><f:format.nl2br>{project.teaser}</f:format.nl2br></strong></p>
+		<h2 class="projectsubtitle">{project.subtitle}</h2>
 		<div class="textpic">
 			<div class="projectimages left">
 				<f:for each="{project.images}" as="image">
 					 <helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.project.show.image.file.maxW}" lightboxMaxWidth="{settings.project.show.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.show.lightboxImage.file.maxH}" id="projectImage_{image.fileHash}" class="lightboximage" />
 				</f:for>
 			</div>
-			<h2 class="projectsubtitle">{project.subtitle}</h2>
+			<p><strong><f:format.nl2br>{project.teaser}</f:format.nl2br></strong></p>
 			<f:format.html>{project.description}</f:format.html>
 			<hr class="clear" />
 		</div>

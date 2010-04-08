@@ -1,8 +1,10 @@
 <div id="maritReferencesDoublebox">
 	<div class="leftReferencebox left">
-		<f:for each="{project.doubleboxImage}" as="doubleboxImage">
-			<f:image src="{doubleboxImage.filePath}{doubleboxImage.fileName}" alt="{doubleboxImage.title} - {doubleboxImage.altText}" title="{doubleboxImage.title}" maxWidth="{settings.project.doublebox.image.file.maxW}" maxHeight="{settings.project.doublebox.image.file.maxH}" class="refbox-pic" />
-		</f:for>
+		<div class="refbox-pic">
+			<f:for each="{project.doubleboxImage}" as="doubleboxImage">
+				<f:image src="{doubleboxImage.filePath}{doubleboxImage.fileName}" alt="{doubleboxImage.title} - {doubleboxImage.altText}" title="{doubleboxImage.title}" maxWidth="{settings.project.doublebox.image.file.maxW}" maxHeight="{settings.project.doublebox.image.file.maxH}" class="refbox-pic" />
+			</f:for>
+		</div>
 		<div class="referencebox">
 			<div class="referencebox-inner">
 				<p class="heading">
@@ -18,9 +20,11 @@
 		</div>
 	</div>
 	<div class="rightReferencebox right">
-		<f:for each="{technology.doubleboxImage}" as="doubleboxImage">
-			<f:image src="{doubleboxImage.filePath}{doubleboxImage.fileName}" alt="{doubleboxImage.title} - {doubleboxImage.altText}" title="{doubleboxImage.title}" maxWidth="{settings.project.doublebox.image.file.maxW}" maxHeight="{settings.project.doublebox.image.file.maxH}" class="refbox-pic" />
-		</f:for>
+		<div class="refbox-pic">
+			<f:for each="{technology.doubleboxImage}" as="doubleboxImage">
+				<f:image src="{doubleboxImage.filePath}{doubleboxImage.fileName}" alt="{doubleboxImage.title} - {doubleboxImage.altText}" title="{doubleboxImage.title}" maxWidth="{settings.project.doublebox.image.file.maxW}" maxHeight="{settings.project.doublebox.image.file.maxH}" class="refbox-pic" />
+			</f:for>
+		</div>		
 		<div class="referencebox">
 			<div class="referencebox-inner">
 				<p class="heading">
