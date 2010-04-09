@@ -10,7 +10,9 @@ div.clear.col1 {
 	list-style-type: none;
 }
 #maritReferences ul#referencesMenu li {
+	background: none;
 	float: left;
+	padding-left: 0px;
 	margin-right: 2px;
 	width: 145px;
 }
