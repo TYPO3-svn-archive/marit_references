@@ -11,6 +11,17 @@ function initImageLightboxes(){
 	});
 }
 
+function initImageAccordion(){
+	if($('.imageAccordion')){
+		$('.imageAccordion').accordion({
+			event: 'mouseover',
+			animated: 'easeOutBounce',
+			autoHeight: true
+		});
+
+	}
+}
+
 function doAjaxPageBrowser(element){		
 	flobuReferenceList.enable();
 	
@@ -31,6 +42,7 @@ var flobuReferenceList;
 
 $(document).ready(function(){
 	initImageLightboxes();
+	initImageAccordion();
 
 	flobuReferenceList = new flower_bubble ({
 		base_obj: $('.wrapper'),

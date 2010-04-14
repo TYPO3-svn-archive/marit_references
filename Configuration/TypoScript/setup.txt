@@ -39,10 +39,10 @@ plugin.tx_maritreferences {
 				customerSizeSliderMax = 1000000
 				cssFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
-					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8rc3.custom.css
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8.custom.css
 				}
 				jsFile {
-					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/js/jquery-ui-1.8rc3.custom.min.js
+					5 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/js/jquery-ui-1.8.custom.min.js
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery.form.js
 					15 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
 					20 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js

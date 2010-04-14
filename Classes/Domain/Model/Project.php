@@ -98,6 +98,12 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	protected $images;
 	
 	/**
+	 * firstImage from $images
+	 * @var Tx_MaritReferences_Domain_Model_DAM
+	 */
+	protected $firstImage;
+	
+	/**
 	 * listImage
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
 	 */
@@ -336,6 +342,27 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	 */
 	public function getImages() {
 		return $this->images;
+	}
+
+	/**
+	 * Getter for first image from $images
+	 *
+	 * @return Tx_MaritReferences_Domain_Model_DAM image
+	 */
+	public function getFirstImage() {
+		foreach($this->images as $image){
+			return $image;
+		}		
+	}
+	
+	/**
+	 * Setter for images
+	 *
+	 * @param Tx_MaritReferences_Domain_Model_DAM $image image
+	 * @return void
+	 */
+	public function setFirstImage(Tx_MaritReferences_Domain_Model_DAM $image) {
+		$this->firstImage = $image;
 	}
 	
 	/**

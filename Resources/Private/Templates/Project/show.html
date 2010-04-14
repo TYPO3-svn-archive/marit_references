@@ -7,9 +7,7 @@
 		<h2 class="projectsubtitle">{project.subtitle}</h2>
 		<div class="textpic">
 			<div class="projectimages left">
-				<f:for each="{project.images}" as="image">
-					 <helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{settings.project.show.image.file.maxW}" lightboxMaxWidth="{settings.project.show.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.show.lightboxImage.file.maxH}" id="projectImage_{image.fileHash}" class="lightboximage" />
-				</f:for>
+				<helper:mouseoverLightboxImage src="{project.firstImage.filePath}{project.firstImage.fileName}" alt="{project.firstImage.title} - {project.firstImage.altText}" title="{project.firstImage.title}" maxWidth="{settings.project.show.image.file.maxW}" lightboxMaxWidth="{settings.project.show.lightboxImage.file.maxW}" lightboxMaxHeight="{settings.project.show.lightboxImage.file.maxH}" id="projectImage_{project.firstImage.fileHash}" class="lightboximage" />
 			</div>
 			<p><strong><f:format.nl2br>{project.teaser}</f:format.nl2br></strong></p>
 			<f:format.html>{project.description}</f:format.html>
@@ -60,6 +58,7 @@
 						<li><strong><f:translate key="tx_maritreferences_domain_model_project.customer_contact_person" />:</strong> <f:link.email email="{project.customerContactPerson.email}"  class="projectcustomercontact"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{project.customerContactPerson.gender}" />{project.customerContactPerson.firstName} {project.customerContactPerson.lastName}</f:link.email></li>
 						<li><strong><f:translate key="tx_maritreferences_domain_model_project.industrial_sector" />:</strong> <span title="{project.industrialSector.description}"  class="projectindustrysector">{project.industrialSector.title}</span></li>
 					</ul>
+					<f:render partial="imageAccordion" arguments="{images: project.images, showSettings: settings.project.show}"/>
 				</div>
 			</div>
 			<div class="clear"></div>

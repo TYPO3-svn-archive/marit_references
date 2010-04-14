@@ -1,0 +1,8 @@
+{namespace helper=Tx_MaritReferences_ViewHelpers}
+
+<div class="imageAccordion">    
+		<f:for each="{images}" as="image">
+			 <h3><a href="#">header</a></h3>
+			 <div><helper:mouseoverLightboxImage src="{image.filePath}{image.fileName}" alt="{image.title} - {image.altText}" title="{image.title}" maxWidth="{showSettings.image.file.maxW}" lightboxMaxWidth="{showSettings.lightboxImage.file.maxW}" lightboxMaxHeight="{showSettings.lightboxImage.file.maxH}" id="accordionImage_{image.fileHash}" class="lightboximage" /></div>
+		</f:for>
+</div>
