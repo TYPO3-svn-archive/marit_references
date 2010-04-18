@@ -19,7 +19,7 @@ plugin.tx_maritreferences {
 				}
 			}
 			show {
-				image.file.maxW = 75	
+				image.file.maxW = 207	
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
 				cssFile {

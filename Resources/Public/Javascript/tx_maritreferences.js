@@ -1,6 +1,6 @@
 function initImageLightboxes(){
 	$('.lightboximage').tooltip({ 
-	    delay: 500, 
+	    delay: 1000, 
 	    showURL: false, 
 	    fade: 250,
     	top: -15, 
@@ -9,17 +9,6 @@ function initImageLightboxes(){
 	        return $("<img/>").attr("src", $('#'+this.id+"_big").attr('src')); 
 	    } 
 	});
-}
-
-function initImageAccordion(){
-	if($('.imageAccordion')){
-		$('.imageAccordion').accordion({
-			event: 'mouseover',
-			animated: 'easeOutBounce',
-			autoHeight: true
-		});
-
-	}
 }
 
 function doAjaxPageBrowser(element){		
@@ -38,7 +27,70 @@ function doAjaxPageBrowser(element){
 	return false;
 }
 
+function initImageAccordion(){
+	if($('.imageAccordion')){
+		$('div.imageItems').each(function(){
+			//Get highest element height
+			if($(this).height()>imageItemsFullHeight) {
+				imageItemsFullHeight = $(this).height();
+			}
+			$(this).height(imageItemsCollapsedHeight);
+		});
+		//set all elements to the same height
+		$('div.imageItems div.imageItemsInnerWrap').height(imageItemsFullHeight); 
+		$('div.imageItems').first().height(imageItemsFullHeight); 
+		$('.imageAccordion').height($('.imageAccordion').height());
+		var boxes = $('div.imageItems')
+			.mouseover(
+				function(){
+					$(this)
+						.stop(true)
+						.animate({syncHeight: imageItemsFullHeight}, 
+								{
+									syncElements: boxes, 
+									fullHeight: $('.imageAccordion').height(),
+									easing: 'easeOutBounce'
+								});
+				}
+			);
+	}
+}
+
+$.fx.step.syncHeight = function(fx){
+    if (!fx.state) {
+        var o = fx.options;
+        fx.start = $(fx.elem).height();
+        fx.syncStart = [];
+        fx.fullHeight = o.fullHeight;
+ 
+        fx.syncElements = $(o.syncElements)
+            .map(function(i, elem){
+                if(elem !== fx.elem){
+                    return elem;
+                }
+            })
+            .each(function(i){
+                fx.syncStart.push($(this).height());
+            });
+ 
+        fx.syncEnd = (fx.fullHeight - fx.end) / fx.syncElements.length;
+    }
+    if(fx.syncElements){
+	    var syncedHeight = 0;
+	    fx.syncElements
+	        .each(function(i){
+	            var height = Math.round(fx.pos * (fx.syncEnd - fx.syncStart[i]) + fx.syncStart[i]);
+	            syncedHeight += height;
+	            this.style.height = height + fx.unit;
+	        });
+	 
+	    fx.elem.style.height = fx.fullHeight - syncedHeight + fx.unit;
+    }
+};
+
 var flobuReferenceList;
+var imageItemsFullHeight = 0;
+var imageItemsCollapsedHeight = 35;
 
 $(document).ready(function(){
 	initImageLightboxes();

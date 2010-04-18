@@ -165,38 +165,6 @@ div.clear.col1 {
 /**
  * Searchboxes
  */ 
- /*
-#maritReferencesSearch .block-inner-header, 
-#maritReferencesSearch .block-inner-content {  
-	padding: 7px 10px;
-} 
-#maritReferencesSearch .block-inner-header{
-	background: url(../CssImages/context-block-headers-top.png) no-repeat 0 0;
-}
-#maritReferencesSearch .green .block-inner-header {
-	background-color: #99CE08;
-}
-#maritReferencesSearch .blue .block-inner-header {
-	background-color: #2B4C6B;
-}
-#maritReferencesSearch .block-inner-header h4{
-	margin-bottom: 0px; 
-	padding-bottom: 0px; 
-	margin-top: 2px
-}
-#maritReferencesSearch .block-inner-content{
-	background: transparent url(../CssImages/context-block-headers-bottom.png) no-repeat; 
-	padding-top: 15px;
-}
-#maritReferencesSearch .green .block-inner-header, 
-#maritReferencesSearch .green .block-inner-content {
-	background-position: -456px 0;
-}
-#maritReferencesSearch .blue .block-inner-header, 
-#maritReferencesSearch .blue .block-inner-content {
-	background-position: -684px 0;
-}
-*/
 #maritReferencesSearch .col1,
 #maritReferencesSearch .col2 {
 	width: 50%;
@@ -310,4 +278,12 @@ div.clear.col1 {
 #maritReferencesDoublebox .leftReferencebox:hover .referencebox .referencebox-inner p.heading a, 
 #maritReferencesDoublebox .rightReferencebox:hover .referencebox .referencebox-inner p.heading a {
 	color: #64a519;
+}
+
+.imageAccordion,
+.imageAccordion .imageItems {
+	overflow: hidden;
+}
+.imageAccordion .imageItems .imageItemsInnerWrap {
+	padding-top: 10px;
 }
