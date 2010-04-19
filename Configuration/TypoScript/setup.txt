@@ -142,14 +142,14 @@ plugin.tx_maritreferences {
 	}
 	
 	persistence {
-		storagePid = 12,9
+		storagePid = 12
 		classes {
 			Tx_MaritReferences_Domain_Model_ContactPerson {
 				mapping {
 					tableName = tt_address
 				}
 			}
-			Tx_MaritReferences_Domain_Model_DAM {
+			Tx_MaritDam_Domain_Model_Dam {
 				mapping {
 					tableName = tx_dam
 				}

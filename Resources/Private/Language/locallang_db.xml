@@ -91,10 +91,6 @@
 			<label index="tt_address.tx_extbase_type">Record Type</label>
 			<label index="tt_address.tx_extbase_type.0">undefined</label>
 			<label index="tt_address.tx_extbase_type.Tx_MaritReferences_Domain_Model_ContactPerson">Tx_MaritReferences_Domain_Model_ContactPerson</label>
-			
-			<label index="tx_dam.tx_extbase_type">Record Type</label>
-			<label index="tx_dam.tx_extbase_type.0">undefined</label>
-			<label index="tx_dam.tx_extbase_type.Tx_MaritReferences_Domain_Model_DAM">Tx_MaritReferences_Domain_Model_DAM</label>
 		</languageKey>
 	</data>
 </T3locallang>

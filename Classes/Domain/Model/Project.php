@@ -87,31 +87,31 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	
 	/**
 	 * files
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
 	protected $files;
 	
 	/**
 	 * images
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
 	protected $images;
 	
 	/**
 	 * firstImage from $images
-	 * @var Tx_MaritReferences_Domain_Model_DAM
+	 * @var Tx_MaritDam_Domain_Model_Dam
 	 */
 	protected $firstImage;
 	
 	/**
 	 * listImage
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
 	protected $listImage;
 	
 	/**
 	 * doubleboxImage
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
 	protected $doubleboxImage;
 	
@@ -309,7 +309,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Setter for files
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $files files
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $files files
 	 * @return void
 	 */
 	public function setFiles(Tx_Extbase_Persistence_ObjectStorage $files) {
@@ -319,7 +319,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for files
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> files
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> files
 	 */
 	public function getFiles() {
 		return $this->files;
@@ -328,7 +328,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Setter for images
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $images images
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $images images
 	 * @return void
 	 */
 	public function setImages(Tx_Extbase_Persistence_ObjectStorage $images) {
@@ -338,7 +338,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for images
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> images
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> images
 	 */
 	public function getImages() {
 		return $this->images;
@@ -347,7 +347,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for first image from $images
 	 *
-	 * @return Tx_MaritReferences_Domain_Model_DAM image
+	 * @return Tx_MaritDam_Domain_Model_Dam image
 	 */
 	public function getFirstImage() {
 		foreach($this->images as $image){
@@ -358,17 +358,17 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Setter for images
 	 *
-	 * @param Tx_MaritReferences_Domain_Model_DAM $image image
+	 * @param Tx_MaritDam_Domain_Model_Dam $image image
 	 * @return void
 	 */
-	public function setFirstImage(Tx_MaritReferences_Domain_Model_DAM $image) {
+	public function setFirstImage(Tx_MaritDam_Domain_Model_Dam $image) {
 		$this->firstImage = $image;
 	}
 	
 	/**
 	 * Setter for the listImage
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $listImage listImage
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $listImage listImage
 	 * @return void
 	 */
 	public function setListImage(Tx_Extbase_Persistence_ObjectStorage $listImage) {
@@ -378,7 +378,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for the listImage
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> listImage
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> listImage
 	 */
 	public function getListImage() {
 		return $this->listImage;
@@ -387,7 +387,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Setter for the doubleboxImage
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $doubleboxImage doubleboxImage
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $doubleboxImage doubleboxImage
 	 * @return void
 	 */
 	public function setDoubleboxImage(Tx_Extbase_Persistence_ObjectStorage $doubleboxImage) {
@@ -397,7 +397,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for the doubleboxImage
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> doubleboxImage
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> doubleboxImage
 	 */
 	public function getDoubleboxImage() {
 		return $this->doubleboxImage;

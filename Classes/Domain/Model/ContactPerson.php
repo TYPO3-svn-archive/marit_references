@@ -81,7 +81,7 @@ class Tx_MaritReferences_Domain_Model_ContactPerson extends Tx_Extbase_DomainObj
 	
 	/**
 	 * images
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
 	protected $images;
 	
@@ -230,7 +230,7 @@ class Tx_MaritReferences_Domain_Model_ContactPerson extends Tx_Extbase_DomainObj
 	/**
 	 * Setter for images
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $images images
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $images images
 	 * @return void
 	 */
 	public function setImages(Tx_Extbase_Persistence_ObjectStorage $images) {
@@ -240,7 +240,7 @@ class Tx_MaritReferences_Domain_Model_ContactPerson extends Tx_Extbase_DomainObj
 	/**
 	 * Getter for images
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> images
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> images
 	 */
 	public function getImages() {
 		return $this->images;

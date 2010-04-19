@@ -168,10 +168,6 @@ CREATE TABLE tx_maritreferences_project_technology_mm (
 	KEY parent (pid)
 );
 
-CREATE TABLE tx_dam (
-	tx_extbase_type varchar(255)
-);
-
 CREATE TABLE tt_address (
 	tx_extbase_type varchar(255)
 );

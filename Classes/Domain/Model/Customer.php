@@ -63,13 +63,13 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	
 	/**
 	 * images
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
 	protected $images;
 	
 	/**
 	 * listImage
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
 	protected $listImage;
 	
@@ -161,7 +161,7 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	/**
 	 * Setter for images
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $images images
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $images images
 	 * @return void
 	 */
 	public function setImages(Tx_Extbase_Persistence_ObjectStorage $images) {
@@ -171,7 +171,7 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	/**
 	 * Getter for images
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> images
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> images
 	 */
 	public function getImages() {
 		return $this->images;
@@ -180,7 +180,7 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	/**
 	 * Setter for the listImage
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> $listImage listImage
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $listImage listImage
 	 * @return void
 	 */
 	public function setListImage(Tx_Extbase_Persistence_ObjectStorage $listImage) {
@@ -190,7 +190,7 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	/**
 	 * Getter for the listImage
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_DAM> listImage
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> listImage
 	 */
 	public function getListImage() {
 		return $this->listImage;

@@ -108,7 +108,7 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 	public function showAction(Tx_MaritReferences_Domain_Model_Project $project) {
 		$this->initCSS($this->settings['project']['show']['cssFile']);
 		$this->initJS($this->settings['project']['show']['jsFile']);
-
+var_dump($project->getImages());
 		$this->view->assign('settings', $this->settings);
 		$this->view->assign('project', $project);
 	}
