@@ -129,7 +129,8 @@ t3lib_div::loadTCA('tt_address');
 t3lib_extMgm::addTCAcolumns('tt_address', $tempColumns, 1);
 t3lib_extMgm::addToAllTCAtypes('tt_address', 'tx_extbase_type');
 $TCA['tt_address']['ctrl']['type'] = 'tx_extbase_type'; // TODO handle already set 'type'
-$TCA['tt_address']['types']['Tx_MaritReferences_Domain_Model_ContactPerson'] = $TCA['tt_address']['types']['0'];
+$TCA['tt_address']['types']['Tx_MaritReferences_Domain_Model_ContactPerson'] = $TCA['tt_address']['types']['1'];
+$TCA['tt_address']['types']['Tx_MaritReferences_Domain_Model_ContactPerson']['showitem'] = 'hidden;;;;1-1-1, gender;;;;3-3-3, first_name, last_name, email, phone, company, department, image;;;;4-4-4, addressgroup;;;;1-1-1, tx_extbase_type';
 $TCA['tt_address']['columns']['image'] = txdam_getMediaTCA('image_field', 'tt_address_image');
 $TCA['tt_address']['columns']['image']['label'] = 'LLL:EXT:lang/locallang_general.xml:LGL.image';
 $TCA['tt_address']['columns']['image']['config']['foreign_table'] = 'tx_dam';
