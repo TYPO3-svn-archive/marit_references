@@ -10,9 +10,7 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 		'Technology' => 'list, show',
 	),
 	array(
-		'Project' => 'list, show, search, doublebox, contextbox',
-		'Customer' => 'list, show',
-		'Technology' => 'list, show',
+		'Project' => 'doublebox, contextbox'
 	)
 );
 

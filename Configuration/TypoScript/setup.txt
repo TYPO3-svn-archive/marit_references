@@ -149,11 +149,6 @@ plugin.tx_maritreferences {
 					tableName = tt_address
 				}
 			}
-			Tx_MaritDam_Domain_Model_Dam {
-				mapping {
-					tableName = tx_dam
-				}
-			}
 		}
 	}
 		

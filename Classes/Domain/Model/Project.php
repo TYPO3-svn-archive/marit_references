@@ -93,7 +93,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	
 	/**
 	 * images
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage>
 	 */
 	protected $images;
 	
@@ -105,13 +105,13 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	
 	/**
 	 * listImage
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage>
 	 */
 	protected $listImage;
 	
 	/**
 	 * doubleboxImage
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage>
 	 */
 	protected $doubleboxImage;
 	
@@ -328,7 +328,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Setter for images
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $images images
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage> $images images
 	 * @return void
 	 */
 	public function setImages(Tx_Extbase_Persistence_ObjectStorage $images) {
@@ -338,7 +338,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for images
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> images
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage> images
 	 */
 	public function getImages() {
 		return $this->images;
@@ -347,7 +347,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for first image from $images
 	 *
-	 * @return Tx_MaritDam_Domain_Model_Dam image
+	 * @return Tx_MaritDam_Domain_Model_DamImage image
 	 */
 	public function getFirstImage() {
 		foreach($this->images as $image){
@@ -358,17 +358,17 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Setter for images
 	 *
-	 * @param Tx_MaritDam_Domain_Model_Dam $image image
+	 * @param Tx_MaritDam_Domain_Model_DamImage $image image
 	 * @return void
 	 */
-	public function setFirstImage(Tx_MaritDam_Domain_Model_Dam $image) {
+	public function setFirstImage(Tx_MaritDam_Domain_Model_DamImage $image) {
 		$this->firstImage = $image;
 	}
 	
 	/**
 	 * Setter for the listImage
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $listImage listImage
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage> $listImage listImage
 	 * @return void
 	 */
 	public function setListImage(Tx_Extbase_Persistence_ObjectStorage $listImage) {
@@ -378,7 +378,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for the listImage
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> listImage
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage> listImage
 	 */
 	public function getListImage() {
 		return $this->listImage;
@@ -387,7 +387,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Setter for the doubleboxImage
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> $doubleboxImage doubleboxImage
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage> $doubleboxImage doubleboxImage
 	 * @return void
 	 */
 	public function setDoubleboxImage(Tx_Extbase_Persistence_ObjectStorage $doubleboxImage) {
@@ -397,7 +397,7 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * Getter for the doubleboxImage
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam> doubleboxImage
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage> doubleboxImage
 	 */
 	public function getDoubleboxImage() {
 		return $this->doubleboxImage;
