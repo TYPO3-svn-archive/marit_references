@@ -104,6 +104,10 @@ div.clear.col1 {
 	font-size: 11px;
 }
 
+.projectList p{
+	line-height: 16px;
+}
+
 /**
  * Customer list
  */ 
