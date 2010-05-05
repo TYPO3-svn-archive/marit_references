@@ -3,7 +3,7 @@ plugin.tx_maritreferences {
 	settings {
 		project {
 			list {
-				image.file.maxW = 194
+				image.file.maxW = 200
 				image.file.maxH = 200
 				lightboxImage.file.maxW = 400
 				lightboxImage.file.maxH = 400		
