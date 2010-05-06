@@ -229,8 +229,6 @@ div.clear.col1 {
 #maritReferencesDoublebox .refbox-pic {
 	background: transparent url(../CssImages/homebox_bg.png) repeat scroll 0 0;
 	border: 0 none;
-
-	padding-right: 2px;
 	width: 340px;
 }
 #maritReferencesDoublebox .referencebox {
