@@ -40,60 +40,6 @@ function initSlider(){
 		$("#yearSlider a.ui-slider-handle:last").css('background', 'url("typo3conf/ext/marit_references/Resources/Public/CssImages/slider-right.png") repeat-x scroll 50% 50% #99CE08');
 		moveTooltip('Year', 'yearSlider', 0);
 	}
-	
-	if($('#budgetSlider')){		
-		
-		$("#budgetSlider").slider({
-			range: true,
-			min: $('#budgetSliderMin').val()*1,
-			max: $('#budgetSliderMax').val()*1,
-			values: [$('#minBudget').val()*1, $('#maxBudget').val()*1],
-			step: 1,
-			slide: function(event, ui){
-				moveTooltip('Budget', 'budgetSlider', ui);
-			},
-			stop: function(event, ui) {
-				moveTooltip('Budget', 'budgetSlider', ui);
-				
-				if($("#minBudget").val()!=ui.values[0] || $("#maxBudget").val()!=ui.values[1]){
-					$("#minBudget").val(ui.values[0]).change();
-					$("#maxBudget").val(ui.values[1]).change();
-				}
-			}
-		});		
-		$('.sliderValue').css('position', 'absolute');
-		$('.sliderValue').css('top', $("#budgetSlider a.ui-slider-handle:first").position().top-12);	
-
-		$("#budgetSlider a.ui-slider-handle:last").css('background', 'url("typo3conf/ext/marit_references/Resources/Public/CssImages/slider-right.png") repeat-x scroll 50% 50% #99CE08');
-		moveTooltip('Budget', 'budgetSlider', 0);	
-	}
-	
-	if($('#customerSizeSlider')){		
-		
-		$("#customerSizeSlider").slider({
-			range: true,
-			min: $('#customerSizeSliderMin').val()*1,
-			max: $('#customerSizeSliderMax').val()*1,
-			values: [$('#minCustomerSize').val()*1, $('#maxCustomerSize').val()*1],
-			step: 1,
-			slide: function(event, ui){
-				moveTooltip('CustomerSize', 'customerSizeSlider', ui);
-			},
-			stop: function(event, ui) {
-				moveTooltip('CustomerSize', 'customerSizeSlider', ui);
-				
-				if($("#minCustomerSize").val()!=ui.values[0] || $("#maxCustomerSize").val()!=ui.values[1]){
-					$("#minCustomerSize").val(ui.values[0]).change();
-					$("#maxCustomerSize").val(ui.values[1]).change();
-				}
-			}
-		});		
-		$('.sliderValue').css('position', 'absolute');
-		$('.sliderValue').css('top', $("#customerSizeSlider a.ui-slider-handle:first").position().top-12);	
-
-		$("#customerSizeSlider a.ui-slider-handle:last").css('background', 'url("typo3conf/ext/marit_references/Resources/Public/CssImages/slider-right.png") repeat-x scroll 50% 50% #99CE08');
-		moveTooltip('CustomerSize', 'customerSizeSlider', 0);	
-	}
 }
 
 function initSearchSubmit(){

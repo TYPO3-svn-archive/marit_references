@@ -37,7 +37,6 @@ CREATE TABLE tx_maritreferences_domain_model_customer (
 	title tinytext,
 	description text,
 	url varchar(255) DEFAULT '' NOT NULL,
-	size int(11) DEFAULT '0' NOT NULL,
 	images int(11) unsigned DEFAULT '0' NOT NULL,
 	list_image int(11) unsigned DEFAULT '0' NOT NULL,
 
@@ -109,7 +108,6 @@ CREATE TABLE tx_maritreferences_domain_model_project (
 	teaser text,
 	description text,
 	url varchar(255) DEFAULT '' NOT NULL,
-	budget int(255) DEFAULT '0' NOT NULL,
 	customer_statement text,
 	year int(4) DEFAULT '1000' NOT NULL,
 	files int(11) unsigned DEFAULT '0' NOT NULL,

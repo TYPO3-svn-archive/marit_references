@@ -12,7 +12,6 @@
 			<label index="teaser.description">A teaser for the project.</label>
 			<label index="description.description">A description for the project.</label>
 			<label index="url.description">The url to the project. Must have "http://"!</label>
-			<label index="budget.description">The budget for the project.</label>
 			<label index="customer_statement.description">A statement from the customer about the project.</label>
 			<label index="year.description">In which year you finished the project.</label>
 			<label index="files.description">Some files for the project.</label>

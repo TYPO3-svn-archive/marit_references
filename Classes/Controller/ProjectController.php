@@ -136,24 +136,6 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 		$this->view->assign('minYear', $minYear);
 		$maxYear = $search['maxYear'] ? $search['maxYear'] : $yearSliderMax;
 		$this->view->assign('maxYear', $maxYear);
-
-		$budgetSliderMin = $this->projectRepository->findMinBudget()->getBudget() > 0 ? $this->projectRepository->findMinBudget()->getBudget() : $this->settings['project']['search']['budgetSliderMin'];
-		$this->view->assign('budgetSliderMin', $budgetSliderMin);
-		$budgetSliderMax = $this->projectRepository->findMaxBudget()->getBudget() > 0 ? $this->projectRepository->findMaxBudget()->getBudget() : $this->settings['project']['search']['budgetSliderMax'];
-		$this->view->assign('budgetSliderMax', $budgetSliderMax);
-		$minBudget = $search['minBudget'] ?  $search['minBudget'] : $budgetSliderMin;
-		$this->view->assign('minBudget', $minBudget);
-		$maxBudget = $search['maxBudget'] ? $search['maxBudget'] : $budgetSliderMax;
-		$this->view->assign('maxBudget', $maxBudget);
-
-		$customerSizeSliderMin = $this->customerRepository->findMinSize()->getSize() > 0 ? $this->customerRepository->findMinSize()->getSize() : $this->settings['project']['search']['customerSizeSliderMin'];
-		$this->view->assign('customerSizeSliderMin', $customerSizeSliderMin);
-		$customerSizeSliderMax = $this->customerRepository->findMaxSize()->getSize() > 0 ? $this->customerRepository->findMaxSize()->getSize() : $this->settings['project']['search']['customerSizeSliderMax'];
-		$this->view->assign('customerSizeSliderMax', $customerSizeSliderMax);
-		$minCustomerSize = $search['minCustomerSize'] ?  $search['minCustomerSize'] : $customerSizeSliderMin;
-		$this->view->assign('minCustomerSize', $minCustomerSize);
-		$maxCustomerSize = $search['maxCustomerSize'] ? $search['maxCustomerSize'] : $customerSizeSliderMax;
-		$this->view->assign('maxCustomerSize', $maxCustomerSize);
 	}
 
 	/**

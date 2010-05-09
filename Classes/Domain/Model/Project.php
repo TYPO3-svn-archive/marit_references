@@ -68,12 +68,6 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	protected $url;
 	
 	/**
-	 * budget
-	 * @var string
-	 */
-	protected $budget;
-	
-	/**
 	 * customerStatement
 	 * @var string
 	 */
@@ -247,25 +241,6 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	 */
 	public function getUrl() {
 		return $this->url;
-	}
-	
-	/**
-	 * Setter for budget
-	 *
-	 * @param string $budget budget
-	 * @return void
-	 */
-	public function setBudget($budget) {
-		$this->budget = $budget;
-	}
-
-	/**
-	 * Getter for budget
-	 *
-	 * @return string budget
-	 */
-	public function getBudget() {
-		return $this->budget;
 	}
 	
 	/**

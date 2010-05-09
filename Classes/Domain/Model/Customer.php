@@ -56,12 +56,6 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	protected $url;
 	
 	/**
-	 * size
-	 * @var string
-	 */
-	protected $size;
-	
-	/**
 	 * images
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
 	 */
@@ -137,25 +131,6 @@ class Tx_MaritReferences_Domain_Model_Customer extends Tx_Extbase_DomainObject_A
 	 */
 	public function getUrl() {
 		return $this->url;
-	}
-	
-	/**
-	 * Setter for size
-	 *
-	 * @param string $size size
-	 * @return void
-	 */
-	public function setSize($size) {
-		$this->size = $size;
-	}
-
-	/**
-	 * Getter for size
-	 *
-	 * @return string size
-	 */
-	public function getSize() {
-		return $this->size;
 	}
 	
 	/**

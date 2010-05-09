@@ -36,7 +36,6 @@
 			<label index="tx_maritreferences_domain_model_customer.title">Title</label>
 			<label index="tx_maritreferences_domain_model_customer.description">Description</label>
 			<label index="tx_maritreferences_domain_model_customer.url">Url</label>
-			<label index="tx_maritreferences_domain_model_customer.size">Size</label>
 			<label index="tx_maritreferences_domain_model_customer.images">Images</label>
 			
 			<label index="tx_maritreferences_domain_model_technology">Technology</label>
@@ -51,7 +50,6 @@
 			<label index="tx_maritreferences_domain_model_project.teaser">Teaser</label>
 			<label index="tx_maritreferences_domain_model_project.description">Description</label>
 			<label index="tx_maritreferences_domain_model_project.url">Url</label>
-			<label index="tx_maritreferences_domain_model_project.budget">Budget (€)</label>
 			<label index="tx_maritreferences_domain_model_project.customer_statement">Customer statement</label>
 			<label index="tx_maritreferences_domain_model_project.year">Year</label>
 			<label index="tx_maritreferences_domain_model_project.files">Files</label>

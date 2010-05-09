@@ -98,36 +98,20 @@ class Tx_MaritReferences_Domain_Repository_ProjectRepository extends Tx_MaritRef
 			//var_dump($field);
 			//var_dump($searchValue);	
 			if($searchValue!=''){
-				if($field == 'maxBudget' || $field == 'maxYear'){			
+				if($field == 'maxYear'){			
 					$field = strtolower(ltrim($field, 'max'));		
 					if($queries){
 						$queries = $query->logicalAnd($queries, $query->lessThanOrEqual($field, $searchValue));
 					} else {
 						$queries = $query->lessThanOrEqual($field, $searchValue);
 					} 
-				} elseif($field == 'minBudget' || $field == 'minYear'){			
+				} elseif($field == 'minYear'){			
 					$field = strtolower(ltrim($field, 'min'));	
 					if($queries){
 						$queries = $query->logicalAnd($queries, $query->greaterThanOrEqual($field, $searchValue));
 					} else {
 						$queries = $query->greaterThanOrEqual($field, $searchValue);
 					} 
-				} elseif($field == 'minCustomerSize' || $field == 'maxCustomerSize'){			
-					if($field == 'maxCustomerSize'){			
-						$field = 'customer.size';		
-						if($queries){
-							$queries = $query->logicalAnd($queries, $query->lessThanOrEqual($field, $searchValue));
-						} else {
-							$queries = $query->lessThanOrEqual($field, $searchValue);
-						} 
-					} elseif($field == 'minCustomerSize'){			
-						$field = 'customer.size';
-						if($queries){
-							$queries = $query->logicalAnd($queries, $query->greaterThanOrEqual($field, $searchValue));
-						} else {
-							$queries = $query->greaterThanOrEqual($field, $searchValue);
-						} 
-					}
 				} else {
 					if($field == 'technologies'){
 						$field = 'uid';

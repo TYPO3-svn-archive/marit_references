@@ -51,10 +51,10 @@ $customerListImage['config']['size'] = 1;
 $TCA['tx_maritreferences_domain_model_project'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_project']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,subtitle,teaser,description,url,budget,customer_statement,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies'
+		'showRecordFieldList' => 'title,subtitle,teaser,description,url,customer_statement,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,budget,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies')
+		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -160,15 +160,6 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
-			)
-		),
-		'budget' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.budget',
-			'config'  => array(
-				'type' => 'input',
-				'size' => 15,
-				'eval' => 'trim,int'
 			)
 		),
 		'customer_statement' => array(
@@ -433,10 +424,10 @@ $TCA['tx_maritreferences_domain_model_technology'] = array(
 $TCA['tx_maritreferences_domain_model_customer'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_customer']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,description,url,size,images,list_image'
+		'showRecordFieldList' => 'title,description,url,images,list_image'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,size,images,list_image')
+		'1' => array('showitem' => 'title,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,images,list_image')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -524,15 +515,6 @@ $TCA['tx_maritreferences_domain_model_customer'] = array(
 				'type' => 'input',
 				'size' => 30,
 				'eval' => 'trim'
-			)
-		),
-		'size' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.size',
-			'config'  => array(
-				'type' => 'input',
-				'size' => 15,
-				'eval' => 'trim,int'
 			)
 		),
 		'images' => $customerImages,

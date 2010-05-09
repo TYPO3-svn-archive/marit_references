@@ -33,10 +33,6 @@ plugin.tx_maritreferences {
 			search {
 				yearSliderMin = 1000
 				yearSliderMax = 2100
-				budgetSliderMin = 0
-				budgetSliderMax = 1000000
-				customerSizeSliderMin = 0
-				customerSizeSliderMax = 1000000
 				cssFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/jquery-ui-1.8rc3.custom/css/ui-lightness/jquery-ui-1.8.custom.css
