@@ -59,6 +59,7 @@
 			<label index="tx_maritreferences_domain_model_project.customer_contact_person">Customer contact person</label>
 			<label index="tx_maritreferences_domain_model_project.customer">Customer</label>
 			<label index="tx_maritreferences_domain_model_project.technologies">Technologies</label>
+			<label index="tx_maritreferences_domain_model_project.additionalInformation">additional information</label>
 			<!-- END: Model labels -->
 			
 			<!-- BEGINN: Labels for views -->
@@ -78,6 +79,7 @@
 			<label index="tx_maritreferences_view.projects">Projects</label>
 			<label index="tx_maritreferences_view.technologies">Technologies</label>
 			<label index="tx_maritreferences_view.customers">Technologies</label>
+			<label index="tx_maritreferences_view.screens">Screenshots</label>
 			
 			<label index="tx_maritreferences_view_search">Searchfilters</label>
 			<label index="tx_maritreferences_view_search.search">Submit search!</label>
