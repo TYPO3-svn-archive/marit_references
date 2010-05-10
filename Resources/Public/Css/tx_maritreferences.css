@@ -291,3 +291,26 @@ div.clear.col1 {
 .imageAccordion .imageItems .imageItemsInnerWrap {
 	padding-top: 10px;
 }
+
+.projectshow {
+	margin-top: 25px;
+}
+
+.projectshow li a:link, li a:visited{
+	text-decoration: underline;
+}
+
+ul ul,ol {
+	margin-left: 15px;
+	margin-bottom: 0px;			
+}
+
+ul {
+	color: #555555;
+}
+
+.boximgtext a{
+	color: #64a519;
+	font-size: 11px;
+	line-height: 24px;
+}
