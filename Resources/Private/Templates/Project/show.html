@@ -37,8 +37,10 @@
 			<li><strong><f:translate key="tx_maritreferences_domain_model_project.contact_person" />:</strong> <f:link.email email="{project.contactPerson.email}" class="projectcontact"><f:translate key="tx_maritreferences_domain_model_contactperson.gender.I.{project.contactPerson.gender}" />{project.contactPerson.firstName} {project.contactPerson.lastName}</f:link.email></li>
 			<li><strong><f:translate key="tx_maritreferences_domain_model_project.industrial_sector" />:</strong> <span title="{project.industrialSector.description}"  class="projectindustrysector">{project.industrialSector.title}</span></li>
 		</ul>
-		<h3><f:translate key="tx_maritreferences_domain_model_project.customer_statement" /></h3>
-		<f:format.html>{project.customerStatement}</f:format.html>
+		<div class="customerStatement">
+			<h3><f:translate key="tx_maritreferences_domain_model_project.customer_statement" /></h3>
+			<f:format.html>{project.customerStatement}</f:format.html>
+		</div>
 		<div class="twinboxes">
 			<div class="twinbox left">
 				<span class="bubbleheader"></span>
