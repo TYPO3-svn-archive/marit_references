@@ -296,7 +296,7 @@ div.clear.col1 {
 	margin-top: 25px;
 }
 
-.projectshow li a:link, li a:visited{
+.projectshow li a:link, .projectshow li a:visited{
 	text-decoration: underline;
 }
 
