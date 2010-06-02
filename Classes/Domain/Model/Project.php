@@ -82,60 +82,70 @@ class Tx_MaritReferences_Domain_Model_Project extends Tx_Extbase_DomainObject_Ab
 	/**
 	 * files
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
+	 * @lazy	 
 	 */
 	protected $files;
 	
 	/**
 	 * images
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage>
+	 * @lazy	 
 	 */
 	protected $images;
 	
 	/**
 	 * firstImage from $images
 	 * @var Tx_MaritDam_Domain_Model_Dam
+	 * @lazy	 
 	 */
 	protected $firstImage;
 	
 	/**
 	 * listImage
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage>
+	 * @lazy	 
 	 */
 	protected $listImage;
 	
 	/**
 	 * doubleboxImage
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_DamImage>
+	 * @lazy	 
 	 */
 	protected $doubleboxImage;
 	
 	/**
 	 * industrialSector
 	 * @var Tx_MaritReferences_Domain_Model_IndustrialSector
+	 * @lazy	 
 	 */
 	protected $industrialSector;
 	
 	/**
 	 * contactPerson
 	 * @var Tx_MaritReferences_Domain_Model_ContactPerson
+	 * @lazy	 
 	 */
 	protected $contactPerson;
 	
 	/**
 	 * customerContactPerson
 	 * @var Tx_MaritReferences_Domain_Model_ContactPerson
+	 * @lazy	 
 	 */
 	protected $customerContactPerson;
 	
 	/**
 	 * customer
 	 * @var Tx_MaritReferences_Domain_Model_Customer
+	 * @lazy	 
 	 */
 	protected $customer;
 	
 	/**
 	 * technologies
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritReferences_Domain_Model_Technology>
+	 * @lazy	 
 	 */
 	protected $technologies;
 	

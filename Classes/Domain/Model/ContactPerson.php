@@ -82,6 +82,7 @@ class Tx_MaritReferences_Domain_Model_ContactPerson extends Tx_Extbase_DomainObj
 	/**
 	 * images
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
+	 * @lazy	 
 	 */
 	protected $images;
 	
