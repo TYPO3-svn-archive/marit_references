@@ -30,7 +30,7 @@ function doAjaxPageBrowser(element){
 }
 
 function initImageAccordion(){
-	if($('.imageAccordion')){
+	if($('.imageAccordion').length > 0){
 		$('div.imageItems').each(function(){
 			//Get highest element height
 			if($(this).height()>imageItemsFullHeight) {
@@ -152,12 +152,7 @@ var flobuReferenceList;
 var imageItemsFullHeight = 0;
 var imageItemsCollapsedHeight = 35;
 
-$(document).ready(function(){
-	initImageLightboxes();
-	initImageAccordion();
-	initDoublebox();
-	initContextbox();
-	
+$(document).ready(function(){	
 	flobuReferenceList = new flower_bubble ({
 		base_obj: $('.wrapper'),
 		block_mode: 'base_obj',
@@ -166,6 +161,9 @@ $(document).ready(function(){
 		bubble: { image: 'bubble.png', width: 130, height: 98 },
 		flower: { image: 'flower.gif', width: 32, height: 32 }
 	});
-
 	
+	initImageLightboxes();
+	initImageAccordion();
+	initDoublebox();
+	initContextbox();	
 });

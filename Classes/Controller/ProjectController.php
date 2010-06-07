@@ -152,7 +152,7 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 		$this->view->assign('project', $project);
 		$technologies = $project->getTechnologies();
 		$i = 0;
-		$rand =  rand(0, count($technologies));
+		$rand =  rand(0, (count($technologies)-1));
 		foreach($technologies as $technology){
 			if($i == $rand){
 				$randTech = $technology;

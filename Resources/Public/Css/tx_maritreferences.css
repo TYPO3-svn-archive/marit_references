@@ -217,6 +217,10 @@ div.clear.col1 {
 #maritReferencesDoublebox a.morelink {
 	line-height: 12px;
 }
+#maritReferencesDoublebox .leftReferencebox,
+#maritReferencesDoublebox .rightReferencebox {
+	cursor: pointer;
+}
 #maritReferencesDoublebox .leftReferencebox {
 	height: 196px;
 	position: absolute;

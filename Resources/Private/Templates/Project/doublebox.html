@@ -1,12 +1,12 @@
 <f:if condition="{doAjax}==1">
 <f:then>
 	<div id="maritReferencesDoublebox">
-		<f:link.action action="doublebox" id="doubleboxLink" class="hide"></f:link.action>
+		<f:link.action action="doublebox" id="doubleboxLink" class="hide">doubleboxLink</f:link.action>
 	</div>
 </f:then>
 <f:else>
 	<div id="maritReferencesDoublebox">
-		<div class="leftReferencebox left">
+		<div class="leftReferencebox left" onclick='window.location.href = "<f:uri.action action="show" arguments="{project: project}" pageUid="{settings.project.doublebox.showId}" />"'>
 			<div class="refbox-pic">
 				<f:for each="{project.doubleboxImage}" as="doubleboxImage">
 					<f:image src="{doubleboxImage.filePath}{doubleboxImage.fileName}" alt="{doubleboxImage.title} - {doubleboxImage.altText}" title="{doubleboxImage.title}" maxWidth="{settings.project.doublebox.image.file.maxW}" maxHeight="{settings.project.doublebox.image.file.maxH}" class="refbox-pic" />
@@ -26,7 +26,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="rightReferencebox right">
+		<div class="rightReferencebox right" onclick='window.location.href = "<f:uri.action action="show" controller="Technology" arguments="{technology: technology}" pageUid="{settings.project.doublebox.showId}" />"'>
 			<div class="refbox-pic">
 				<f:for each="{technology.doubleboxImage}" as="doubleboxImage">
 					<f:image src="{doubleboxImage.filePath}{doubleboxImage.fileName}" alt="{doubleboxImage.title} - {doubleboxImage.altText}" title="{doubleboxImage.title}" maxWidth="{settings.project.doublebox.image.file.maxW}" maxHeight="{settings.project.doublebox.image.file.maxH}" class="refbox-pic" />

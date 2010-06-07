@@ -14,7 +14,7 @@ function moveTooltip(slider, sliderId, ui){
 }
 
 function initSlider(){
-	if($('#yearSlider')){		
+	if($('#yearSlider').length > 0){		
 		
 		$("#yearSlider").slider({
 			range: true,
@@ -78,7 +78,7 @@ function initSearchSubmit(){
 		    //alert('status: ' + statusText + '\n\nresponseText: \n' + responseText);		
 				flobuReferenceList.disable(); 
 				initImageLightboxes();
-			},
+			}
   };
   
   $('#searchProject').submit(function() { 
@@ -91,9 +91,6 @@ function initSearchSubmit(){
 var flobuReferenceList;
 
 $(document).ready(function(){
-	initSlider();
-	initSearchSubmit();
-	
 	flobuReferenceList = new flower_bubble ({
 		base_obj: $('.wrapper'),
 		block_mode: 'base_obj',
@@ -102,4 +99,7 @@ $(document).ready(function(){
 		bubble: { image: 'bubble.png', width: 130, height: 98 },
 		flower: { image: 'flower.gif', width: 32, height: 32 }
 	});
+	
+	initSlider();
+	initSearchSubmit();	
 });
