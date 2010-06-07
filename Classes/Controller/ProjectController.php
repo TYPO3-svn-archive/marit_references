@@ -148,8 +148,29 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 		$this->initJS($this->settings['project']['doublebox']['jsFile']);
 
 		$this->view->assign('settings', $this->settings);
-		$this->view->assign('project', $this->projectRepository->findRandom());
-		$this->view->assign('technology', $this->technologyRepository->findRandom());
+		$project = $this->projectRepository->findRandom();
+		$this->view->assign('project', $project);
+		$technologies = $project->getTechnologies();
+		$i = 0;
+		$rand =  rand(0, count($technologies));
+		foreach($technologies as $technology){
+			if($i == $rand){
+				$randTech = $technology;
+				break;
+			}
+			$i++;
+		}
+		if($randTech){
+			$this->view->assign('technology', $randTech);
+		} else {
+			$this->view->assign('technology', $this->technologyRepository->findRandom());
+		}
+		
+		if($GLOBALS['TSFE']->type == $GLOBALS['TSFE']->tmpl->setup['maritReferences.']['typeNum']){
+			$this->view->assign('doAjax', 0);
+		} else {
+			$this->view->assign('doAjax', 1);
+		}
 		//$this->view->assign('project', $this->projectRepository->findByUid(7));
 		//$this->view->assign('technology', $this->technologyRepository->findByUid(1));
 	}
@@ -171,6 +192,11 @@ class Tx_MaritReferences_Controller_ProjectController extends Tx_MaritReferences
 			$this->view->assign('project', $this->projectRepository->findRandom());
 		}
 		
+		if($GLOBALS['TSFE']->type == $GLOBALS['TSFE']->tmpl->setup['maritReferences.']['typeNum']){
+			$this->view->assign('doAjax', 0);
+		} else {
+			$this->view->assign('doAjax', 1);
+		}
 	}
 }
 ?>

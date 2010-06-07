@@ -51,10 +51,10 @@ $customerListImage['config']['size'] = 1;
 $TCA['tx_maritreferences_domain_model_project'] = array(
 	'ctrl' => $TCA['tx_maritreferences_domain_model_project']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,subtitle,teaser,description,url,customer_statement,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies'
+		'showRecordFieldList' => 'title,subtitle,teaser,description,url,customer_statement,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer,technologies'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer_contact_person,customer,technologies')
+		'1' => array('showitem' => 'title,subtitle,teaser,description;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,url,customer_statement;;9;richtext[paste|bold|italic|underline|formatblock|class|left|center|right|orderedlist|unorderedlist|outdent|indent|link|image]:rte_transform[flag=rte_enabled|mode=ts];3-3-3,year,files,images,list_image,doublebox_image,industrial_sector,contact_person,customer,technologies')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -226,28 +226,6 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 				'type' => 'group',
         		'internal_type' => 'db',
 				'minitems' => 1,
-				'maxitems' => 1,
-				'size' => 1,
-				'allowed' => 'tt_address',
-				'foreign_table' => 'tt_address',
-		        'wizards' => array(
-		            'suggest' => array(
-		                'type' => 'suggest',
-		                'tt_address' => array(
-		                    'maxItemsInResultList' => 5,
-		                    'searchWholePhrase' => 1
-		                ),
-		            ),
-		        ),
-			)
-		),
-		'customer_contact_person' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.customer_contact_person',
-			'config'  => array(				
-				'type' => 'group',
-        		'internal_type' => 'db',
-				'minitems' => 0,
 				'maxitems' => 1,
 				'size' => 1,
 				'allowed' => 'tt_address',

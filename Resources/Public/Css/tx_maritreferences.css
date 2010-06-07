@@ -212,6 +212,7 @@ div.clear.col1 {
   */
 #maritReferencesDoublebox {
 	margin-top: 37px;
+	height: 196px;
 }
 #maritReferencesDoublebox a.morelink {
 	line-height: 12px;
@@ -283,6 +284,11 @@ div.clear.col1 {
 #maritReferencesDoublebox .rightReferencebox:hover .referencebox .referencebox-inner p.heading a {
 	color: #64a519;
 }
+
+#maritReferencesContextbox {
+	min-height: 100px;
+}
+
 
 .imageAccordion,
 .imageAccordion .imageItems {

@@ -1,16 +1,25 @@
-<div id="maritReferencesContextbox">
-	<div class="block blue">
-		<div class="blockHeaderTop"></div>
-		<h4 class="blockHeader">{project.title}</h4>
-		<div class="blockHeaderBottom"></div>
-		<f:for each="{project.listImage}" as="listImage">
-			<f:image src="{listImage.filePath}{listImage.fileName}" alt="{listImage.title} - {listImage.altText}" title="{listImage.title}" maxWidth="{settings.project.contextbox.image.file.maxW}" maxHeight="{settings.project.conntextbox.image.file.maxH}" class="contextbox-pic" />
-		</f:for>
-		<p class="subtitle"><f:link.action action="show" arguments="{project: project}">{project.subtitle}</f:link.action></p>
-		<p>
-			<f:format.nl2br>{project.teaser}</f:format.nl2br>
-		</p>
-		<p class="right"><f:link.action action="show" arguments="{project: project}" class="morelink"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
-		<br class="clear" />
+<f:if condition="{doAjax}==1">
+<f:then>
+	<div id="maritReferencesContextbox">
+		<f:link.action action="contextbox" id="contextboxLink" class="hide"></f:link.action>
 	</div>
-</div>
+</f:then>
+<f:else>
+	<div id="maritReferencesContextbox">
+		<div class="block blue">
+			<div class="blockHeaderTop"></div>
+			<h4 class="blockHeader">{project.title}</h4>
+			<div class="blockHeaderBottom"></div>
+			<f:for each="{project.listImage}" as="listImage">
+				<f:image src="{listImage.filePath}{listImage.fileName}" alt="{listImage.title} - {listImage.altText}" title="{listImage.title}" maxWidth="{settings.project.contextbox.image.file.maxW}" maxHeight="{settings.project.conntextbox.image.file.maxH}" class="contextbox-pic" />
+			</f:for>
+			<p class="subtitle"><f:link.action action="show" arguments="{project: project}" pageUid="{settings.project.contextbox.showId}">{project.subtitle}</f:link.action></p>
+			<p>
+				<f:format.nl2br>{project.teaser}</f:format.nl2br>
+			</p>
+			<p class="right"><f:link.action action="show" arguments="{project: project}" pageUid="{settings.project.contextbox.showId}" class="morelink"><f:translate key="tx_maritreferences_view.read_more" /></f:link.action></p>
+			<br class="clear" />
+		</div>
+	</div>
+</f:else>
+</f:if>

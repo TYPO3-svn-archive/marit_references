@@ -49,21 +49,25 @@ plugin.tx_maritreferences {
 				image.file.maxW = 340
 				image.file.maxH = 150		
 				technology.description.crop = 200
+				showId = 7
 				cssFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
-					#10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+					15 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 			contextbox {
 				image.file.maxW = 200
 				image.file.maxH = 120		
+				showId = 7
 				cssFile {
 					5 = typo3conf/ext/marit_references/Resources/Public/Css/tx_maritreferences.css
 				}
 				jsFile {
-					#10 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
+					10 = typo3conf/ext/marit_references/Resources/Public/Javascript/flower_bubble.js
+					15 = typo3conf/ext/marit_references/Resources/Public/Javascript/tx_maritreferences.js
 				}
 			}
 		}

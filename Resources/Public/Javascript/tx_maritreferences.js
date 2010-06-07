@@ -1,17 +1,19 @@
 function initImageLightboxes(){
-	$('.lightboximage').tooltip({ 
-	    delay: 1000, 
-	    showURL: false, 
-	    fade: 250,
-    	top: -15, 
-    	left: 15,
-	    bodyHandler: function() { 
-	        return $("<img/>").attr("src", $('#'+this.id+"_big").attr('src')); 
-	    } 
-	});
+	if($('.lightboximage').length > 0){
+		$('.lightboximage').tooltip({ 
+		    delay: 1000, 
+		    showURL: false, 
+		    fade: 250,
+	    	top: -15, 
+	    	left: 15,
+		    bodyHandler: function() { 
+		        return $("<img/>").attr("src", $('#'+this.id+"_big").attr('src')); 
+		    } 
+		});
+	}
 }
 
-function doAjaxPageBrowser(element){		
+function doAjaxPageBrowser(element){	
 	flobuReferenceList.enable();
 	
 	$.ajax({
@@ -56,6 +58,64 @@ function initImageAccordion(){
 	}
 }
 
+function initDoublebox(){	
+
+	if($('#maritReferencesDoublebox').length > 0){
+	
+		flobuReferenceDoublebox = new flower_bubble ({
+			base_obj: $('#maritReferencesDoublebox'),
+			block_mode: 'base_obj',
+			base_dir: 'typo3conf/ext/marit_references/Resources/Public/Javascript',
+			background: { css: 'white', opacity: 0.78 },
+			bubble: { image: 'bubble.png', width: 130, height: 98 },
+			flower: { image: 'flower.gif', width: 32, height: 32 }
+		});
+		
+		flobuReferenceDoublebox.enable();
+		
+		$.ajax({
+			type: 'GET',
+			url: $('#doubleboxLink').attr("href")+'&type=1267717411&no_cache=1',
+			success: function(responseText, statusText, xhr) {     
+				$('#maritReferencesDoublebox').replaceWith(responseText);
+				flobuReferenceDoublebox.disable();
+			}
+	  });
+	}
+	
+	return false;
+	
+}
+
+function initContextbox(){	
+
+	if($('#maritReferencesContextbox').length > 0){
+	
+		flobuReferenceContextbox = new flower_bubble ({
+			base_obj: $('#maritReferencesContextbox'),
+			block_mode: 'base_obj',
+			base_dir: 'typo3conf/ext/marit_references/Resources/Public/Javascript',
+			background: { css: 'white', opacity: 0.78 },
+			bubble: { image: 'bubble.png', width: 130, height: 98 },
+			flower: { image: 'flower.gif', width: 32, height: 32 }
+		});
+		
+		flobuReferenceContextbox.enable();
+		
+		$.ajax({
+			type: 'GET',
+			url: $('#contextboxLink').attr("href")+'&type=1267717411&no_cache=1',
+			success: function(responseText, statusText, xhr) {     
+				$('#maritReferencesContextbox').replaceWith(responseText);
+				flobuReferenceContextbox.disable();
+			}
+	  });
+	}
+	
+	return false;
+	
+}
+
 $.fx.step.syncHeight = function(fx){
     if (!fx.state) {
         var o = fx.options;
@@ -95,7 +155,9 @@ var imageItemsCollapsedHeight = 35;
 $(document).ready(function(){
 	initImageLightboxes();
 	initImageAccordion();
-
+	initDoublebox();
+	initContextbox();
+	
 	flobuReferenceList = new flower_bubble ({
 		base_obj: $('.wrapper'),
 		block_mode: 'base_obj',
@@ -104,4 +166,6 @@ $(document).ready(function(){
 		bubble: { image: 'bubble.png', width: 130, height: 98 },
 		flower: { image: 'flower.gif', width: 32, height: 32 }
 	});
+
+	
 });

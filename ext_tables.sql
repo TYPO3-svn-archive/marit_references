@@ -116,7 +116,6 @@ CREATE TABLE tx_maritreferences_domain_model_project (
 	doublebox_image int(11) unsigned DEFAULT '0' NOT NULL,
 	industrial_sector int(11) unsigned DEFAULT '0',
 	contact_person int(11) unsigned DEFAULT '0',
-	customer_contact_person int(11) unsigned DEFAULT '0',
 	customer int(11) unsigned DEFAULT '0',
 	technologies int(11) unsigned DEFAULT '0' NOT NULL,
 
