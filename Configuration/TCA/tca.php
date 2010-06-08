@@ -150,7 +150,7 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 						'icon' => 'wizard_rte2.gif',
 						'script' => 'wizard_rte.php',
 					),
-            	)
+        )
 			)
 		),
 		'url' => array(
@@ -180,7 +180,7 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 						'icon' => 'wizard_rte2.gif',
 						'script' => 'wizard_rte.php',
 					),
-            	)
+        )
 			)
 		),
 		'year' => array(
@@ -202,21 +202,21 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.industrial_sector',
 			'config'  => array(
 				'type' => 'group',
-        		'internal_type' => 'db',
+        'internal_type' => 'db',
 				'minitems' => 1,
 				'maxitems' => 1,
 				'size' => 1,
 				'allowed' => 'tx_maritreferences_domain_model_industrialsector',
 				'foreign_table' => 'tx_maritreferences_domain_model_industrialsector',
-		        'wizards' => array(
-		            'suggest' => array(
-		                'type' => 'suggest',
-		                'tx_maritreferences_domain_model_industrialsector' => array(
-		                    'maxItemsInResultList' => 5,
-		                    'searchWholePhrase' => 1
-		                ),
-		            ),
-		        ),
+        'wizards' => array(
+            'suggest' => array(
+                'type' => 'suggest',
+                'tx_maritreferences_domain_model_industrialsector' => array(
+                    'maxItemsInResultList' => 5,
+                    'searchWholePhrase' => 1
+                ),
+            ),
+        ),
 			)
 		),
 		'contact_person' => array(
@@ -224,21 +224,21 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.contact_person',
 			'config'  => array(				
 				'type' => 'group',
-        		'internal_type' => 'db',
+        'internal_type' => 'db',
 				'minitems' => 1,
 				'maxitems' => 1,
 				'size' => 1,
 				'allowed' => 'tt_address',
 				'foreign_table' => 'tt_address',
-		        'wizards' => array(
-		            'suggest' => array(
-		                'type' => 'suggest',
-		                'tt_address' => array(
-		                    'maxItemsInResultList' => 5,
-		                    'searchWholePhrase' => 1
-		                ),
-		            ),
-		        ),
+        'wizards' => array(
+            'suggest' => array(
+                'type' => 'suggest',
+                'tt_address' => array(
+                    'maxItemsInResultList' => 5,
+                    'searchWholePhrase' => 1
+                ),
+            ),
+        ),
 			)
 		),
 		'customer' => array(
@@ -246,21 +246,21 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 			'label'   => 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.customer',
 			'config'  => array(
 				'type' => 'group',
-        		'internal_type' => 'db',
+        'internal_type' => 'db',
 				'minitems' => 1,
 				'maxitems' => 1,
 				'size' => 1,
 				'allowed' => 'tx_maritreferences_domain_model_customer',
 				'foreign_table' => 'tx_maritreferences_domain_model_customer',
-		        'wizards' => array(
-		            'suggest' => array(
-		                'type' => 'suggest',
-		                'tx_maritreferences_domain_model_customer' => array(
-		                    'maxItemsInResultList' => 5,
-		                    'searchWholePhrase' => 1
-		                ),
-		            ),
-		        ),
+        'wizards' => array(
+            'suggest' => array(
+                'type' => 'suggest',
+                'tx_maritreferences_domain_model_customer' => array(
+                    'maxItemsInResultList' => 5,
+                    'searchWholePhrase' => 1
+                ),
+            ),
+        ),
 			)
 		),
 		'technologies' => array(
@@ -277,6 +277,7 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 				'allowed' => 'tx_maritreferences_domain_model_technology',
 				'foreign_class' => 'Tx_MaritReferences_Domain_Model_Technology',
 				'foreign_table' => 'tx_maritreferences_domain_model_technology',
+				'foreign_table_where' => ' AND tx_maritreferences_domain_model_technology.deleted+tx_maritreferences_domain_model_technology.hidden=0 ',
 				'MM' => 'tx_maritreferences_project_technology_mm',
 			),
 		),
