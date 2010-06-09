@@ -75,7 +75,7 @@ function initDoublebox(){
 		
 		$.ajax({
 			type: 'GET',
-			url: $('#doubleboxLink').attr("href")+'&type=1267717411&no_cache=1',
+			url: $('#doubleboxLink').attr("href"),
 			success: function(responseText, statusText, xhr) {     
 				$('#maritReferencesDoublebox').replaceWith(responseText);
 				flobuReferenceDoublebox.disable();
@@ -104,7 +104,7 @@ function initContextbox(){
 		
 		$.ajax({
 			type: 'GET',
-			url: $('#contextboxLink').attr("href")+'&type=1267717411&no_cache=1',
+			url: $('#contextboxLink').attr("href"),
 			success: function(responseText, statusText, xhr) {     
 				$('#maritReferencesContextbox').replaceWith(responseText);
 				flobuReferenceContextbox.disable();

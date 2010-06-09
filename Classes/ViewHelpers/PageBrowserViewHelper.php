@@ -68,6 +68,7 @@ class Tx_MaritReferences_ViewHelpers_PageBrowserViewHelper extends Tx_Fluid_Core
 	 */
 	public function render($totalCountOfItems=NULL, $maxItemsToDisplay=5, $range=2, $mode='pages', $previousLabel='previous', $nextLabel='next', $template='page %1$s out of %2$s<br />%3$s %4$s %5$s', $onclick='') {
 		$pagesTotal = ceil($totalCountOfItems/$maxItemsToDisplay);
+		$this->pageType = $pageType;
 		if($this->controllerContext->getRequest()->hasArgument('currentPage')) {
 			$currentPage = $this->controllerContext->getRequest()->getArgument('currentPage');
 		} else {
