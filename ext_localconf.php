@@ -26,6 +26,7 @@ if($TYPO3_CONF_VARS['EXTCONF']['realurl']){
 			'contextbox' => 'contextbox',
 		),
 		'valueDefault' => 'list',
+		'noMatch' => 'bypass',
 	);
 	$TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT']['fixedPostVars']['_DEFAULT'][] = array(
 		'GETvar' => 'tx_maritreferences_pi1[controller]',
