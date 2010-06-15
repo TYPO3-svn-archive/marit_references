@@ -88,5 +88,90 @@
 			<!-- END: Labels for views -->
 			
 		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<!-- BEGINN: Model labels -->
+			<label index="tx_maritreferences_domain_model_dam">DAM</label>
+			<label index="tx_maritreferences_domain_model_dam.title">Titel</label>
+			<label index="tx_maritreferences_domain_model_dam.file_name">Datei Name</label>
+			<label index="tx_maritreferences_domain_model_dam.file_path">Datei Pfad</label>
+			<label index="tx_maritreferences_domain_model_dam.file_size">Datei Größe</label>
+			<label index="tx_maritreferences_domain_model_dam.file_hash">Datei Hash</label>
+			<label index="tx_maritreferences_domain_model_dam.file_dl_name">Datei Download Name</label>
+			<label index="tx_maritreferences_domain_model_dam.alt_text">alt Text</label>
+			
+			<label index="tx_maritreferences_domain_model_contactperson">Ansprechpartner</label>
+			<label index="tx_maritreferences_domain_model_contactperson.gender">Gender</label>
+			<label index="tx_maritreferences_domain_model_contactperson.gender.I.m">Herr</label>
+			<label index="tx_maritreferences_domain_model_contactperson.gender.I.f">Frau</label>
+			<label index="tx_maritreferences_domain_model_contactperson.first_name">Vorname</label>
+			<label index="tx_maritreferences_domain_model_contactperson.last_name">Nachname</label>
+			<label index="tx_maritreferences_domain_model_contactperson.email">Email</label>
+			<label index="tx_maritreferences_domain_model_contactperson.phone">Telefon</label>
+			<label index="tx_maritreferences_domain_model_contactperson.company">Firma</label>
+			<label index="tx_maritreferences_domain_model_contactperson.department">Abteilung</label>
+			<label index="tx_maritreferences_domain_model_contactperson.images">Bilder</label>
+			
+			<label index="tx_maritreferences_domain_model_industrialsector">Branchen</label>
+			<label index="tx_maritreferences_domain_model_industrialsector.title">Title</label>
+			<label index="tx_maritreferences_domain_model_industrialsector.description">Beschreibung</label>
+			
+			<label index="tx_maritreferences_domain_model_customer">Kunde</label>
+			<label index="tx_maritreferences_domain_model_customer.title">Title</label>
+			<label index="tx_maritreferences_domain_model_customer.description">Beschreibung</label>
+			<label index="tx_maritreferences_domain_model_customer.url">Url</label>
+			<label index="tx_maritreferences_domain_model_customer.images">Bilder</label>
+			
+			<label index="tx_maritreferences_domain_model_technology">Technologie</label>
+			<label index="tx_maritreferences_domain_model_technology.title">Title</label>
+			<label index="tx_maritreferences_domain_model_technology.description">Beschreibung</label>
+			<label index="tx_maritreferences_domain_model_technology.images">Bilder</label>
+			<label index="tx_maritreferences_domain_model_technology.contact_person">Ansprechpartner</label>
+			
+			<label index="tx_maritreferences_domain_model_project">Projekt</label>
+			<label index="tx_maritreferences_domain_model_project.title">Titel</label>
+			<label index="tx_maritreferences_domain_model_project.subtitle">Untertitel</label>
+			<label index="tx_maritreferences_domain_model_project.teaser">Teaser</label>
+			<label index="tx_maritreferences_domain_model_project.description">Beschreibung</label>
+			<label index="tx_maritreferences_domain_model_project.url">Url</label>
+			<label index="tx_maritreferences_domain_model_project.customer_statement">Kundenkommentar</label>
+			<label index="tx_maritreferences_domain_model_project.year">Jahr</label>
+			<label index="tx_maritreferences_domain_model_project.files">Dateien</label>
+			<label index="tx_maritreferences_domain_model_project.images">Bilder</label>
+			<label index="tx_maritreferences_domain_model_project.industrial_sector">Branche</label>
+			<label index="tx_maritreferences_domain_model_project.contact_person">Ansprechpartner</label>
+			<label index="tx_maritreferences_domain_model_project.customer_contact_person">Kundenkontaktperson</label>
+			<label index="tx_maritreferences_domain_model_project.customer">Kunde</label>
+			<label index="tx_maritreferences_domain_model_project.technologies">Technologien</label>
+			<label index="tx_maritreferences_domain_model_project.additionalInformation">weitere Informationen</label>
+			<!-- END: Model labels -->
+			
+			<!-- BEGINN: Labels for views -->
+			<label index="tx_maritreferences_view.read_more">mehr!</label>
+			<label index="tx_maritreferences_view.left_box">Linke Box</label>
+			<label index="tx_maritreferences_view.right_box">Rechte Box</label>
+			<label index="tx_maritreferences_view.pageBrowser.previous">&lt;</label>
+			<label index="tx_maritreferences_view.pageBrowser.page">Seite</label>
+			<label index="tx_maritreferences_view.pageBrowser.outOf">von</label>
+			<label index="tx_maritreferences_view.pageBrowser.next">&gt;</label>	
+			<label index="tx_maritreferences_view.pageBrowser.projects">Projekte</label>
+			<label index="tx_maritreferences_view.pageBrowser.technologies">Technologien</label>
+			<label index="tx_maritreferences_view.pageBrowser.customers">Kunden</label>		
+			<label index="tx_maritreferences_view.project_list">PROJEKTE</label>			
+			<label index="tx_maritreferences_view.customer_list">KUNDEN</label>
+			<label index="tx_maritreferences_view.technology_list">TECHNOLOGIEN</label>
+			<label index="tx_maritreferences_view.projects">Projekte</label>
+			<label index="tx_maritreferences_view.technologies">Technologien</label>
+			<label index="tx_maritreferences_view.customers">Technologien</label>
+			<label index="tx_maritreferences_view.screens">Screenshots</label>
+			
+			<label index="tx_maritreferences_view_search">Suchfilter</label>
+			<label index="tx_maritreferences_view_search.search">Suche abschicken!</label>
+			<label index="tx_maritreferences_view_search.all_industriall_sectors">Alle Branchen</label>
+			<label index="tx_maritreferences_view_search.all_technologies">Alle Technologien</label>
+			<!-- END: Labels for views -->
+			
+		</languageKey>
+
 	</data>
 </T3locallang>

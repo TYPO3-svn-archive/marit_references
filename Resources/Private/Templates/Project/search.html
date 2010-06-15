@@ -9,9 +9,9 @@
 				<h4 class="blockHeader"><f:translate key="tx_maritreferences_domain_model_project.industrial_sector" /></h4>
 				<div class="blockHeaderBottom"></div>
 				<div class="form">
-					<helper:searchForm.checkbox name="search[industrialSector][]" value="all" searched="{search.industrialSector}" id="industrialSectorAll" class="searchAll" /><label for="industrialSectorAll"><f:translate key="tx_maritreferences_view_search.all_industriall_sectors" /></label><br /><br />
+					<helper:searchForm.checkbox name="search[industrialSector][]" value="all" searched="{search.industrialSector}" id="industrialSectorAll" class="searchAll left" /><label for="industrialSectorAll" class="industrialSector"><f:translate key="tx_maritreferences_view_search.all_industriall_sectors" /></label><br /><br class="clear"/>
 					<f:for each="{industrialSectors}" as="industrialSector">
-						<helper:searchForm.checkbox name="search[industrialSector][]" value="{industrialSector.uid}" searched="{search.industrialSector}" id="industrialSector{industrialSector.uid}" class="search" /><label for="industrialSector{industrialSector.uid}">{industrialSector.title}</label><br />
+						<helper:searchForm.checkbox name="search[industrialSector][]" value="{industrialSector.uid}" searched="{search.industrialSector}" id="industrialSector{industrialSector.uid}" class="search left" /><label for="industrialSector{industrialSector.uid}" class="industrialSector">{industrialSector.title}</label><br class="clear"/>
 					</f:for>
 				</div>
 			</div>
