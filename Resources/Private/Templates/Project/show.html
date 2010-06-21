@@ -22,7 +22,7 @@
 		<p><b><f:translate key="tx_maritreferences_domain_model_project.additionalInformation" /></b></p>
 		<ul>
 			<li><strong><f:translate key="tx_maritreferences_domain_model_project.customer" />:</strong> <f:link.action controller="Customer" action="show" arguments="{customer: project.customer.uid}" class="projectcustomer">{project.customer.title}</f:link.action></li>
-			<li><strong><f:translate key="tx_maritreferences_domain_model_project.url" />:</strong> <f:link.external uri="{project.url}">{project.url}</f:link.external></li>
+			<li><strong><f:translate key="tx_maritreferences_domain_model_project.url" />:</strong> <f:link.external target="_blank" uri="{project.url}">{project.url}</f:link.external></li>
 			<li>
 				<strong><f:translate key="tx_maritreferences_domain_model_project.technologies" />:</strong>
 				<ol>
