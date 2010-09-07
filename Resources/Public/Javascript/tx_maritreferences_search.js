@@ -1,10 +1,10 @@
 function moveTooltip(slider, sliderId, ui){
 				//alert($("#"+sliderId+" a.ui-slider-handle:first").position().left);
 				$('#sliderValueMin'+slider).css('left', 
-							$("#"+sliderId+" a.ui-slider-handle:first").position().left + 10 - $('#sliderValueMin'+slider).width()
+							$("#"+sliderId+" a.ui-slider-handle:first").position().left + 14 - $('#sliderValueMin'+slider).width()
 				);	
 				$('#sliderValueMax'+slider).css('left', 
-							$("#"+sliderId+" a.ui-slider-handle:last").position().left + 10
+							$("#"+sliderId+" a.ui-slider-handle:last").position().left + 6
 				);	
 				
 				if(ui!=0) {
