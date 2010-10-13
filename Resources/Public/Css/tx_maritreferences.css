@@ -55,6 +55,7 @@ div.clear.col1 {
 #maritReferences .projectimages {
 	margin: 0px 10px 10px 0;
 }
+
 /**
  * Project list
  */ 
@@ -136,6 +137,10 @@ div.clear.col1 {
 }
 #maritReferences .technologyList .technology .technologyListText {
 	margin-left: 170px;
+}
+#maritReferences .technologyList .technology .technologyListText p.moreLinkContainer{
+	display: block;
+	text-align: right;
 }
 #maritReferences .technologyList .technology .technologyListText .technologyName,
 #maritReferences .technologyList .technology .technologyListText .technologyName a {
