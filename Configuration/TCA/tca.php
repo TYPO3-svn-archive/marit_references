@@ -191,6 +191,7 @@ $TCA['tx_maritreferences_domain_model_project'] = array(
 				'size' => 4,
 				'eval' => 'trim,int',
 		 		'range' => array('lower' => 1000,'upper' => 9999),
+		 		'default' => date('Y')
 			)
 		),
 		'files' => $projectFiles,
