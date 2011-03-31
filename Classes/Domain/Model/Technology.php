@@ -52,21 +52,18 @@ class Tx_MaritReferences_Domain_Model_Technology extends Tx_Extbase_DomainObject
 	/**
 	 * images
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
-	 * @lazy	 
 	 */
 	protected $images;
 	
 	/**
 	 * listImage
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
-	 * @lazy	 
 	 */
 	protected $listImage;
 	
 	/**
 	 * doubleboxImage
 	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_MaritDam_Domain_Model_Dam>
-	 * @lazy	 
 	 */
 	protected $doubleboxImage;
 	

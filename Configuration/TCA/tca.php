@@ -4,46 +4,55 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $projectFiles = txdam_getMediaTCA('media_field', 'project_files');
 $projectFiles['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.files';
 $projectFiles['config']['foreign_table'] = 'tx_dam';
+$projectFiles['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 
 $projectImages = txdam_getMediaTCA('image_field', 'project_images');
 $projectImages['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.images';
 $projectImages['config']['foreign_table'] = 'tx_dam';
+$projectImages['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 
 $projectListImage = txdam_getMediaTCA('image_field', 'project_list_image');
 $projectListImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.list_image';
 $projectListImage['config']['foreign_table'] = 'tx_dam';
+$projectListImage['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 $projectListImage['config']['maxitems'] = 1;
 $projectListImage['config']['size'] = 1;
 
 $projectDoubleboxImage = txdam_getMediaTCA('image_field', 'project_doublebox_image');
 $projectDoubleboxImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_project.doublebox_image';
 $projectDoubleboxImage['config']['foreign_table'] = 'tx_dam';
+$projectDoubleboxImage['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 $projectDoubleboxImage['config']['maxitems'] = 1;
 $projectDoubleboxImage['config']['size'] = 1;
 
 $technologyImages = txdam_getMediaTCA('image_field', 'technology_images');
 $technologyImages['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.images';
 $technologyImages['config']['foreign_table'] = 'tx_dam';
+$technologyImages['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 
 $technologyListImage = txdam_getMediaTCA('image_field', 'technology_list_image');
 $technologyListImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.list_image';
 $technologyListImage['config']['foreign_table'] = 'tx_dam';
+$technologyListImage['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 $technologyListImage['config']['maxitems'] = 1;
 $technologyListImage['config']['size'] = 1;
 
 $technologyDoubleboxImage = txdam_getMediaTCA('image_field', 'technology_doublebox_image');
 $technologyDoubleboxImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_technology.doublebox_image';
 $technologyDoubleboxImage['config']['foreign_table'] = 'tx_dam';
+$technologyDoubleboxImage['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 $technologyDoubleboxImage['config']['maxitems'] = 1;
 $technologyDoubleboxImage['config']['size'] = 1;
 
 $customerImages = txdam_getMediaTCA('image_field', 'customer_images');
 $customerImages['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.images';
 $customerImages['config']['foreign_table'] = 'tx_dam';
+$customerImages['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 
 $customerListImage = txdam_getMediaTCA('image_field', 'customer_list_image');
 $customerListImage['label'] = 'LLL:EXT:marit_references/Resources/Private/Language/locallang_db.xml:tx_maritreferences_domain_model_customer.list_image';
 $customerListImage['config']['foreign_table'] = 'tx_dam';
+$customerListImage['config']['foreign_class'] = 'Tx_MaritDam_Domain_Model_Dam';
 $customerListImage['config']['maxitems'] = 1;
 $customerListImage['config']['size'] = 1;
 
